@@ -29,25 +29,21 @@ and earlier was TurboPower Software.
  * ***** END LICENSE BLOCK ***** *}
 
 unit uTPLb_ComponentRegistration;
+
 interface
 
 procedure Register;
 
 implementation
 
+{$R 'LockBox3DD.dcr'}
 
-
-
-{$R '..\..\design\dclTP_LockBox3.dcr'}
-
-
-uses Classes, uTPLb_Hash, uTPLb_CryptographicLibrary, uTPLb_Codec,
-     uTPLb_Signatory, uTPLB_OpenSSL;
+uses
+  Classes, uTPLb_Hash, uTPLb_CryptographicLibrary, uTPLb_Codec, uTPLb_Signatory;
 
 procedure Register;
 begin
-RegisterComponents( 'LockBox', [THash, TCodec, TCryptographicLibrary,
-  TSignatory, TOpenSSL_Signatory, TOpenSSL_Codec])
+  RegisterComponents( 'LockBox', [THash, TCodec, TCryptographicLibrary, TSignatory])
 end;
 
 
