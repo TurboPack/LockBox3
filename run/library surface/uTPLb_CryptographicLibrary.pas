@@ -312,7 +312,6 @@ var
   isBlock: boolean;
   SizeParam: integer;
 begin
-Features := [];
 isBlock  := False;
 if assigned( SCipher) then
     result := SCipher.DisplayName

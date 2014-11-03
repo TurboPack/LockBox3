@@ -115,9 +115,7 @@ for Idx := 1 to Length( Value) do
   begin
   Ch := Upcase( Value[ Idx]);
   if Ch = ' ' then continue;
-  {$IFDEF UNICODE}
   if Ord( Ch) >= 256 then continue;
-  {$ENDIF}
   if (Ch >= '0') and (Ch <= '9') then
       Nibble := Ord( Ch) - Ord( '0')
     else

@@ -44,11 +44,7 @@ TGenerateAsymetricKeyPairProgress = procedure (
 
 
 ICodec = interface
-{$IFDEF UNICODE}
   ['{48B3116A-5681-4E79-9013-8EC89BAC5B35}']
-{$ELSE}
-  ['{721D22EB-66C7-45B7-B926-D7E5C964AED8}']
-{$ENDIF}
     procedure SetStreamCipher( const Value: IStreamCipher);
     procedure SetBlockCipher ( const Value: IBlockCipher);
     procedure SetChainMode   ( const Value: IBlockChainingModel);

@@ -64,19 +64,10 @@ TRandomStream = class( TStream)
 
 implementation
 
-
-
-
-
-
-uses {$IFDEF MSWINDOWS}Windows, {$ENDIF}Math, SysUtils, uTPLb_IntegerUtils;
+uses
+  {$IFDEF MSWINDOWS}Windows, {$ENDIF}Math, SysUtils, uTPLb_IntegerUtils;
 var
   Inst: TRandomStream = nil;
-
-
-
-
-
 
 {$IFDEF MSWINDOWS}
 function TimeStampClock: int64;
@@ -102,12 +93,7 @@ function CryptAcquireContext(
   var phProv: THandle;
   pszContainer, pszProvider: PChar;
   dwProvType, dwFlags: DWORD): bool;
-  stdcall; external advapi32
-         {$IFDEF UNICODE}
-         name 'CryptAcquireContextW';
-         {$ELSE}
-         name 'CryptAcquireContextA';
-         {$ENDIF}
+  stdcall; external advapi32  name 'CryptAcquireContextW';
 
 function CryptReleaseContext(
   hProv: THandle;
