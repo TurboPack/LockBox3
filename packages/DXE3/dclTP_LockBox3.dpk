@@ -1,0 +1,46 @@
+package dclTP_LockBox3;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'TurboPower LockBox 3 design-time package'}
+{$LIBSUFFIX '_dXE3'}
+{$DESIGNONLY}
+{$IMPLICITBUILD OFF}
+
+requires
+  rtl,
+  designide,
+  vclie,
+  vclimg,
+  TP_LockBox3;
+
+contains
+  uTPLb_ComponentRegistration in '..\..\design\uTPLb_ComponentRegistration.pas',
+  uTPLb_ComponentEditors in '..\..\design\uTPLb_ComponentEditors.pas',
+  uTPLb_ComponentAbout in '..\..\design\uTPLb_ComponentAbout.pas' {TPLb_fmComponentAbout},
+  uTPLb_InfoUtils in '..\..\design\uTPLb_InfoUtils.pas';
+
+end.

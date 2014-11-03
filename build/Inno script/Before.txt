@@ -1,0 +1,11 @@
+Important note comparing TurboPower LockBox 2 and LockBox 3
+===========================================================
+
+TurboPower LockBox 3 IS NOT TurboPower LockBox 2 and the API is different.
+TurboPower LockBox 2 was and is issued under MPL1.1. That has not changed.
+
+TurboPower LockBox 3, from 3.0.0 to 3.1.0 was issued under LGPL3. LGPL is different to GPL. Please don't confuse it. I have released LockBox 3.1.3 and onwards under a dual licensing scheme, much like SoftGems VirtualTrees. Users can choose to distribute it according to either the conditions of LGPL3 (*not* GPL, remember) or MPL1.1 .
+
+LockBox 3 has no code in common with LockBox 2 and is a different library. The TurboPower LockBox 2 license has been fully respected. You are free to continue to use LockBox 2 as you have always done. It's MPL licensing has not and will never be changed.
+
+LockBox 3 has the same core mission as LockBox 2. All of the main functions and features of Lockbox 2 are furnished in LockBox 3, but without copying a single line of code. The spirit of LockBox is its intended offering of features (AES, DES, 3DES, various chaining modes, MD5, SHA-1 and RSA). Because of this, it is right and proper that LockBox 3 is entitled "TurboPower LockBox 3". For various reasons relating to cryptographic integrity, if your project is in Delphi 2010 or later, I would recommend that you choose LB3 over LB2. However upgraders should be advised that the API is a lot different.

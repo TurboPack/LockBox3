@@ -1,0 +1,26 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = TP_LockBox3_d7.bpl dclTP_LockBox3.bpl LockBox_DUnit_Tests.exe
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+TP_LockBox3_d7.bpl: TP_LockBox3.dpk
+  $(DCC)
+
+dclTP_LockBox3.bpl: dclTP_LockBox3.dpk
+  $(DCC)
+
+LockBox_DUnit_Tests.exe: LockBox_DUnit_Tests.dpr
+  $(DCC)
+
+

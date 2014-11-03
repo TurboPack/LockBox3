@@ -1,0 +1,72 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{CD35A969-3EE9-444D-8433-F317BE3BC706}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="TP_LockBox3.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="dclTP_LockBox3.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="LockBox_DUnit_Tests.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="Lockbox3_Demo.dproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="TP_LockBox3">
+			<MSBuild Projects="TP_LockBox3.dproj"/>
+		</Target>
+		<Target Name="TP_LockBox3:Clean">
+			<MSBuild Projects="TP_LockBox3.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="TP_LockBox3:Make">
+			<MSBuild Projects="TP_LockBox3.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="dclTP_LockBox3">
+			<MSBuild Projects="dclTP_LockBox3.dproj"/>
+		</Target>
+		<Target Name="dclTP_LockBox3:Clean">
+			<MSBuild Projects="dclTP_LockBox3.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="dclTP_LockBox3:Make">
+			<MSBuild Projects="dclTP_LockBox3.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="LockBox_DUnit_Tests">
+			<MSBuild Projects="LockBox_DUnit_Tests.dproj"/>
+		</Target>
+		<Target Name="LockBox_DUnit_Tests:Clean">
+			<MSBuild Projects="LockBox_DUnit_Tests.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="LockBox_DUnit_Tests:Make">
+			<MSBuild Projects="LockBox_DUnit_Tests.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="Lockbox3_Demo">
+			<MSBuild Projects="Lockbox3_Demo.dproj"/>
+		</Target>
+		<Target Name="Lockbox3_Demo:Clean">
+			<MSBuild Projects="Lockbox3_Demo.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="Lockbox3_Demo:Make">
+			<MSBuild Projects="Lockbox3_Demo.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="TP_LockBox3;dclTP_LockBox3;LockBox_DUnit_Tests;Lockbox3_Demo"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="TP_LockBox3:Clean;dclTP_LockBox3:Clean;LockBox_DUnit_Tests:Clean;Lockbox3_Demo:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="TP_LockBox3:Make;dclTP_LockBox3:Make;LockBox_DUnit_Tests:Make;Lockbox3_Demo:Make"/>
+		</Target>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')" Project="$(BDS)\Bin\CodeGear.Group.Targets"/>
+	</Project>

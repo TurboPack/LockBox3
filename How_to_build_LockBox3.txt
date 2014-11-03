@@ -1,0 +1,78 @@
+How to Build TurboPower LockBox 3
+=================================
+
+To build TurboPower LockBox 3, follow these steps.
+
+1. Open up each of the projects and set the project options and directories
+    as you prefer for your development environment. (See notes about
+    Environment Variables below).
+
+2. Compile the main run-time package.
+
+3. Compile the main design-time package.
+
+4. Install the main design-time package.
+
+5. Use and enjoy!
+
+
+Package, Application and Group heads
+====================================
+Here is listed the package heads and thier purposes.
+
+\packages\d2010\TP_LockBox3_d2010.groupproj
+   The project group for Delphi 2010 without SmartInspect
+
+\packages\d2010\TP_LockBox3.dpk
+   The main run-time package for Delphi 2010 without SmartInspect
+
+\packages\d2010\dclTP_LockBox3.dpk
+   The main design-time package for Delphi 2010 without SmartInspect
+
+\packages\d2010\Lockbox3_Demo.dpr
+   The demonstration program for Delphi 2010 without SmartInspect
+
+\packages\d2010\LockBox_DUnit_Tests.dpr
+   The D-Unit test suite running under Delphi 2010 without SmartInpect support.
+
+\packages\d2010\MakeSampleKey.dpr
+   A demonstration program for Delphi 2010 without SmartInspect, to create
+   an RSA key.
+
+\packages\d2010\Precompute.dpr
+   Program which show how the AES look-up tables were precomputed.
+
+And similary for Delphi 2010 WITH SmartInspect support ...
+\packages\d2010 with SmartInspect\TP_LockBox3_d2010.groupproj
+\packages\d2010 with SmartInspect\TP_LockBox3.dpk
+\packages\d2010 with SmartInspect\dclTP_LockBox3.dpk
+\packages\d2010 with SmartInspect\LockBox_DUnit_Tests.dpr
+\packages\d2010 with SmartInspect\MakeSampleKey.dpr
+\packages\d2010 with SmartInspect\Precompute.dpr
+
+
+And similary for Delphi 2007 ...
+\packages\d2007\TP_LockBox3_d2007.groupproj
+\packages\d2007\TP_LockBox3.dpk
+\packages\d2007\dclTP_LockBox3.dpk
+\packages\d2007\Precompute.dpr
+
+
+Environment Variables
+======================
+In used the following environment variables in the project options.
+Free free to clear the directory settings in the Project Options and
+not use these:
+
+$(DCU)    ----  directory for compiled units (.dcu files).
+$(DCP)    ----  directory for comiled packages (.dcp files).
+$(BPL)    ----  directory for packages (.bpl files).
+$(EXE)    ----  directory for applications (.exe files).
+
+Conditional Defines
+===================
+I used the following custom conditional defines.
+{$SI}  ==== Means that SmartInspect is supported. Requires SmartInspect
+             to be installed.
+
+

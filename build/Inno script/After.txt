@@ -1,0 +1,14 @@
+Where there any issues with the install process?
+Where there any issues with the unistall process?
+
+Open Source software projects thrive on user feed-back.
+If you have an issue with TurboPower LockBox, please post your question,
+request for enhancement or anomaly report on the official
+TurboPower LockBox forums.
+
+These forums can be found at:
+ 
+  * http://lockbox.seanbdurkin.id.au/tiki-forums.php 
+
+
+You may need to create a forum account first, before posting.

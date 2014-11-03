@@ -1,0 +1,23 @@
+This component library is part of TurboPower LockBox 3. TurboPower LockBox 3 is free software being offered under a dual licensing scheme:
+  LGPL3 or 
+  MPL1.1.
+
+[OPTION ONE]
+============
+The contents of this library are subject to the Mozilla Public License  (MPL) Version 1.1 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.mozilla.org/MPL/
+
+[OPTION TWO]
+============
+Alternatively, you may redistribute it and/or modify it under the terms of the GNU Lesser General Public License (LGPL) as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+LGPL is not GPL. Please don't confuse the two.
+
+You will receive a copy of the Lesser GNU General Public License along with TurboPower LockBox 3, as part of the install process.  If not, see <http://www.gnu.org/licenses/>.
+
+[IMPORTANT NOTICE]
+==================
+TurboPower LockBox is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. In relation to LGPL, see the GNU Lesser General Public License for more details. In relation to 
+MPL, see the MPL License for the specific language governing rights and limitations under the License.
+
+The Initial Developer of the Original Code for TurboPower LockBox version 2 and earlier was TurboPower Software.
+

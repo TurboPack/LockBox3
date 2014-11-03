@@ -1,0 +1,42 @@
+package dclTP_LockBox3;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'TurboPower LockBox 3 design-time package'}
+{$LIBSUFFIX '_dXE'}
+{$DESIGNONLY}
+{$IMPLICITBUILD OFF}
+
+requires
+  rtl,
+  TP_LockBox3_DXE,
+  designide,
+  vclie,
+  vclimg;
+
+contains
+  uTPLb_ComponentRegistration in '..\..\design\uTPLb_ComponentRegistration.pas',
+  uTPLb_ComponentEditors in '..\..\design\uTPLb_ComponentEditors.pas',
+  uTPLb_ComponentAbout in '..\..\design\uTPLb_ComponentAbout.pas' {TPLb_fmComponentAbout},
+  uTPLb_InfoUtils in '..\..\design\uTPLb_InfoUtils.pas';
+end.

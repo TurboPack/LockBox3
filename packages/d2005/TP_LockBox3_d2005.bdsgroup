@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<PersonalityInfo>
+		<Option>
+			<Option Name="Personality">Default.Personality</Option>
+			<Option Name="ProjectType"></Option>
+			<Option Name="Version">1.0</Option>
+			<Option Name="GUID">{74663FDE-CB42-41E5-9BB1-B7EC75F56174}</Option>
+		</Option>
+	</PersonalityInfo>
+	<Default.Personality>  <Projects>
+      <Projects Name="TP_LockBox3_d2005.bpl">TP_LockBox3.bdsproj</Projects>
+      <Projects Name="dclTP_LockBox3_d2005.bpl">dclTP_LockBox3.bdsproj</Projects>
+      <Projects Name="LockBox_DUnit_Tests.exe">LockBox_DUnit_Tests.bdsproj</Projects>
+      <Projects Name="Targets">TP_LockBox3_d2005.bpl dclTP_LockBox3_d2005.bpl LockBox_DUnit_Tests.exe</Projects>
+    </Projects>
+    <Dependencies/>
+  </Default.Personality>
+</BorlandProject>

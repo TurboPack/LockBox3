@@ -1,0 +1,85 @@
+package TP_LockBox3;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'TurboPower LockBox 3 run-time package'}
+{$LIBSUFFIX '_dXE6'}
+{$RUNONLY}
+{$IMPLICITBUILD OFF}
+
+requires
+  rtl,
+  dbrtl;
+
+contains
+  uTPLb_BlockCipher in '..\..\run\cryptography\uTPLb_BlockCipher.pas',
+  uTPLb_StreamUtils in '..\..\run\utilities\uTPLb_StreamUtils.pas',
+  uTPLb_StreamCipher in '..\..\run\cryptography\uTPLb_StreamCipher.pas',
+  uTPLb_CryptographicLibrary in '..\..\run\library surface\uTPLb_CryptographicLibrary.pas',
+  uTPLb_BaseNonVisualComponent in '..\..\run\utilities\uTPLb_BaseNonVisualComponent.pas',
+  uTPLb_Codec in '..\..\run\library surface\uTPLb_Codec.pas',
+  uTPLb_ECB in '..\..\run\ciphers\uTPLb_ECB.pas',
+  uTPLb_CBC in '..\..\run\ciphers\uTPLb_CBC.pas',
+  uTPLb_PCBC in '..\..\run\ciphers\uTPLb_PCBC.pas',
+  uTPLb_CFB_Block in '..\..\run\ciphers\uTPLb_CFB_Block.pas',
+  uTPLb_CFB_8Bit in '..\..\run\ciphers\uTPLb_CFB_8Bit.pas',
+  uTPLb_OFB in '..\..\run\ciphers\uTPLb_OFB.pas',
+  uTPLb_CTR in '..\..\run\ciphers\uTPLb_CTR.pas',
+  uTPLb_HashDsc in '..\..\run\cryptography\uTPLb_HashDsc.pas',
+  uTPLb_SHA1 in '..\..\run\hashes\uTPLb_SHA1.pas',
+  uTPLb_BinaryUtils in '..\..\run\utilities\uTPLb_BinaryUtils.pas',
+  uTPLb_Hash in '..\..\run\library surface\uTPLb_Hash.pas',
+  uTPLb_MD5 in '..\..\run\hashes\uTPLb_MD5.pas',
+  uTPLb_Random in '..\..\run\utilities\uTPLb_Random.pas',
+  uTPLb_StreamToBlock in '..\..\run\cryptography\uTPLb_StreamToBlock.pas',
+  uTPLb_Base64 in '..\..\run\ciphers\uTPLb_Base64.pas',
+  uTPLb_CipherUtils in '..\..\run\utilities\uTPLb_CipherUtils.pas',
+  uTPLb_AES in '..\..\run\ciphers\uTPLb_AES.pas',
+  uTPLb_PointerArithmetic in '..\..\run\utilities\uTPLb_PointerArithmetic.pas',
+  uTPLb_HugeCardinal in '..\..\run\utilities\uTPLb_HugeCardinal.pas',
+  uTPLb_IntegerUtils in '..\..\run\utilities\uTPLb_IntegerUtils.pas',
+  uTPLb_HugeCardinalUtils in '..\..\run\utilities\uTPLb_HugeCardinalUtils.pas',
+  uTPLb_MemoryStreamPool in '..\..\run\utilities\uTPLb_MemoryStreamPool.pas',
+  uTPLb_RSA_Primitives in '..\..\run\RSA\uTPLb_RSA_Primitives.pas',
+  uTPLb_RSA_Engine in '..\..\run\RSA\uTPLb_RSA_Engine.pas',
+  uTPLb_Asymetric in '..\..\run\RSA\uTPLb_Asymetric.pas',
+  uTPLb_Signatory in '..\..\run\library surface\uTPLb_Signatory.pas',
+  uTPLb_CodecIntf in '..\..\run\library surface\uTPLb_CodecIntf.pas',
+  uTPLb_Constants in '..\..\run\library surface\uTPLb_Constants.pas',
+  uTPLb_I18n in '..\..\run\utilities\uTPLb_I18n.pas',
+  uTPLb_SimpleBlockCipher in '..\..\run\library surface\uTPLb_SimpleBlockCipher.pas',
+  uTPLb_DES in '..\..\run\ciphers\uTPLb_DES.pas',
+  uTPLb_3DES in '..\..\run\ciphers\uTPLb_3DES.pas',
+  uTPLb_BlowFish in '..\..\run\ciphers\uTPLb_BlowFish.pas',
+  uTPLb_Decorators in '..\..\run\utilities\uTPLb_Decorators.pas',
+  DCPtwofish_LB3Modified in '..\..\run\ciphers\DCPtwofish_LB3Modified.pas',
+  uTPLb_TwoFish in '..\..\run\ciphers\uTPLb_TwoFish.pas',
+  uTPLb_XXTEA in '..\..\run\ciphers\uTPLb_XXTEA.pas',
+  uTPLb_SHA2 in '..\..\run\hashes\uTPLb_SHA2.pas',
+  uTPLb_SVN_Keywords in '..\..\run\utilities\uTPLb_SVN_Keywords.pas',
+  uTPLb_StrUtils in '..\..\run\utilities\uTPLb_StrUtils.pas';
+
+end.
