@@ -36,7 +36,7 @@ procedure Register;
 
 implementation
 
-{$R 'LockBox3DD.dcr'}
+{$R 'LockBox3.dcr'}
 
 uses
   Classes, uTPLb_Hash, uTPLb_CryptographicLibrary, uTPLb_Codec, uTPLb_Signatory;

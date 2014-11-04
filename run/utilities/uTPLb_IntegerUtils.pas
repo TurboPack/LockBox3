@@ -112,7 +112,6 @@ uses SysUtils;
   {$define IntegerUtils_Pascal}
 {$ENDIF}
 
-ff
 {$IFDEF IntegerUtils_ASM32}
 function Add_uint32_WithCarry( x, y: uint32; var Carry: Boolean): uint32;
 // The following code was inspired by
