@@ -52,8 +52,8 @@ TRandomStream = class( TStream)
     destructor  Destroy; override;
     class function Instance: TRandomStream;
 
-    function  Read ( var Buffer; Count: Longint): Longint; override;
-    function  Write( const Buffer; Count: Longint): Longint; override;
+    function  Read ( var Buffer; Count: Integer): Integer; override;
+    function  Write( const Buffer; Count: Integer): Integer; override;
     function  Seek ( const Offset: Int64; Origin: TSeekOrigin): Int64; override;
 
     procedure Randomize;
@@ -188,7 +188,7 @@ end;
 
 
 
-function TRandomStream.Read( var Buffer; Count: Integer): Longint;
+function TRandomStream.Read( var Buffer; Count: Integer): Integer;
 var
   P: PByte;
   Amnt, AmntBits, C: integer;
@@ -248,7 +248,7 @@ begin
 end;
 
 
-function TRandomStream.Write( const Buffer; Count: Integer): Longint;
+function TRandomStream.Write( const Buffer; Count: Integer): Integer;
 begin
 result := Count
 end;
