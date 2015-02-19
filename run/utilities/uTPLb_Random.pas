@@ -161,7 +161,7 @@ end;
 
 
 procedure TRandomStream.Randomize;
-{$IFDEF SMWINDOWS}
+{$IFDEF MSWINDOWS}
 var
   hProv: THandle;
   dwProvType, dwFlags: DWORD;
@@ -169,7 +169,7 @@ var
   hasOpenHandle: boolean;
 {$ENDIF}
 begin
-{$IFDEF SMWINDOWS}
+{$IFDEF MSWINDOWS}
 Provider1  := Provider;
 dwProvType := PROV_RSA_FULL;
 dwFlags    := CRYPT_SILENT;
