@@ -67,7 +67,7 @@
         <DesignOnlyPackage>true</DesignOnlyPackage>
         <DCC_HppOutput>..\..\hpp</DCC_HppOutput>
         <ProjectType>CppPackage</ProjectType>
-        <ILINK_Description>TurboPower LockBox 3 CBuilder runtime package</ILINK_Description>
+        <ILINK_Description>TurboPack LockBox 3 CBuilder runtime package</ILINK_Description>
         <DCC_OutputNeverBuildDcps>true</DCC_OutputNeverBuildDcps>
         <IncludePath>..\..\design\;$(IncludePath)</IncludePath>
         <Multithreaded>true</Multithreaded>

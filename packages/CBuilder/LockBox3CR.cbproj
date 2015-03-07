@@ -86,7 +86,7 @@
         <ProjectType>CppPackage</ProjectType>
         <RuntimeOnlyPackage>true</RuntimeOnlyPackage>
         <ILINK_GenerateImportLibrary>true</ILINK_GenerateImportLibrary>
-        <ILINK_Description>TurboPower LockBox 3 CBuilder runtime package</ILINK_Description>
+        <ILINK_Description>TurboPack LockBox 3 CBuilder runtime package</ILINK_Description>
         <VerInfo_Locale>1031</VerInfo_Locale>
         <SanitizedProjectName>LockBox3CR</SanitizedProjectName>
         <IncludePath>..\..\run\utilities\;..\..\run\RSA\;..\..\run\library surface\;..\..\run\hashes\;..\..\run\cryptography\;..\..\run\ciphers\;$(IncludePath)</IncludePath>

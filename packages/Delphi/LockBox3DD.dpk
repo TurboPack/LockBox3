@@ -25,7 +25,7 @@ package LockBox3DD;
 {$IMAGEBASE $400000}
 {$DEFINE RELEASE}
 {$ENDIF IMPLICITBUILDING}
-{$DESCRIPTION 'TurboPower LockBox 3 designtime package'}
+{$DESCRIPTION 'TurboPack LockBox 3 designtime package'}
 {$DESIGNONLY}
 {$IMPLICITBUILD OFF}
 

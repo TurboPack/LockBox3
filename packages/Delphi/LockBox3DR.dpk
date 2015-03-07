@@ -25,7 +25,7 @@ package LockBox3DR;
 {$IMAGEBASE $400000}
 {$DEFINE RELEASE}
 {$ENDIF IMPLICITBUILDING}
-{$DESCRIPTION 'TurboPower LockBox 3 Delphi runtime package'}
+{$DESCRIPTION 'TurboPack LockBox 3 Delphi runtime package'}
 {$RUNONLY}
 {$IMPLICITBUILD OFF}
 
