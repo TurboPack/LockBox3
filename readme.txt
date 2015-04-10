@@ -19,7 +19,7 @@ of chaining modes, RSA digital signature and verific...
 
 This is a source-only release of TurboPack LockBox3. It includes
 designtime and runtime packages for Delphi and C++Builder and supports 
-Win32 and Win64.
+Win32, Win64, OSX, iOS and Android.
 
 ==============================================
 
