@@ -49,7 +49,7 @@ steps:
 
   3. Add the source directory (e.g. d:\lockBox3\run and all the 
      subdirectories) to the IDE's library path. For C++Builder, 
-     add the hpp subdirectory (e.g., d:\lockBox3\source\hpp) to the 
+     add the hpp subdirectory (e.g., d:\lockBox3\source\hpp\Win32\Release) to the 
      IDE's system include path.
 
   4. Open & install the designtime package specific to the IDE being
