@@ -1,4 +1,4 @@
-package LockBox3DD;
+package LockBox3VCLDD;
 
 {$R *.res}
 {$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
@@ -25,7 +25,7 @@ package LockBox3DD;
 {$IMAGEBASE $400000}
 {$DEFINE RELEASE}
 {$ENDIF IMPLICITBUILDING}
-{$DESCRIPTION 'TurboPack LockBox 3 designtime package'}
+{$DESCRIPTION 'TurboPack LockBox 3 VCL designtime package'}
 {$DESIGNONLY}
 {$IMPLICITBUILD OFF}
 

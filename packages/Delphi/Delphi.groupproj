@@ -6,7 +6,7 @@
         <Projects Include="LockBox3DR.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="LockBox3DD.dproj">
+        <Projects Include="LockBox3VCLDD.dproj">
             <Dependencies/>
         </Projects>
     </ItemGroup>
@@ -26,23 +26,23 @@
     <Target Name="LockBox3DR:Make">
         <MSBuild Projects="LockBox3DR.dproj" Targets="Make"/>
     </Target>
-    <Target Name="LockBox3DD">
-        <MSBuild Projects="LockBox3DD.dproj"/>
+    <Target Name="LockBox3VCLDD">
+        <MSBuild Projects="LockBox3VCLDD.dproj"/>
     </Target>
-    <Target Name="LockBox3DD:Clean">
-        <MSBuild Projects="LockBox3DD.dproj" Targets="Clean"/>
+    <Target Name="LockBox3VCLDD:Clean">
+        <MSBuild Projects="LockBox3VCLDD.dproj" Targets="Clean"/>
     </Target>
-    <Target Name="LockBox3DD:Make">
-        <MSBuild Projects="LockBox3DD.dproj" Targets="Make"/>
+    <Target Name="LockBox3VCLDD:Make">
+        <MSBuild Projects="LockBox3VCLDD.dproj" Targets="Make"/>
     </Target>
     <Target Name="Build">
-        <CallTarget Targets="LockBox3DR;LockBox3DD"/>
+        <CallTarget Targets="LockBox3DR;LockBox3VCLDD"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="LockBox3DR:Clean;LockBox3DD:Clean"/>
+        <CallTarget Targets="LockBox3DR:Clean;LockBox3VCLDD:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="LockBox3DR:Make;LockBox3DD:Make"/>
+        <CallTarget Targets="LockBox3DR:Make;LockBox3VCLDD:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
