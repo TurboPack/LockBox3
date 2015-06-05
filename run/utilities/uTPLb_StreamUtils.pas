@@ -51,8 +51,8 @@ TDesalinationWriteStream = class( TStream)
     procedure SetSize( const NewSize: Int64); override;
 
   public
-    function  Read( var Buffer; Count: Integer): Integer; override;
-    function  Write( const Buffer; Count: Integer): Integer; override;
+    function  Read( var Buffer; Count: Longint): Longint; override;
+    function  Write( const Buffer; Count: Longint): Longint; override;
     function  Seek( const Offset: Int64; Origin: TSeekOrigin): Int64; override;
 
     property FreshwaterStream: TStream   read FFreshwaterStream write FFreshwaterStream;
@@ -394,7 +394,7 @@ begin
 result := 0
 end;
 
-function TDesalinationWriteStream.Read( var Buffer; Count: Integer): Integer;
+function TDesalinationWriteStream.Read( var Buffer; Count: Longint): Longint;
 begin
 result := 0
 end;
@@ -417,7 +417,7 @@ begin
 end;
 
 
-function TDesalinationWriteStream.Write( const Buffer; Count: Integer): Integer;
+function TDesalinationWriteStream.Write( const Buffer; Count: Longint): Longint;
 var
   P: PByte;
   C: integer;

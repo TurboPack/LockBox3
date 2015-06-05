@@ -47,7 +47,7 @@ TPooledMemoryStream = class( TMemoryStream)
     FPool: IMemoryStreamPool;
     FCoVector: integer;
 
-    function Realloc( var NewCapacity: Integer): Pointer; override;
+    function Realloc( var NewCapacity: Longint): Pointer; override;
 
   public
     constructor Create( const Pool1: IMemoryStreamPool);
@@ -183,7 +183,7 @@ end;
 
 
 
-function TPooledMemoryStream.Realloc( var NewCapacity: Integer): Pointer;
+function TPooledMemoryStream.Realloc( var NewCapacity: Longint): Pointer;
 // Fragments of this method were copied from the Classes unit and modified.
 var
   Ex: IMemoryStreamPoolEx;

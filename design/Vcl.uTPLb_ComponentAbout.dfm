@@ -38,20 +38,15 @@ object TPLb_fmComponentAbout: TTPLb_fmComponentAbout
       Margins.Top = 4
       Margins.Right = 4
       Margins.Bottom = 4
-      ActivePage = tsMain
+      ActivePage = tsAlgorithms
       Align = alClient
       TabOrder = 0
-      ExplicitHeight = 510
       object tsMain: TTabSheet
         Margins.Left = 4
         Margins.Top = 4
         Margins.Right = 4
         Margins.Bottom = 4
         Caption = 'Main'
-        ExplicitLeft = 0
-        ExplicitTop = 0
-        ExplicitWidth = 0
-        ExplicitHeight = 0
         DesignSize = (
           791
           479)
@@ -2253,10 +2248,6 @@ object TPLb_fmComponentAbout: TTPLb_fmComponentAbout
         Margins.Bottom = 4
         Caption = 'Welcome'
         ImageIndex = 1
-        ExplicitLeft = 0
-        ExplicitTop = 0
-        ExplicitWidth = 0
-        ExplicitHeight = 0
         object browserIntro: TWebBrowser
           Left = 132
           Top = 0
@@ -2268,10 +2259,9 @@ object TPLb_fmComponentAbout: TTPLb_fmComponentAbout
           Margins.Bottom = 4
           Align = alRight
           TabOrder = 0
-          ExplicitLeft = 130
-          ExplicitHeight = 470
+          ExplicitHeight = 475
           ControlData = {
-            4C00000078360000462700000000000000000000000000000000000000000000
+            4C0000007D3600009B2700000000000000000000000000000000000000000000
             000000004C000000000000000000000001000000E0D057007335CF11AE690800
             2B2E126208000000000000004C0000000114020000000000C000000000000046
             8000000000000000000000000000000000000000000000000000000000000000
@@ -2324,10 +2314,6 @@ object TPLb_fmComponentAbout: TTPLb_fmComponentAbout
         Margins.Bottom = 4
         Caption = 'Project'
         ImageIndex = 2
-        ExplicitLeft = 0
-        ExplicitTop = 0
-        ExplicitWidth = 0
-        ExplicitHeight = 0
         object Label4: TLabel
           Left = 0
           Top = 4
@@ -2466,10 +2452,6 @@ object TPLb_fmComponentAbout: TTPLb_fmComponentAbout
         Margins.Bottom = 4
         Caption = 'Statement of copying permission'
         ImageIndex = 3
-        ExplicitLeft = 0
-        ExplicitTop = 0
-        ExplicitWidth = 0
-        ExplicitHeight = 0
         DesignSize = (
           791
           479)
@@ -2607,10 +2589,6 @@ object TPLb_fmComponentAbout: TTPLb_fmComponentAbout
         Margins.Bottom = 4
         Caption = 'Authors'
         ImageIndex = 4
-        ExplicitLeft = 0
-        ExplicitTop = 0
-        ExplicitWidth = 0
-        ExplicitHeight = 0
         DesignSize = (
           791
           479)
@@ -3018,10 +2996,6 @@ object TPLb_fmComponentAbout: TTPLb_fmComponentAbout
         Margins.Bottom = 4
         Caption = 'Support'
         ImageIndex = 5
-        ExplicitLeft = 0
-        ExplicitTop = 0
-        ExplicitWidth = 0
-        ExplicitHeight = 0
         object memoSupport: TMemo
           Left = 4
           Top = 30
@@ -3082,10 +3056,6 @@ object TPLb_fmComponentAbout: TTPLb_fmComponentAbout
         Margins.Bottom = 4
         Caption = 'Algorithms'
         ImageIndex = 6
-        ExplicitLeft = 0
-        ExplicitTop = 0
-        ExplicitWidth = 0
-        ExplicitHeight = 0
         object Panel1: TPanel
           Left = 4
           Top = 20
@@ -3218,7 +3188,7 @@ object TPLb_fmComponentAbout: TTPLb_fmComponentAbout
             Margins.Top = 4
             Margins.Right = 4
             Margins.Bottom = 4
-            ItemHeight = 13
+            ItemHeight = 17
             TabOrder = 0
           end
         end
@@ -3343,7 +3313,7 @@ object TPLb_fmComponentAbout: TTPLb_fmComponentAbout
             Margins.Top = 4
             Margins.Right = 4
             Margins.Bottom = 4
-            ItemHeight = 13
+            ItemHeight = 17
             TabOrder = 0
           end
           object memoExtraCipherDescription: TMemo
@@ -3455,7 +3425,7 @@ object TPLb_fmComponentAbout: TTPLb_fmComponentAbout
             Margins.Top = 4
             Margins.Right = 4
             Margins.Bottom = 4
-            ItemHeight = 13
+            ItemHeight = 17
             TabOrder = 0
           end
         end

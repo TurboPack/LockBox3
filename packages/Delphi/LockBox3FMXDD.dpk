@@ -1,0 +1,48 @@
+package LockBox3FMXDD;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'TurboPack LockBox 3 FMX designtime package'}
+{$DESIGNONLY}
+{$IMPLICITBUILD OFF}
+
+requires
+  rtl,
+  designide,
+  LockBox3DR,
+  fmx,
+  bindengine,
+  bindcomp,
+  dsnap,
+  bindcompfmx;
+
+contains
+  FMX.uTPLb_InfoUtils in '..\..\design\FMX.uTPLb_InfoUtils.pas',
+  FMX.uTPLb_ComponentEditors in '..\..\design\FMX.uTPLb_ComponentEditors.pas',
+  FMX.uTPLb_ComponentAbout in '..\..\design\FMX.uTPLb_ComponentAbout.pas' {TPLb_fmComponentAbout},
+  FMX.uTPLb_ComponentRegistration in '..\..\design\FMX.uTPLb_ComponentRegistration.pas';
+
+end.

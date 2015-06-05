@@ -161,8 +161,8 @@ TAbbrieviatingStream = class( TStream)
 
   public
     constructor Create( OutputStream1: TStream; ClipAmount1: integer);
-    function Read ( var Buffer; Count: Integer): Integer; override;
-    function Write( const Buffer; Count: Integer): Integer; override;
+    function Read ( var Buffer; Count: Longint): Longint; override;
+    function Write( const Buffer; Count: Longint): Longint; override;
     function Seek ( const Offset: Int64; Origin: TSeekOrigin): int64; override;
 
     procedure EndStreaming;
@@ -1003,7 +1003,7 @@ begin
 result := 0  // Not used
 end;
 
-function TAbbrieviatingStream.Read( var Buffer; Count: Integer): Integer;
+function TAbbrieviatingStream.Read( var Buffer; Count: Longint): Longint;
 begin
 result := 0  // Not used
 end;
@@ -1020,7 +1020,7 @@ end;
 
 
 
-function TAbbrieviatingStream.Write( const Buffer; Count: Integer): Integer;
+function TAbbrieviatingStream.Write( const Buffer; Count: Longint): Longint;
 var
   Amnt, Succeeded: integer;
   P: PByte;

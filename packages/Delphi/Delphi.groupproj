@@ -9,6 +9,9 @@
         <Projects Include="LockBox3VCLDD.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="LockBox3FMXDD.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -35,14 +38,23 @@
     <Target Name="LockBox3VCLDD:Make">
         <MSBuild Projects="LockBox3VCLDD.dproj" Targets="Make"/>
     </Target>
+    <Target Name="LockBox3FMXDD">
+        <MSBuild Projects="LockBox3FMXDD.dproj"/>
+    </Target>
+    <Target Name="LockBox3FMXDD:Clean">
+        <MSBuild Projects="LockBox3FMXDD.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="LockBox3FMXDD:Make">
+        <MSBuild Projects="LockBox3FMXDD.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="LockBox3DR;LockBox3VCLDD"/>
+        <CallTarget Targets="LockBox3DR;LockBox3VCLDD;LockBox3FMXDD"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="LockBox3DR:Clean;LockBox3VCLDD:Clean"/>
+        <CallTarget Targets="LockBox3DR:Clean;LockBox3VCLDD:Clean;LockBox3FMXDD:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="LockBox3DR:Make;LockBox3VCLDD:Make"/>
+        <CallTarget Targets="LockBox3DR:Make;LockBox3VCLDD:Make;LockBox3FMXDD:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
