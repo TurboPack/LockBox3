@@ -28,7 +28,7 @@ and earlier was TurboPower Software.
 
  * ***** END LICENSE BLOCK ***** *}
 
-unit uTPLb_ComponentAbout;
+unit Vcl.uTPLb_ComponentAbout;
 
 interface
 
@@ -120,19 +120,8 @@ var
 
 implementation
 
-
-
-
-
-
-
-
-
-
-
-
-
-uses uTPLb_InfoUtils, uTPLb_Hash, uTPLb_HashDsc, ShellAPI, uTPLb_StreamCipher,
+uses
+  Vcl.uTPLb_InfoUtils, uTPLb_Hash, uTPLb_HashDsc, ShellAPI, uTPLb_StreamCipher,
   uTPLb_Signatory, uTPLb_Codec, TypInfo, uTPLb_BlockCipher, Registry,
   uTPLb_I18n, uTPLb_Decorators
 {$IF CompilerVersion >= 21}

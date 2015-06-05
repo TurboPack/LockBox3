@@ -28,7 +28,7 @@ and earlier was TurboPower Software.
 
  * ***** END LICENSE BLOCK ***** *}
 
-unit uTPLb_ComponentRegistration;
+unit Vcl.uTPLb_ComponentRegistration;
 
 interface
 

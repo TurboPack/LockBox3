@@ -2,47 +2,68 @@ object TPLb_fmComponentAbout: TTPLb_fmComponentAbout
   Left = 0
   Top = 0
   Caption = 'Component About'
-  ClientHeight = 442
-  ClientWidth = 640
+  ClientHeight = 553
+  ClientWidth = 800
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -14
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
   OnCreate = FormCreate
   DesignSize = (
-    640
-    442)
-  PixelsPerInch = 96
-  TextHeight = 13
+    800
+    553)
+  PixelsPerInch = 120
+  TextHeight = 17
   object pnlAbout: TPanel
     Left = 0
     Top = 0
-    Width = 641
-    Height = 410
+    Width = 801
+    Height = 513
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Anchors = [akLeft, akTop, akRight, akBottom]
     Caption = 'About Box to be developed!'
     TabOrder = 0
     object pgAboutContent: TPageControl
       Left = 1
       Top = 1
-      Width = 639
-      Height = 408
+      Width = 799
+      Height = 511
+      Margins.Left = 4
+      Margins.Top = 4
+      Margins.Right = 4
+      Margins.Bottom = 4
       ActivePage = tsMain
       Align = alClient
       TabOrder = 0
+      ExplicitHeight = 510
       object tsMain: TTabSheet
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Caption = 'Main'
+        ExplicitLeft = 0
+        ExplicitTop = 0
+        ExplicitWidth = 0
+        ExplicitHeight = 0
         DesignSize = (
-          631
-          380)
+          791
+          479)
         object Image1: TImage
           Left = 0
           Top = 0
-          Width = 225
-          Height = 329
+          Width = 281
+          Height = 411
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Picture.Data = {
             0A544A504547496D6167659E020100FFD8FFE000104A46494600010101004800
             480000FFE1004045786966000049492A0008000000010069870400010000001A
@@ -2116,16 +2137,20 @@ object TPLb_fmComponentAbout: TTPLb_fmComponentAbout
             B5BF6F91D5F50E66B9A5D0FFD9}
         end
         object lblTitle: TLabel
-          Left = 231
-          Top = 3
-          Width = 402
-          Height = 62
+          Left = 289
+          Top = 4
+          Width = 502
+          Height = 77
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Anchors = [akLeft, akTop, akRight]
           AutoSize = False
           Caption = 'TurboPower LockBox 3'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clNavy
-          Font.Height = -33
+          Font.Height = -41
           Font.Name = 'Lucida Sans'
           Font.Style = [fsBold, fsUnderline]
           ParentFont = False
@@ -2133,10 +2158,14 @@ object TPLb_fmComponentAbout: TTPLb_fmComponentAbout
           WordWrap = True
         end
         object Label1: TLabel
-          Left = 231
-          Top = 65
-          Width = 400
-          Height = 137
+          Left = 289
+          Top = 81
+          Width = 500
+          Height = 172
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           AutoSize = False
           Caption = 
             'TurboPower LockBox 3 (TPLB3) is a Delphi Library, whose purpose ' +
@@ -2151,24 +2180,36 @@ object TPLb_fmComponentAbout: TTPLb_fmComponentAbout
           WordWrap = True
         end
         object lblRunTimeVersion: TLabel
-          Left = 231
-          Top = 208
-          Width = 78
-          Height = 13
+          Left = 289
+          Top = 260
+          Width = 100
+          Height = 17
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Caption = 'run-time version'
         end
         object lblDesignTimeVersion: TLabel
-          Left = 231
-          Top = 224
-          Width = 93
-          Height = 13
+          Left = 289
+          Top = 280
+          Width = 118
+          Height = 17
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Caption = 'design-time version'
         end
         object lblLogoAttribution: TLabel
           Left = 0
-          Top = 330
-          Width = 614
-          Height = 47
+          Top = 413
+          Width = 768
+          Height = 58
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           AutoSize = False
           Caption = 
             'The above photo was sourced from http://www.flickr.com/photos/ml' +
@@ -2178,17 +2219,21 @@ object TPLb_fmComponentAbout: TTPLb_fmComponentAbout
             'licenses/by-nc-sa/2.0/deed.en).'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -14
           Font.Name = 'Tahoma'
           Font.Style = [fsItalic]
           ParentFont = False
           WordWrap = True
         end
         object Memo1: TMemo
-          Left = 231
-          Top = 243
-          Width = 194
-          Height = 86
+          Left = 289
+          Top = 304
+          Width = 242
+          Height = 107
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Color = clInfoBk
           Lines.Strings = (
             'TPLB3 is free and open source '
@@ -2202,15 +2247,29 @@ object TPLb_fmComponentAbout: TTPLb_fmComponentAbout
         end
       end
       object tsWelcome: TTabSheet
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Caption = 'Welcome'
         ImageIndex = 1
+        ExplicitLeft = 0
+        ExplicitTop = 0
+        ExplicitWidth = 0
+        ExplicitHeight = 0
         object browserIntro: TWebBrowser
-          Left = 104
+          Left = 132
           Top = 0
-          Width = 527
-          Height = 380
+          Width = 659
+          Height = 479
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Align = alRight
           TabOrder = 0
+          ExplicitLeft = 130
+          ExplicitHeight = 470
           ControlData = {
             4C00000078360000462700000000000000000000000000000000000000000000
             000000004C000000000000000000000001000000E0D057007335CF11AE690800
@@ -2221,12 +2280,16 @@ object TPLb_fmComponentAbout: TTPLb_fmComponentAbout
         object memoWelcomeInstructions: TMemo
           Left = 0
           Top = 0
-          Width = 104
-          Height = 377
+          Width = 130
+          Height = 471
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           BorderStyle = bsNone
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -14
           Font.Name = 'Tahoma'
           Font.Style = []
           Lines.Strings = (
@@ -2247,51 +2310,73 @@ object TPLb_fmComponentAbout: TTPLb_fmComponentAbout
             'your firewall '
             'configuration for '
             'access to '
-            'www.youtube.com .')
+            'www.youtube.com '
+            '.')
           ParentFont = False
           ReadOnly = True
           TabOrder = 1
         end
       end
       object tsProject: TTabSheet
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Caption = 'Project'
         ImageIndex = 2
+        ExplicitLeft = 0
+        ExplicitTop = 0
+        ExplicitWidth = 0
+        ExplicitHeight = 0
         object Label4: TLabel
           Left = 0
-          Top = 3
-          Width = 323
-          Height = 30
+          Top = 4
+          Width = 664
+          Height = 38
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Caption = 'This product has been brought to you by ...'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlue
-          Font.Height = -27
+          Font.Height = -34
           Font.Name = 'Script'
           Font.Style = [fsBold]
           ParentFont = False
         end
         object lblWebsite: TLabel
-          Left = 3
-          Top = 312
-          Width = 250
-          Height = 13
+          Left = 4
+          Top = 390
+          Width = 310
+          Height = 17
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Caption = 'http://sourceforge.net/projects/tplockbox/'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -14
           Font.Name = 'Tahoma'
           Font.Style = [fsBold, fsUnderline]
           ParentFont = False
         end
         object Memo2: TMemo
-          Left = 3
-          Top = 32
-          Width = 614
-          Height = 217
+          Left = 4
+          Top = 40
+          Width = 767
+          Height = 271
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Color = clInfoBk
           Lines.Strings = (
             
               'The TPLB3 product is produced under the organisational umbrella ' +
-              'of the TurboPower LockBox project. This project has no '
+              'of the TurboPower LockBox project. This project has '
+            'no '
             
               'legal incorporation. It is an informal organisation with no defi' +
               'ned membership. The TPLB3 product is owned by the '
@@ -2302,13 +2387,15 @@ object TPLb_fmComponentAbout: TTPLb_fmComponentAbout
             ''
             
               'LockBox was originally produced and released by TurboPower Softw' +
-              'are Company as a commercial product. Versions 1 and'
+              'are Company as a commercial product. Versions 1 '
+            'and'
             
               '2 of the product were commericial and were released in the perio' +
               'd from 1997 to 2002. The copyright holder was'
             
               'TurboPower Software Company. Version 2 source code was donated t' +
-              'o the the TurboPower LockBox SourceForge project'
+              'o the the TurboPower LockBox SourceForge '
+            'project'
             'under an MPL 1.1 license, which is free and open-source license.'
             ''
             
@@ -2326,25 +2413,33 @@ object TPLb_fmComponentAbout: TTPLb_fmComponentAbout
           TabOrder = 0
         end
         object lblTpsfaIntro: TStaticText
-          Left = 3
-          Top = 255
-          Width = 356
-          Height = 17
+          Left = 4
+          Top = 319
+          Width = 453
+          Height = 21
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Caption = 
             'The TurboPower Source Forge Administrator (tpsfa) can be contact' +
             'ed at:'
           TabOrder = 1
         end
         object lblTpsfaContact: TStaticText
-          Left = 3
-          Top = 272
-          Width = 335
-          Height = 17
+          Left = 4
+          Top = 340
+          Width = 415
+          Height = 21
           Cursor = crHandPoint
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Caption = 'http://sourceforge.net/sendmessage.php?touser=625421'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clBlue
-          Font.Height = -11
+          Font.Height = -14
           Font.Name = 'Tahoma'
           Font.Style = [fsBold, fsUnderline]
           ParentFont = False
@@ -2352,34 +2447,54 @@ object TPLb_fmComponentAbout: TTPLb_fmComponentAbout
           OnClick = lblTpsfaContactClick
         end
         object lblWebLabel: TStaticText
-          Left = 3
-          Top = 295
-          Width = 177
-          Height = 17
+          Left = 4
+          Top = 369
+          Width = 226
+          Height = 21
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Caption = 'TPLB3 on SourceForge is located at:'
           TabOrder = 3
         end
       end
       object tsCopyLeft: TTabSheet
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Caption = 'Statement of copying permission'
         ImageIndex = 3
+        ExplicitLeft = 0
+        ExplicitTop = 0
+        ExplicitWidth = 0
+        ExplicitHeight = 0
         DesignSize = (
-          631
-          380)
+          791
+          479)
         object Label7: TLabel
-          Left = 3
-          Top = 3
-          Width = 370
-          Height = 13
+          Left = 4
+          Top = 4
+          Width = 474
+          Height = 17
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Caption = 
             'Copyright 2009..2011 Sean B. Durkin (except for portions marked ' +
             'otherwise)'
         end
         object Label8: TLabel
-          Left = 3
-          Top = 18
-          Width = 625
-          Height = 26
+          Left = 4
+          Top = 23
+          Width = 683
+          Height = 34
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Caption = 
             'The below copyright applies to all the source code and compiled ' +
             'binaries of the TPBL3 project, except the DCPtwofish_LB3Modified' +
@@ -2388,27 +2503,35 @@ object TPLb_fmComponentAbout: TTPLb_fmComponentAbout
           WordWrap = True
         end
         object Label9: TLabel
-          Left = 8
-          Top = 48
-          Width = 190
-          Height = 13
+          Left = 10
+          Top = 60
+          Width = 232
+          Height = 17
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Caption = 'Statement of copying permission:'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -14
           Font.Name = 'Tahoma'
           Font.Style = [fsBold]
           ParentFont = False
         end
         object Memo3: TMemo
-          Left = 2
-          Top = 67
-          Width = 625
-          Height = 246
+          Left = 3
+          Top = 84
+          Width = 781
+          Height = 307
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Anchors = [akLeft, akTop, akRight]
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -13
+          Font.Height = -16
           Font.Name = 'Courier New'
           Font.Style = []
           Lines.Strings = (
@@ -2478,56 +2601,88 @@ object TPLb_fmComponentAbout: TTPLb_fmComponentAbout
         end
       end
       object tsAuthors: TTabSheet
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Caption = 'Authors'
         ImageIndex = 4
+        ExplicitLeft = 0
+        ExplicitTop = 0
+        ExplicitWidth = 0
+        ExplicitHeight = 0
         DesignSize = (
-          631
-          380)
+          791
+          479)
         object Bevel1: TBevel
-          Left = 328
-          Top = 16
-          Width = 281
-          Height = 257
+          Left = 410
+          Top = 20
+          Width = 351
+          Height = 321
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
         end
         object imgAuthorPic: TImage
-          Left = 336
-          Top = 24
-          Width = 265
-          Height = 233
+          Left = 420
+          Top = 30
+          Width = 331
+          Height = 291
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Stretch = True
         end
         object lblAuthorEmail: TLabel
-          Left = 328
-          Top = 293
-          Width = 150
-          Height = 13
+          Left = 410
+          Top = 366
+          Width = 187
+          Height = 17
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Caption = 'email: sean@seanbdurkin.id.au'
         end
         object lblAuthorWeb: TLabel
-          Left = 328
-          Top = 312
-          Width = 173
-          Height = 13
+          Left = 410
+          Top = 390
+          Width = 216
+          Height = 17
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Caption = 'web: http:\\www.seanbdurkin.id.au'
         end
         object Label12: TLabel
-          Left = 175
-          Top = 135
-          Width = 135
-          Height = 13
+          Left = 219
+          Top = 169
+          Width = 167
+          Height = 17
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Caption = 'Select author to see details.'
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -11
+          Font.Height = -14
           Font.Name = 'Tahoma'
           Font.Style = [fsItalic]
           ParentFont = False
         end
         object imgSean: TImage
-          Left = 175
-          Top = 272
-          Width = 135
-          Height = 105
+          Left = 219
+          Top = 340
+          Width = 169
+          Height = 131
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Picture.Data = {
             0A544A504547496D616765A1220000FFD8FFE000104A46494600010100000100
             010000FFFE003B43524541544F523A2067642D6A7065672076312E3020287573
@@ -2810,10 +2965,14 @@ object TPLb_fmComponentAbout: TTPLb_fmComponentAbout
           Visible = False
         end
         object Memo4: TMemo
-          Left = 8
-          Top = 8
-          Width = 161
-          Height = 369
+          Left = 10
+          Top = 10
+          Width = 201
+          Height = 461
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Anchors = [akLeft, akTop, akBottom]
           Lines.Strings = (
             'To the right is a list of authors '
@@ -2823,7 +2982,8 @@ object TPLb_fmComponentAbout: TTPLb_fmComponentAbout
             'of LockBox 1 & 2, as there is '
             'no common'
             'copyrightable content '
-            'between them and LockBox 3.'
+            'between them and LockBox '
+            '3.'
             ''
             'The LockBox 3 project '
             'welcomes any contributions. If '
@@ -2835,11 +2995,15 @@ object TPLb_fmComponentAbout: TTPLb_fmComponentAbout
           TabOrder = 0
         end
         object lbxAuthors: TListBox
-          Left = 175
-          Top = 8
-          Width = 138
-          Height = 121
-          ItemHeight = 13
+          Left = 219
+          Top = 10
+          Width = 172
+          Height = 151
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
+          ItemHeight = 17
           Items.Strings = (
             'Sean B. Durkin'
             'David Barton')
@@ -2848,17 +3012,29 @@ object TPLb_fmComponentAbout: TTPLb_fmComponentAbout
         end
       end
       object tsSupport: TTabSheet
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Caption = 'Support'
         ImageIndex = 5
+        ExplicitLeft = 0
+        ExplicitTop = 0
+        ExplicitWidth = 0
+        ExplicitHeight = 0
         object memoSupport: TMemo
-          Left = 3
-          Top = 24
-          Width = 286
-          Height = 161
+          Left = 4
+          Top = 30
+          Width = 357
+          Height = 201
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Color = clInfoBk
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -16
+          Font.Height = -20
           Font.Name = 'Tahoma'
           Font.Style = []
           Lines.Strings = (
@@ -2871,14 +3047,18 @@ object TPLb_fmComponentAbout: TTPLb_fmComponentAbout
           TabOrder = 0
         end
         object memoHelp: TMemo
-          Left = 295
-          Top = 24
-          Width = 333
-          Height = 161
+          Left = 369
+          Top = 30
+          Width = 416
+          Height = 201
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Color = clInfoBk
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWindowText
-          Font.Height = -16
+          Font.Height = -20
           Font.Name = 'Tahoma'
           Font.Style = []
           Lines.Strings = (
@@ -2896,205 +3076,285 @@ object TPLb_fmComponentAbout: TTPLb_fmComponentAbout
         end
       end
       object tsAlgorithms: TTabSheet
+        Margins.Left = 4
+        Margins.Top = 4
+        Margins.Right = 4
+        Margins.Bottom = 4
         Caption = 'Algorithms'
         ImageIndex = 6
+        ExplicitLeft = 0
+        ExplicitTop = 0
+        ExplicitWidth = 0
+        ExplicitHeight = 0
         object Panel1: TPanel
-          Left = 3
-          Top = 16
-          Width = 270
-          Height = 209
+          Left = 4
+          Top = 20
+          Width = 337
+          Height = 261
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Color = clYellow
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clNone
-          Font.Height = -11
+          Font.Height = -14
           Font.Name = 'Tahoma'
           Font.Style = []
           ParentBackground = False
           ParentFont = False
           TabOrder = 0
           object Label13: TLabel
-            Left = 16
+            Left = 20
             Top = 0
-            Width = 116
-            Height = 13
+            Width = 142
+            Height = 17
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
             Caption = 'About selected Hash'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlue
-            Font.Height = -11
+            Font.Height = -14
             Font.Name = 'Tahoma'
             Font.Style = [fsBold]
             ParentFont = False
           end
           object lblHashDisplayName: TLabel
-            Left = 24
-            Top = 24
-            Width = 61
-            Height = 13
+            Left = 30
+            Top = 30
+            Width = 78
+            Height = 17
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
             Caption = 'DisplayName'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -14
             Font.Name = 'Tahoma'
             Font.Style = []
             ParentFont = False
           end
           object Label15: TLabel
-            Left = 14
-            Top = 43
-            Width = 47
-            Height = 13
+            Left = 18
+            Top = 54
+            Width = 57
+            Height = 17
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
             Caption = 'Features:'
           end
           object lblHashDefinitionURL: TLabel
-            Left = 16
-            Top = 112
-            Width = 59
-            Height = 13
+            Left = 20
+            Top = 140
+            Width = 73
+            Height = 17
             Cursor = crHandPoint
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
             Caption = 'definition url'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clNone
-            Font.Height = -11
+            Font.Height = -14
             Font.Name = 'Tahoma'
             Font.Style = [fsUnderline]
             ParentFont = False
             OnClick = OnURL_Click
           end
           object lblHashWikipediaURL: TLabel
-            Left = 16
-            Top = 136
-            Width = 58
-            Height = 13
+            Left = 20
+            Top = 170
+            Width = 72
+            Height = 17
             Cursor = crHandPoint
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
             Caption = 'wikipedia url'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clNone
-            Font.Height = -11
+            Font.Height = -14
             Font.Name = 'Tahoma'
             Font.Style = [fsUnderline]
             ParentFont = False
             OnClick = OnURL_Click
           end
           object lblHashBlockSize: TLabel
-            Left = 16
-            Top = 160
-            Width = 97
-            Height = 13
+            Left = 20
+            Top = 200
+            Width = 124
+            Height = 17
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
             Caption = 'Block size = 128 bits'
           end
           object lblHashDigestSize: TLabel
-            Left = 16
-            Top = 184
-            Width = 97
-            Height = 13
+            Left = 20
+            Top = 230
+            Width = 122
+            Height = 17
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
             Caption = 'Digest size = 64 bits'
           end
           object lbxHashFeatures: TListBox
-            Left = 67
-            Top = 40
-            Width = 182
-            Height = 65
+            Left = 84
+            Top = 50
+            Width = 227
+            Height = 81
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
             ItemHeight = 13
             TabOrder = 0
           end
         end
         object pnlCipherDescription: TPanel
-          Left = 299
-          Top = 16
-          Width = 270
-          Height = 209
+          Left = 374
+          Top = 20
+          Width = 337
+          Height = 261
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Color = clYellow
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clNone
-          Font.Height = -11
+          Font.Height = -14
           Font.Name = 'Tahoma'
           Font.Style = []
           ParentBackground = False
           ParentFont = False
           TabOrder = 1
           object Label20: TLabel
-            Left = 16
+            Left = 20
             Top = 0
-            Width = 124
-            Height = 13
+            Width = 152
+            Height = 17
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
             Caption = 'About selected Cipher'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlue
-            Font.Height = -11
+            Font.Height = -14
             Font.Name = 'Tahoma'
             Font.Style = [fsBold]
             ParentFont = False
           end
           object lblCipherDisplayName: TLabel
-            Left = 24
-            Top = 24
-            Width = 61
-            Height = 13
+            Left = 30
+            Top = 30
+            Width = 78
+            Height = 17
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
             Caption = 'DisplayName'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -14
             Font.Name = 'Tahoma'
             Font.Style = []
             ParentFont = False
           end
           object Label22: TLabel
-            Left = 14
-            Top = 43
-            Width = 47
-            Height = 13
+            Left = 18
+            Top = 54
+            Width = 57
+            Height = 17
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
             Caption = 'Features:'
           end
           object lblCipherDefinitionURL: TLabel
-            Left = 16
-            Top = 112
-            Width = 59
-            Height = 13
+            Left = 20
+            Top = 140
+            Width = 73
+            Height = 17
             Cursor = crHandPoint
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
             Caption = 'definition url'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clNone
-            Font.Height = -11
+            Font.Height = -14
             Font.Name = 'Tahoma'
             Font.Style = [fsUnderline]
             ParentFont = False
             OnClick = OnURL_Click
           end
           object lblCipherWikipediaURL: TLabel
-            Left = 16
-            Top = 141
-            Width = 58
-            Height = 13
+            Left = 20
+            Top = 176
+            Width = 72
+            Height = 17
             Cursor = crHandPoint
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
             Caption = 'wikipedia url'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clNone
-            Font.Height = -11
+            Font.Height = -14
             Font.Name = 'Tahoma'
             Font.Style = [fsUnderline]
             ParentFont = False
             OnClick = OnURL_Click
           end
           object lblCipherBlockSize: TLabel
-            Left = 16
-            Top = 160
-            Width = 97
-            Height = 13
+            Left = 20
+            Top = 200
+            Width = 124
+            Height = 17
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
             Caption = 'Block size = 128 bits'
           end
           object lbxCipherFeatures: TListBox
-            Left = 67
-            Top = 40
-            Width = 182
-            Height = 65
+            Left = 84
+            Top = 50
+            Width = 227
+            Height = 81
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
             ItemHeight = 13
             TabOrder = 0
           end
           object memoExtraCipherDescription: TMemo
-            Left = 16
-            Top = 192
-            Width = 233
-            Height = 89
+            Left = 20
+            Top = 240
+            Width = 291
+            Height = 111
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
             Lines.Strings = (
               'Extra Cipher Description')
             ParentColor = True
@@ -3105,72 +3365,96 @@ object TPLb_fmComponentAbout: TTPLb_fmComponentAbout
           end
         end
         object Panel3: TPanel
-          Left = 3
-          Top = 231
-          Width = 270
-          Height = 146
+          Left = 4
+          Top = 289
+          Width = 337
+          Height = 182
+          Margins.Left = 4
+          Margins.Top = 4
+          Margins.Right = 4
+          Margins.Bottom = 4
           Color = clYellow
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clNone
-          Font.Height = -11
+          Font.Height = -14
           Font.Name = 'Tahoma'
           Font.Style = []
           ParentBackground = False
           ParentFont = False
           TabOrder = 2
           object Label27: TLabel
-            Left = 16
+            Left = 20
             Top = 0
-            Width = 170
-            Height = 13
+            Width = 209
+            Height = 17
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
             Caption = 'About selected Chaining Mode'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlue
-            Font.Height = -11
+            Font.Height = -14
             Font.Name = 'Tahoma'
             Font.Style = [fsBold]
             ParentFont = False
           end
           object lblChainName: TLabel
-            Left = 24
-            Top = 24
-            Width = 61
-            Height = 13
+            Left = 30
+            Top = 30
+            Width = 78
+            Height = 17
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
             Caption = 'DisplayName'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clBlack
-            Font.Height = -11
+            Font.Height = -14
             Font.Name = 'Tahoma'
             Font.Style = []
             ParentFont = False
           end
           object Label29: TLabel
-            Left = 14
-            Top = 43
-            Width = 47
-            Height = 13
+            Left = 18
+            Top = 54
+            Width = 57
+            Height = 17
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
             Caption = 'Features:'
           end
           object lblChainWikipedia: TLabel
-            Left = 16
-            Top = 120
-            Width = 58
-            Height = 13
+            Left = 20
+            Top = 150
+            Width = 72
+            Height = 17
             Cursor = crHandPoint
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
             Caption = 'wikipedia url'
             Font.Charset = DEFAULT_CHARSET
             Font.Color = clNone
-            Font.Height = -11
+            Font.Height = -14
             Font.Name = 'Tahoma'
             Font.Style = [fsUnderline]
             ParentFont = False
             OnClick = OnURL_Click
           end
           object lbxChainFeatures: TListBox
-            Left = 67
-            Top = 40
-            Width = 182
-            Height = 65
+            Left = 84
+            Top = 50
+            Width = 227
+            Height = 81
+            Margins.Left = 4
+            Margins.Top = 4
+            Margins.Right = 4
+            Margins.Bottom = 4
             ItemHeight = 13
             TabOrder = 0
           end
@@ -3179,10 +3463,14 @@ object TPLb_fmComponentAbout: TTPLb_fmComponentAbout
     end
   end
   object btnClose: TButton
-    Left = 280
-    Top = 416
-    Width = 75
-    Height = 25
+    Left = 350
+    Top = 520
+    Width = 94
+    Height = 31
+    Margins.Left = 4
+    Margins.Top = 4
+    Margins.Right = 4
+    Margins.Bottom = 4
     Anchors = [akLeft, akBottom]
     Caption = 'Close'
     ModalResult = 1

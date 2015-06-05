@@ -28,9 +28,12 @@ and earlier was TurboPower Software.
 
  * ***** END LICENSE BLOCK ***** *}
 
-unit uTPLb_InfoUtils;
+unit Vcl.uTPLb_InfoUtils;
+
 interface
-uses windows;
+
+uses
+  windows;
 
 function GetLibraryInfo(
   ModuleHandle: HMODULE; var LibName: string; var FileVersion: string): boolean;
@@ -46,26 +49,10 @@ function Get_dclTP_LockBox3_Info(  // This, the Design-time package.
   var LibName: string; var FileVersion: string): boolean;
 // Assumes that this unit is part of the dclTP_LockBox3 unit.
 
-
-
 implementation
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-uses SysUtils, uTPLb_BinaryUtils;
+uses
+  SysUtils, uTPLb_BinaryUtils;
 
 function GetLibraryInfo(
   ModuleHandle: HMODULE; var LibName: string; var FileVersion: string): boolean;

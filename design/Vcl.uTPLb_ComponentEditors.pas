@@ -28,26 +28,16 @@ and earlier was TurboPower Software.
 
  * ***** END LICENSE BLOCK ***** *}
 
-unit uTPLb_ComponentEditors;
-interface
+unit Vcl.uTPLb_ComponentEditors;
 
+interface
 
 procedure Register;
 
 implementation
 
-
-
-
-
-
-
-
-
-
-
 uses Classes, TypInfo, DesignIntf, DesignEditors, VCLEditors, SysUtils,
-     uTPLb_Hash, uTPLb_CryptographicLibrary, uTPLb_ComponentAbout,
+     uTPLb_Hash, uTPLb_CryptographicLibrary, Vcl.uTPLb_ComponentAbout,
      uTPLb_BaseNonVisualComponent, uTPLb_HashDsc, uTPLb_Codec,
      uTPLb_BlockCipher, uTPLb_Signatory, uTPLb_I18n;
 
