@@ -55,3 +55,5 @@ steps:
   4. Open & install the designtime package specific to the IDE being
      used. The IDE should notify you the components have been
      installed.
+
+Test
