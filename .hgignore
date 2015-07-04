@@ -12,3 +12,4 @@ Android
 OSX32
 Debug
 Release
+*.stat

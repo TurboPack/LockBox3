@@ -60,6 +60,7 @@
         <Base>true</Base>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base)'!=''">
+        <DllSuffix>220</DllSuffix>
         <SanitizedProjectName>LockBox3FMXCD</SanitizedProjectName>
         <ILINK_GenerateImportLibrary>true</ILINK_GenerateImportLibrary>
         <DCC_UnitSearchPath>..\..\run\ciphers;..\..\run\cryptography;..\..\run\hashes;..\..\run\library surface;..\..\run\RSA;..\..\run\utilities;..\..\design;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
@@ -146,18 +147,6 @@
         <TASM_Debugging>None</TASM_Debugging>
     </PropertyGroup>
     <ItemGroup>
-        <PackageImport Include="bindcomp.bpi">
-            <BuildOrder>16</BuildOrder>
-        </PackageImport>
-        <PackageImport Include="bindcompfmx.bpi">
-            <BuildOrder>18</BuildOrder>
-        </PackageImport>
-        <PackageImport Include="bindengine.bpi">
-            <BuildOrder>15</BuildOrder>
-        </PackageImport>
-        <PackageImport Include="designide.bpi">
-            <BuildOrder>2</BuildOrder>
-        </PackageImport>
         <DelphiCompile Include="..\..\design\FMX.uTPLb_ComponentAbout.pas">
             <Form>TPLb_fmComponentAbout</Form>
             <FormType>fmx</FormType>
@@ -172,14 +161,20 @@
         <DelphiCompile Include="..\..\design\FMX.uTPLb_InfoUtils.pas">
             <BuildOrder>7</BuildOrder>
         </DelphiCompile>
-        <CppCompile Include="LockBox3FMXCD.cpp">
-            <BuildOrder>0</BuildOrder>
-        </CppCompile>
-        <PackageImport Include="LockBox3CR.bpi">
-            <BuildOrder>3</BuildOrder>
+        <PackageImport Include="bindcomp.bpi">
+            <BuildOrder>16</BuildOrder>
+        </PackageImport>
+        <PackageImport Include="bindcompfmx.bpi">
+            <BuildOrder>18</BuildOrder>
+        </PackageImport>
+        <PackageImport Include="bindengine.bpi">
+            <BuildOrder>15</BuildOrder>
         </PackageImport>
         <PackageImport Include="dbrtl.bpi">
             <BuildOrder>13</BuildOrder>
+        </PackageImport>
+        <PackageImport Include="designide.bpi">
+            <BuildOrder>2</BuildOrder>
         </PackageImport>
         <PackageImport Include="dsnap.bpi">
             <BuildOrder>17</BuildOrder>
@@ -187,6 +182,12 @@
         <PackageImport Include="fmx.bpi">
             <BuildOrder>14</BuildOrder>
         </PackageImport>
+        <PackageImport Include="LockBox3CR.bpi">
+            <BuildOrder>3</BuildOrder>
+        </PackageImport>
+        <CppCompile Include="LockBox3FMXCD.cpp">
+            <BuildOrder>0</BuildOrder>
+        </CppCompile>
         <PackageImport Include="rtl.bpi">
             <BuildOrder>1</BuildOrder>
         </PackageImport>
@@ -233,20 +234,20 @@
                     <Source Name="MainSource">LockBox3FMXCD.cpp</Source>
                 </Source>
                 <Excluded_Packages>
-                    <Excluded_Packages Name="C:\Users\Roman\Desktop\30232_mida_converter_basic_for_rad_studio_xe8\MidaBasicDesign220.bpl">Datei C:\Users\Roman\Desktop\30232_mida_converter_basic_for_rad_studio_xe8\MidaBasicDesign220.bpl nicht gefunden</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\DUnitXRuntime220.bpl">Embarcadero Unit-Test IDE-Package</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\bcboffice2k220.bpl">Embarcadero C++Builder-Package für Office 2000-Server</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\bcbofficexp220.bpl">Embarcadero C++Builder-Package für Office XP-Server</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\dcloffice2k220.bpl">Microsoft Office 2000 Beispiele für gekapselte Komponenten für Automatisierungsserver</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\dclofficexp220.bpl">Microsoft Office XP Beispiele für gekapselte Komponenten für Automation Server</Excluded_Packages>
                 </Excluded_Packages>
             </CPlusPlusBuilder.Personality>
-            <Deployment Version="1">
-                <DeployFile Condition="'$(UsingDelphiRTL)'=='true'" LocalName="$(BDS)\bin64\borlndmm.dll" Class="DependencyModule">
-                    <Platform Name="Win64">
+            <Deployment Version="2">
+                <DeployFile LocalName="$(BDS)\Redist\iossimulator\libPCRE.dylib" Class="DependencyModule">
+                    <Platform Name="iOSSimulator">
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile Condition="'$(DynamicRTL)'=='true' And '$(Multithreaded)'=='true'" LocalName="$(BDS)\bin64\cc64220mt.dll" Class="DependencyModule">
+                <DeployFile Condition="'$(UsingDelphiRTL)'=='true'" LocalName="$(BDS)\bin64\borlndmm.dll" Class="DependencyModule">
                     <Platform Name="Win64">
                         <Overwrite>true</Overwrite>
                     </Platform>
@@ -261,11 +262,6 @@
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
-                <DeployFile Condition="'$(DynamicRTL)'=='true' And '$(Multithreaded)'!='true'" LocalName="$(BDS)\bin64\cc64220.dll" Class="DependencyModule">
-                    <Platform Name="Win64">
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
                 <DeployFile Condition="'$(DynamicRTL)'=='true'" LocalName="$(BDS)\Redist\osx32\libcgcrtl.dylib" Class="DependencyModule">
                     <Platform Name="OSX32">
                         <Overwrite>true</Overwrite>
@@ -273,6 +269,27 @@
                 </DeployFile>
                 <DeployFile Condition="'$(DynamicRTL)'=='true' And '$(Multithreaded)'!='true'" LocalName="$(BDS)\bin\cc32220.dll" Class="DependencyModule">
                     <Platform Name="Win32">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="C:\Users\Public\Documents\Embarcadero\Studio\16.0\BPL\LockBox3FMXCD.tds" Configuration="Debug" Class="DebugSymbols">
+                    <Platform Name="Win32">
+                        <RemoteName>LockBox3FMXCD.tds</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="$(BDS)\Redist\iossimulator\libcgunwind.1.0.dylib" Class="DependencyModule">
+                    <Platform Name="iOSSimulator">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile Condition="'$(DynamicRTL)'=='true' And '$(Multithreaded)'=='true'" LocalName="$(BDS)\bin64\cc64220mt.dll" Class="DependencyModule">
+                    <Platform Name="Win64">
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile Condition="'$(DynamicRTL)'=='true' And '$(Multithreaded)'!='true'" LocalName="$(BDS)\bin64\cc64220.dll" Class="DependencyModule">
+                    <Platform Name="Win64">
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -294,12 +311,6 @@
                 <DeployFile LocalName="C:\Users\Public\Documents\Embarcadero\Studio\16.0\BPL\LockBox3FMXCD.bpl" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>LockBox3FMXCD.bpl</RemoteName>
-                        <Overwrite>true</Overwrite>
-                    </Platform>
-                </DeployFile>
-                <DeployFile LocalName="C:\Users\Public\Documents\Embarcadero\Studio\16.0\BPL\LockBox3FMXCD.tds" Configuration="Debug" Class="DebugSymbols">
-                    <Platform Name="Win32">
-                        <RemoteName>LockBox3FMXCD.tds</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
@@ -621,13 +632,13 @@
                         <Operation>1</Operation>
                     </Platform>
                 </DeployClass>
-                <ProjectRoot Platform="Win64" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="iOSDevice32" Name="$(PROJECTNAME).app"/>
                 <ProjectRoot Platform="Android" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="Win32" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="iOSDevice64" Name="$(PROJECTNAME).app"/>
+                <ProjectRoot Platform="Win64" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="OSX32" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="iOSSimulator" Name="$(PROJECTNAME).app"/>
-                <ProjectRoot Platform="iOSDevice32" Name="$(PROJECTNAME).app"/>
             </Deployment>
             <Platforms>
                 <Platform value="Android">False</Platform>
