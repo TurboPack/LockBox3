@@ -2,7 +2,7 @@
 // Copyright (c) 1995, 2015 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'uTPLb_MemoryStreamPool.pas' rev: 29.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'uTPLb_MemoryStreamPool.pas' rev: 30.00 (Windows)
 
 #ifndef Utplb_memorystreampoolHPP
 #define Utplb_memorystreampoolHPP

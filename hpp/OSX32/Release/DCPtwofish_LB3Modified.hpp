@@ -2,7 +2,7 @@
 // Copyright (c) 1995, 2015 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'DCPtwofish_LB3Modified.pas' rev: 29.00 (MacOS)
+// (DO NOT EDIT: machine generated header) 'DCPtwofish_LB3Modified.pas' rev: 30.00 (MacOS)
 
 #ifndef Dcptwofish_lb3modifiedHPP
 #define Dcptwofish_lb3modifiedHPP

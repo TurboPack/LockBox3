@@ -2,7 +2,7 @@
 // Copyright (c) 1995, 2015 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'LockBox3VCLDD.dpk' rev: 29.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'LockBox3VCLDD.dpk' rev: 30.00 (Windows)
 
 #ifndef Lockbox3vclddHPP
 #define Lockbox3vclddHPP
@@ -19,6 +19,7 @@
 #include <Vcl.uTPLb_ComponentEditors.hpp>
 #include <Vcl.uTPLb_ComponentRegistration.hpp>
 #include <Winapi.Windows.hpp>	// (rtl)
+#include <System.Character.hpp>	// (rtl)
 #include <System.Internal.ExcUtils.hpp>	// (rtl)
 #include <System.SysUtils.hpp>	// (rtl)
 #include <System.VarUtils.hpp>	// (rtl)
@@ -52,6 +53,7 @@
 #include <Winapi.FlatSB.hpp>	// (rtl)
 #include <Vcl.Forms.hpp>	// (vcl)
 #include <Vcl.Menus.hpp>	// (vcl)
+#include <Winapi.MsCTF.hpp>	// (rtl)
 #include <Vcl.Controls.hpp>	// (vcl)
 #include <Vcl.AxCtrls.hpp>	// (vcl)
 #include <Vcl.OleCtrls.hpp>	// (vcl)
