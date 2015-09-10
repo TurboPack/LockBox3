@@ -72,6 +72,7 @@ THugeCardinal =        class
     procedure MulPower2_NewAlgorithm( ShiftAmnt: integer);
     procedure MultiplyMod_Old( Factor, Modulus: THugeCardinal);
     procedure MultiplyMod_New( Factor, Modulus: THugeCardinal);
+    function GetAsBase10: string;
 
 
   protected
@@ -112,6 +113,7 @@ THugeCardinal =        class
 
     // Assignment.
     procedure Assign( Source: THugeCardinal);
+    procedure AssignFromBuf( ByteOrder: TByteOrder; const Value; const ByteLength: integer);
     procedure AssignFromStreamIn( ByteOrder: TByteOrder; Stream: TStream);
     procedure AssignSmall( Value: uint64);
     procedure Swap( Peer: THugeCardinal);
@@ -179,6 +181,7 @@ THugeCardinal =        class
 
     procedure SmallExponent_PowerMod( Exponent: uint64; Modulus: THugeCardinal);
     procedure SmallExponent_Power( Exponent: uint32);  // Only used for unit-test purposes.
+    procedure SmallExponent_PowerSlow( Exponent: uint32);
 
     // Streaming.
     procedure StreamOut( ByteOrder: TByteOrder; Stream: TStream;
@@ -186,6 +189,7 @@ THugeCardinal =        class
     // ^ Streams the low order SizeToOutput bytes out to the stream.
     // If SizeToOutput is -1, then this is interpreted as (MaxBits + 7) div 8
     property AsHexString:  string  read GetAsHexString;
+    property AsBase10: string read GetAsBase10;
   end;
 
 procedure SafeAssign( Destin, Source: THugeCardinal);     // Both parameters must pre-exist.
@@ -231,6 +235,35 @@ implementation
 uses
   SysUtils, uTPLb_StreamUtils, Math, uTPlb_Random,uTPLb_I18n, uTPLb_PointerArithmetic,
   SyncObjs;
+
+function HugeToBase10(const AHuge: THugeCardinal): string;
+var
+  s: string;
+  tmp: THugeCardinal;
+  divisor, rem: THugeCardinal;
+begin
+  Result := '';
+  tmp := THugeCardinal.CreateAsClone(AHuge, AHuge.FPool);
+  divisor := THugeCardinal.CreateSimple(10000);
+  rem := THugeCardinal.CreateSimple(0);
+  try
+    while not tmp.isZero do
+    begin
+      tmp.Divide(divisor, tmp, rem);
+      s := rem.ExtractSmall.ToString;
+      while length(s) < 4 do
+        s := '0' + s;
+      Result := s + Result;
+    end;
+    Result := '0' + Result;
+    while (length(Result) > 1) And (Result[1] = '0') do
+      delete(Result, 1, 1);
+  finally
+    tmp.Free;
+    rem.Free;
+    divisor.Free;
+  end;
+end;
 
 
 {$IFDEF profiling}
@@ -546,6 +579,11 @@ end;
 function THugeCardinal.ExtractSmall: uint64;
 begin
 Move( FValue.Memory^, result, 8)
+end;
+
+function THugeCardinal.GetAsBase10: string;
+begin
+  Result := HugeToBase10(self);
 end;
 
 function THugeCardinal.GetAsHexString: string;
@@ -1796,6 +1834,62 @@ Factor.Free
 end end;
 
 
+procedure THugeCardinal.SmallExponent_PowerSlow(Exponent: uint32);
+var
+  Odd1: boolean;
+  i:uint32;
+  Base, Product: THugeCardinal;
+  RequiredBits: uint64;
+
+  procedure Mult( Factor: THugeCardinal);
+  begin
+  Product := Multiply( Factor);
+  try
+    Assign( Product)
+  finally
+    FreeAndNil( Product)
+  end end;
+
+begin
+// First, deal with special cases.
+if isZero then
+  begin
+  Assert( Exponent <> 0, AS_ZeroToZero);
+  exit
+  end;
+if Exponent = 0 then
+  begin
+  AssignSmall( 1);
+  exit
+  end;
+RequiredBits := cardinal( BitLength) * Exponent;
+if (RequiredBits < Exponent) or (RequiredBits > MaxBits) then
+  raise Exception.Create( ES_HugeCardinal_PowerOverflow);
+
+// Russian Peasant Algorithm.
+Base := THugeCardinal.CreateZero( RequiredBits, FPool);
+try
+ Base.Assign( self);
+ for i := 2 to Exponent do
+ begin
+    Mult(Base);
+ end;
+
+//while Exponent >= 2 do
+//  begin
+//  Odd1 := Odd( Exponent);
+//  if Odd1 then
+//
+//  Exponent := Exponent shr 1;
+//  Mult( self);
+//  if Odd1 then
+//    Mult( Base)
+//  end
+finally
+Base.Free
+end
+end;
+
 function THugeCardinal.PowerMod( Exponent, Modulus: THugeCardinal; OnProgress: TProgress): boolean;
 var
   Base: THugeCardinal;
@@ -2070,6 +2164,31 @@ case ByteOrder of
   end
 end;
 
+procedure THugeCardinal.AssignFromBuf( ByteOrder: TByteOrder;const Value; const ByteLength: integer);
+
+procedure ReverseBytes(const ABytes: TBytes; const ALength: integer); inline;
+var
+b: byte;
+i: integer;
+begin
+  for i := 0 to ALength div 2 -1 do
+  begin
+    b := ABytes[i];
+    ABytes[i] := ABytes[ALength-i-1];
+    ABytes[ALength-i-1] := b;
+  end;
+end;
+
+begin
+  Resize(ByteLength * 8);
+  ZeroFillStream(FValue);
+  FMaxBits := ByteLength * 8;
+  Move(Value, FValue.Memory^, ByteLength);
+  if ByteOrder=BigEndien then
+    ReverseBytes(TBytes(FValue.Memory),ByteLength);
+  FBits := -1;
+  CheckBits;
+end;
 
 procedure THugeCardinal.AssignFromStreamIn(
   ByteOrder: TByteOrder; Stream: TStream);
