@@ -64,7 +64,7 @@ TDesalinationWriteStream = class( TStream)
 function  CloneMemoryStream( Original: TMemoryStream): TMemoryStream;
 procedure CopyMemoryStream( Source, Destination: TMemoryStream);
 procedure BurnMemoryStream( Destructo: TMemoryStream);
-procedure BurnBytes( var Destructo: TBytes);
+procedure BurnBytes(var Destructo: TBytes);
 procedure BurnMemory( var Buff; BuffLen: integer);
 procedure ZeroFillStream( Stream: TMemoryStream);
 procedure RandomFillStream( Stream: TMemoryStream);
@@ -177,18 +177,14 @@ BurnMemory( Destructo.Memory^, L);
 Destructo.Size := 0
 end;
 
-procedure BurnBytes( var Destructo: TBytes);
-var
-  L: integer;
+procedure BurnBytes(var Destructo: TBytes);
 begin
-if not assigned( Destructo) then exit;
-L := length(Destructo);
-if L <= 0 then exit;
-BurnMemory( Destructo[0], L);
-SetLength(Destructo,0);
+  if Destructo <> nil then
+  begin
+    BurnMemory(Destructo[0], Length(Destructo));
+    SetLength(Destructo,0);
+  end;
 end;
-
-
 
 procedure XOR_Streams2( Dest, Srce: TMemoryStream);  // Dest := Dest xor Srce
 var

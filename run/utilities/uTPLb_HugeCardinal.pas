@@ -251,13 +251,13 @@ begin
     begin
       tmp.Divide(divisor, tmp, rem);
       s := rem.ExtractSmall.ToString;
-      while length(s) < 4 do
+      while s.Length < 4 do
         s := '0' + s;
       Result := s + Result;
     end;
     Result := '0' + Result;
-    while (length(Result) > 1) And (Result[1] = '0') do
-      delete(Result, 1, 1);
+    while (Result.Length > 1) And (Result.Chars[0] = '0') do
+      Result := Result.Remove(0, 1);
   finally
     tmp.Free;
     rem.Free;
@@ -1836,58 +1836,50 @@ end end;
 
 procedure THugeCardinal.SmallExponent_PowerSlow(Exponent: uint32);
 var
-  Odd1: boolean;
   i:uint32;
   Base, Product: THugeCardinal;
   RequiredBits: uint64;
 
   procedure Mult( Factor: THugeCardinal);
   begin
-  Product := Multiply( Factor);
-  try
-    Assign( Product)
-  finally
-    FreeAndNil( Product)
-  end end;
+    Product := Multiply(Factor);
+    try
+      Assign(Product)
+    finally
+      FreeAndNil(Product);
+    end;
+
+  end;
 
 begin
-// First, deal with special cases.
-if isZero then
+  // First, deal with special cases.
+  if isZero then
   begin
-  Assert( Exponent <> 0, AS_ZeroToZero);
-  exit
+    Assert( Exponent <> 0, AS_ZeroToZero);
+    Exit;
   end;
-if Exponent = 0 then
+  if Exponent = 0 then
   begin
-  AssignSmall( 1);
-  exit
+    AssignSmall(1);
+    Exit;
   end;
-RequiredBits := cardinal( BitLength) * Exponent;
-if (RequiredBits < Exponent) or (RequiredBits > MaxBits) then
-  raise Exception.Create( ES_HugeCardinal_PowerOverflow);
 
-// Russian Peasant Algorithm.
-Base := THugeCardinal.CreateZero( RequiredBits, FPool);
-try
- Base.Assign( self);
- for i := 2 to Exponent do
- begin
-    Mult(Base);
- end;
+  RequiredBits := Cardinal(BitLength) * Exponent;
+  if (RequiredBits < Exponent) or (RequiredBits > MaxBits) then
+    raise Exception.Create( ES_HugeCardinal_PowerOverflow);
 
-//while Exponent >= 2 do
-//  begin
-//  Odd1 := Odd( Exponent);
-//  if Odd1 then
-//
-//  Exponent := Exponent shr 1;
-//  Mult( self);
-//  if Odd1 then
-//    Mult( Base)
-//  end
-finally
-Base.Free
-end
+  // Russian Peasant Algorithm.
+  Base := THugeCardinal.CreateZero(RequiredBits, FPool);
+  try
+    Base.Assign(Self);
+    for i := 2 to Exponent do
+    begin
+      Mult(Base);
+    end;
+
+  finally
+    Base.Free;
+  end
 end;
 
 function THugeCardinal.PowerMod( Exponent, Modulus: THugeCardinal; OnProgress: TProgress): boolean;
@@ -2166,18 +2158,18 @@ end;
 
 procedure THugeCardinal.AssignFromBuf( ByteOrder: TByteOrder;const Value; const ByteLength: integer);
 
-procedure ReverseBytes(const ABytes: TBytes; const ALength: integer); inline;
-var
-b: byte;
-i: integer;
-begin
-  for i := 0 to ALength div 2 -1 do
+  procedure ReverseBytes(const ABytes: TBytes; const ALength: integer); inline;
+  var
+    b: byte;
+    i: integer;
   begin
-    b := ABytes[i];
-    ABytes[i] := ABytes[ALength-i-1];
-    ABytes[ALength-i-1] := b;
+    for i := 0 to ALength div 2 -1 do
+    begin
+      b := ABytes[i];
+      ABytes[i] := ABytes[ALength-i-1];
+      ABytes[ALength-i-1] := b;
+    end;
   end;
-end;
 
 begin
   Resize(ByteLength * 8);

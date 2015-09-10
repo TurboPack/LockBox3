@@ -73,6 +73,7 @@ extern DELPHI_PACKAGE void __fastcall ZeroFillStream(System::Classes::TMemoryStr
 extern DELPHI_PACKAGE void __fastcall RandomFillStream(System::Classes::TMemoryStream* Stream);
 extern DELPHI_PACKAGE System::Classes::TMemoryStream* __fastcall CloneMemoryStream(System::Classes::TMemoryStream* Original);
 extern DELPHI_PACKAGE void __fastcall BurnMemoryStream(System::Classes::TMemoryStream* Destructo);
+extern DELPHI_PACKAGE void __fastcall BurnBytes(System::TArray__1<System::Byte> &Destructo);
 extern DELPHI_PACKAGE void __fastcall XOR_Streams2(System::Classes::TMemoryStream* Dest, System::Classes::TMemoryStream* Srce);
 extern DELPHI_PACKAGE void __fastcall XOR_Streams3(System::Classes::TMemoryStream* Dest, System::Classes::TMemoryStream* SrceA, System::Classes::TMemoryStream* SrceB);
 extern DELPHI_PACKAGE bool __fastcall CompareMemoryStreams(System::Classes::TMemoryStream* S1, System::Classes::TMemoryStream* S2);
