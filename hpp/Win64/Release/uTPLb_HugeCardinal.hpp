@@ -48,6 +48,7 @@ private:
 	void __fastcall MulPower2_NewAlgorithm(int ShiftAmnt);
 	void __fastcall MultiplyMod_Old(THugeCardinal* Factor, THugeCardinal* Modulus);
 	void __fastcall MultiplyMod_New(THugeCardinal* Factor, THugeCardinal* Modulus);
+	System::UnicodeString __fastcall GetAsBase10(void);
 	
 protected:
 	System::Classes::TMemoryStream* __fastcall NewMemoryStream(int InitBitSize);
@@ -72,6 +73,7 @@ public:
 	int __fastcall MaxBits(void);
 	int __fastcall CapacityInBits(void);
 	void __fastcall Assign(THugeCardinal* Source);
+	void __fastcall AssignFromBuf(TByteOrder ByteOrder, const void *Value, const int ByteLength);
 	void __fastcall AssignFromStreamIn(TByteOrder ByteOrder, System::Classes::TStream* Stream);
 	void __fastcall AssignSmall(unsigned __int64 Value);
 	void __fastcall Swap(THugeCardinal* Peer);
@@ -100,8 +102,10 @@ public:
 	bool __fastcall PowerMod_WithChineseRemainderAlgorithm(THugeCardinal* Exponent, THugeCardinal* Modulus, THugeCardinal* FactorP, THugeCardinal* FactorQ, THugeCardinal* ExponentModFactorP, THugeCardinal* ExponentModFactorQ, THugeCardinal* InverseQ, TProgress OnProgress);
 	void __fastcall SmallExponent_PowerMod(unsigned __int64 Exponent, THugeCardinal* Modulus);
 	void __fastcall SmallExponent_Power(unsigned Exponent);
+	void __fastcall SmallExponent_PowerSlow(unsigned Exponent);
 	void __fastcall StreamOut(TByteOrder ByteOrder, System::Classes::TStream* Stream, int SizeToOutput = 0xffffffff);
 	__property System::UnicodeString AsHexString = {read=GetAsHexString};
+	__property System::UnicodeString AsBase10 = {read=GetAsBase10};
 public:
 	/* TObject.Create */ inline __fastcall THugeCardinal(void) : System::TObject() { }
 	
