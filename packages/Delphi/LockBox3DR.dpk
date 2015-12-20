@@ -26,7 +26,7 @@ package LockBox3DR;
 {$DEFINE RELEASE}
 {$ENDIF IMPLICITBUILDING}
 {$DESCRIPTION 'TurboPack LockBox 3 Delphi runtime package'}
-{$LIBSUFFIX '230'}
+{$LIBSUFFIX '240'}
 {$RUNONLY}
 {$IMPLICITBUILD OFF}
 
