@@ -247,7 +247,7 @@ repeat
     begin // We have full buffer, aligned to 4-ansichar.
     SetLength( base64_Fragment, FromBase64_BufferSize);
     FInBuffer.Position := 0;
-    FInBuffer.Read( base64_Fragment[1], FromBase64_BufferSize);
+    FInBuffer.Read( base64_Fragment[0], FromBase64_BufferSize);
     Base64_to_stream( base64_Fragment, FOutStream);
     FInBufferLen := 0
     end
