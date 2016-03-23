@@ -69,10 +69,22 @@ uses
 var
   Inst: TRandomStream = nil;
 
-{$IFDEF MSWINDOWS}
+
+
+
+
+
 function TimeStampClock: int64;
+{$IFDEF ASSEMBLER}
 asm
   RDTSC
+end;
+{$ELSE}
+var
+  SystemTimes: TThread.TSystemTimes;
+begin
+  TThread.GetSystemTimes( SystemTimes);
+  result := SystemTimes.KernelTime
 end;
 {$ENDIF}
 
@@ -93,7 +105,7 @@ function CryptAcquireContext(
   var phProv: THandle;
   pszContainer, pszProvider: PChar;
   dwProvType, dwFlags: DWORD): bool;
-  stdcall; external advapi32  name 'CryptAcquireContextW';
+  stdcall; external advapi32 name 'CryptAcquireContextW';
 
 function CryptReleaseContext(
   hProv: THandle;
@@ -111,6 +123,7 @@ const
   CRYPT_SILENT = 64;
   Provider = 'Microsoft Base Cryptographic Provider v1.0';
 {$ENDIF}
+
 
 
 
@@ -181,14 +194,16 @@ finally
   if hasOpenHandle then
     CryptReleaseContext( hProv, 0)
   end;
-Crunch
+{$ELSE}
+  FValue := TimeStampClock;
 {$ENDIF}
+Crunch
 end;
 
 
 
 
-function TRandomStream.Read( var Buffer; Count: Longint): Longint;
+function TRandomStream.Read( var Buffer; Count: Integer): Longint;
 var
   P: PByte;
   Amnt, AmntBits, C: integer;
@@ -248,7 +263,7 @@ begin
 end;
 
 
-function TRandomStream.Write( const Buffer; Count: Longint): Longint;
+function TRandomStream.Write( const Buffer; Count: Integer): Longint;
 begin
 result := Count
 end;
