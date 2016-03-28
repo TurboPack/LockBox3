@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2015 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'uTPLb_CFB_8Bit.pas' rev: 30.00 (MacOS)
+// (DO NOT EDIT: machine generated header) 'uTPLb_CFB_8Bit.pas' rev: 31.00 (MacOS)
 
 #ifndef Utplb_cfb_8bitHPP
 #define Utplb_cfb_8bitHPP

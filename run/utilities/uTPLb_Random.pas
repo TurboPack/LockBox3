@@ -203,7 +203,7 @@ end;
 
 
 
-function TRandomStream.Read( var Buffer; Count: Integer): Longint;
+function TRandomStream.Read( var Buffer; Count: Longint): Longint;
 var
   P: PByte;
   Amnt, AmntBits, C: integer;
@@ -263,7 +263,7 @@ begin
 end;
 
 
-function TRandomStream.Write( const Buffer; Count: Integer): Longint;
+function TRandomStream.Write( const Buffer; Count: Longint): Longint;
 begin
 result := Count
 end;
