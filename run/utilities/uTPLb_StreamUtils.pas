@@ -91,6 +91,7 @@ function FileSize( const FileName: string): int64;
 
 // For debug purposes ONLY:
 function Stream_to_decimalbytes( Source: TStream): string;
+function Stream_To_Hex(ASource: TStream): Ansistring;
 function DisplayStream( Stream: TStream): string;
 
 implementation
@@ -310,6 +311,19 @@ begin
       end
 end;
 
+function Stream_To_Hex(ASource: TStream): Ansistring;
+var
+  NumBytes, I: Integer;
+  B: Byte;
+begin
+  NumBytes := ASource.Size - ASource.Position;
+  SetLength(Result, NumBytes * 2);
+  for I := 0 to NumBytes-1 do
+  begin
+    ASource.ReadBuffer(B, 1);
+    BinToHex(PAnsiChar(@B), PAnsiChar(@Result[(I*2)+1]), 1);
+  end;
+end;
 
 procedure Base64_to_stream( const Base64: TBytes; Destin: TStream);
 begin
