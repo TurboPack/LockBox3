@@ -1895,6 +1895,7 @@ if doProfiling then EnterProfileSection( func_PowerMod);
 {$ENDIF}
 Factor := nil;
 try
+doAbort := False;
 if not Exponent.isSmall then
     begin
     doAbort := False;
