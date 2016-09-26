@@ -40,7 +40,7 @@ requires
 contains
   Vcl.uTPLb_InfoUtils in '..\..\design\Vcl.uTPLb_InfoUtils.pas',
   Vcl.uTPLb_ComponentAbout in '..\..\design\Vcl.uTPLb_ComponentAbout.pas' {TPLb_fmComponentAbout},
-  Vcl.uTPLb_ComponentEditors in '..\..\design\Vcl.uTPLb_ComponentEditors.pas',
-  Vcl.uTPLb_ComponentRegistration in '..\..\design\Vcl.uTPLb_ComponentRegistration.pas';
+  VcluTPLb_ComponentEditors in '..\..\design\VcluTPLb_ComponentEditors.pas',
+  VcluTPLb_ComponentRegistration in '..\..\design\VcluTPLb_ComponentRegistration.pas';
 
 end.

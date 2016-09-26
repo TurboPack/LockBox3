@@ -15,9 +15,9 @@
 #include <System.hpp>	// (rtl)
 #include <SysInit.hpp>
 #include <FMX.uTPLb_InfoUtils.hpp>
-#include <FMX.uTPLb_ComponentEditors.hpp>
+#include <FMXuTPLb_ComponentEditors.hpp>
 #include <FMX.uTPLb_ComponentAbout.hpp>
-#include <FMX.uTPLb_ComponentRegistration.hpp>
+#include <FMXuTPLb_ComponentRegistration.hpp>
 #include <Winapi.Windows.hpp>	// (rtl)
 #include <Winapi.PsAPI.hpp>	// (rtl)
 #include <System.Character.hpp>	// (rtl)

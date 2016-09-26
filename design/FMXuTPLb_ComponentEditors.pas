@@ -28,7 +28,7 @@ and earlier was TurboPower Software.
 
  * ***** END LICENSE BLOCK ***** *}
 
-unit Vcl.uTPLb_ComponentEditors;
+unit FMXuTPLb_ComponentEditors;
 
 interface
 
@@ -36,8 +36,8 @@ procedure Register;
 
 implementation
 
-uses Classes, TypInfo, DesignIntf, DesignEditors, VCLEditors, SysUtils,
-     uTPLb_Hash, uTPLb_CryptographicLibrary, Vcl.uTPLb_ComponentAbout,
+uses Classes, TypInfo, DesignIntf, DesignEditors, SysUtils,
+     uTPLb_Hash, uTPLb_CryptographicLibrary, FMX.uTPLb_ComponentAbout,
      uTPLb_BaseNonVisualComponent, uTPLb_HashDsc, uTPLb_Codec,
      uTPLb_BlockCipher, uTPLb_Signatory, uTPLb_I18n;
 

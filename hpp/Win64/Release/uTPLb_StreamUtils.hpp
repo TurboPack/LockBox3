@@ -77,6 +77,7 @@ extern DELPHI_PACKAGE void __fastcall XOR_Streams3(System::Classes::TMemoryStrea
 extern DELPHI_PACKAGE bool __fastcall CompareMemoryStreams(System::Classes::TMemoryStream* S1, System::Classes::TMemoryStream* S2);
 extern DELPHI_PACKAGE void __fastcall CopyMemoryStream(System::Classes::TMemoryStream* Source, System::Classes::TMemoryStream* Destination);
 extern DELPHI_PACKAGE System::TArray__1<System::Byte> __fastcall Stream_to_Base64(System::Classes::TStream* ASource, const System::TArray__1<System::Byte> ATransform = System::TArray__1<System::Byte>());
+extern DELPHI_PACKAGE System::AnsiString __fastcall Stream_To_Hex(System::Classes::TStream* ASource);
 extern DELPHI_PACKAGE void __fastcall Base64_to_stream(const System::TArray__1<System::Byte> Base64, System::Classes::TStream* Destin);
 extern DELPHI_PACKAGE void __fastcall CustomBase64_to_stream(const System::TArray__1<System::Byte> Base64, System::Classes::TStream* Destin, const TInverseBaseTransform &InverseTransform);
 extern DELPHI_PACKAGE System::TArray__1<System::Byte> __fastcall Stream_to_Bytes(System::Classes::TStream* Source);

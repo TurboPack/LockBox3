@@ -42,8 +42,8 @@ requires
 
 contains
   FMX.uTPLb_InfoUtils in '..\..\design\FMX.uTPLb_InfoUtils.pas',
-  FMX.uTPLb_ComponentEditors in '..\..\design\FMX.uTPLb_ComponentEditors.pas',
+  FMXuTPLb_ComponentEditors in '..\..\design\FMXuTPLb_ComponentEditors.pas',
   FMX.uTPLb_ComponentAbout in '..\..\design\FMX.uTPLb_ComponentAbout.pas' {TPLb_fmComponentAbout},
-  FMX.uTPLb_ComponentRegistration in '..\..\design\FMX.uTPLb_ComponentRegistration.pas';
+  FMXuTPLb_ComponentRegistration in '..\..\design\FMXuTPLb_ComponentRegistration.pas';
 
 end.

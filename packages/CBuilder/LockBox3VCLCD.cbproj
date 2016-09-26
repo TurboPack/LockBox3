@@ -210,10 +210,10 @@
             <FormType>dfm</FormType>
             <BuildOrder>10</BuildOrder>
         </DelphiCompile>
-        <DelphiCompile Include="..\..\design\Vcl.uTPLb_ComponentEditors.pas">
+        <DelphiCompile Include="..\..\design\VcluTPLb_ComponentEditors.pas">
             <BuildOrder>11</BuildOrder>
         </DelphiCompile>
-        <DelphiCompile Include="..\..\design\Vcl.uTPLb_ComponentRegistration.pas">
+        <DelphiCompile Include="..\..\design\VcluTPLb_ComponentRegistration.pas">
             <BuildOrder>12</BuildOrder>
         </DelphiCompile>
         <DelphiCompile Include="..\..\design\Vcl.uTPLb_InfoUtils.pas">

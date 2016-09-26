@@ -16,8 +16,8 @@
 #include <SysInit.hpp>
 #include <Vcl.uTPLb_InfoUtils.hpp>
 #include <Vcl.uTPLb_ComponentAbout.hpp>
-#include <Vcl.uTPLb_ComponentEditors.hpp>
-#include <Vcl.uTPLb_ComponentRegistration.hpp>
+#include <VcluTPLb_ComponentEditors.hpp>
+#include <VcluTPLb_ComponentRegistration.hpp>
 #include <Winapi.Windows.hpp>	// (rtl)
 #include <Winapi.PsAPI.hpp>	// (rtl)
 #include <System.Character.hpp>	// (rtl)

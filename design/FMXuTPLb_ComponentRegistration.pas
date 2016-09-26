@@ -28,7 +28,7 @@ and earlier was TurboPower Software.
 
  * ***** END LICENSE BLOCK ***** *}
 
-unit FMX.uTPLb_ComponentRegistration;
+unit FMXuTPLb_ComponentRegistration;
 
 interface
 

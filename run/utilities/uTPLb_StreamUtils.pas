@@ -91,7 +91,9 @@ function FileSize( const FileName: string): int64;
 
 // For debug purposes ONLY:
 function Stream_to_decimalbytes( Source: TStream): string;
+{$IFNDEF NEXTGEN}
 function Stream_To_Hex(ASource: TStream): Ansistring;
+{$ENDIF}
 function DisplayStream( Stream: TStream): string;
 
 implementation
@@ -311,6 +313,7 @@ begin
       end
 end;
 
+{$IFNDEF NEXTGEN}
 function Stream_To_Hex(ASource: TStream): Ansistring;
 var
   NumBytes, I: Integer;
@@ -324,6 +327,7 @@ begin
     BinToHex(PAnsiChar(@B), PAnsiChar(@Result[(I*2)+1]), 1);
   end;
 end;
+{$ENDIF}
 
 procedure Base64_to_stream( const Base64: TBytes; Destin: TStream);
 begin
