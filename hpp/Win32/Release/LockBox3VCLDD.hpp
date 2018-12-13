@@ -2,7 +2,7 @@
 // Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'LockBox3VCLDD.dpk' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'LockBox3VCLDD.dpk' rev: 33.00 (Windows)
 
 #ifndef Lockbox3vclddHPP
 #define Lockbox3vclddHPP
@@ -34,9 +34,11 @@
 #include <System.TimeSpan.hpp>	// (rtl)
 #include <System.DateUtils.hpp>	// (rtl)
 #include <System.IOUtils.hpp>	// (rtl)
+#include <System.IniFiles.hpp>	// (rtl)
 #include <System.Win.Registry.hpp>	// (rtl)
 #include <System.UIConsts.hpp>	// (rtl)
 #include <Vcl.Graphics.hpp>	// (vcl)
+#include <System.Messaging.hpp>	// (rtl)
 #include <System.Actions.hpp>	// (rtl)
 #include <Vcl.ActnList.hpp>	// (vcl)
 #include <System.HelpIntfs.hpp>	// (rtl)
@@ -87,6 +89,7 @@
 #include <Vcl.ActnMenus.hpp>	// (vclactnband)
 #include <Vcl.ActnMan.hpp>	// (vclactnband)
 #include <Vcl.PlatformDefaultStyleActnCtrls.hpp>	// (vclactnband)
+#include <Winapi.GDIPOBJ.hpp>	// (rtl)
 #include <BaseDock.hpp>	// (designide)
 #include <DeskUtil.hpp>	// (designide)
 #include <DeskForm.hpp>	// (designide)
@@ -106,8 +109,8 @@
 #include <VCLEditors.hpp>	// (designide)
 // SO_SFX: 250
 // PRG_EXT: .bpl
-// BPI_DIR: C:\Users\Public\Documents\Embarcadero\Studio\19.0\Dcp
-// OBJ_DIR: C:\Users\Public\Documents\Embarcadero\Studio\19.0\Dcp
+// BPI_DIR: C:\Users\Public\Documents\Embarcadero\Studio\20.0\Dcp
+// OBJ_DIR: C:\Users\Public\Documents\Embarcadero\Studio\20.0\Dcp
 // OBJ_EXT: .obj
 
 //-- user supplied -----------------------------------------------------------

@@ -2,7 +2,7 @@
 // Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'uTPLb_Asymetric.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'uTPLb_Asymetric.pas' rev: 33.00 (Windows)
 
 #ifndef Utplb_asymetricHPP
 #define Utplb_asymetricHPP
@@ -28,9 +28,9 @@ class DELPHICLASS TAsymetricKeyPair;
 class DELPHICLASS TAsymetricEncDec;
 class DELPHICLASS TAsymetricEncryptor;
 class DELPHICLASS TAsymetricDecryptor;
-__interface IAsymetric_Engine;
+__interface DELPHIINTERFACE IAsymetric_Engine;
 typedef System::DelphiInterface<IAsymetric_Engine> _di_IAsymetric_Engine;
-__interface ICodec_WithAsymetricSupport;
+__interface DELPHIINTERFACE ICodec_WithAsymetricSupport;
 typedef System::DelphiInterface<ICodec_WithAsymetricSupport> _di_ICodec_WithAsymetricSupport;
 class DELPHICLASS TAsymetric_Engine;
 //-- type declarations -------------------------------------------------------
@@ -44,16 +44,16 @@ class PASCALIMPLEMENTATION TAsymtricKeyPart : public System::TObject
 	typedef System::TObject inherited;
 	
 protected:
-	virtual unsigned __fastcall NominalKeyBitLength(void) = 0 ;
+	virtual unsigned __fastcall NominalKeyBitLength() = 0 ;
 	
 public:
 	virtual void __fastcall SaveToStream(System::Classes::TStream* Store) = 0 ;
 	virtual void __fastcall LoadFromStream(System::Classes::TStream* Store) = 0 ;
-	virtual bool __fastcall isEmpty(void) = 0 ;
-	virtual void __fastcall Burn(void) = 0 ;
+	virtual bool __fastcall isEmpty() = 0 ;
+	virtual void __fastcall Burn() = 0 ;
 public:
-	/* TObject.Create */ inline __fastcall TAsymtricKeyPart(void) : System::TObject() { }
-	/* TObject.Destroy */ inline __fastcall virtual ~TAsymtricKeyPart(void) { }
+	/* TObject.Create */ inline __fastcall TAsymtricKeyPart() : System::TObject() { }
+	/* TObject.Destroy */ inline __fastcall virtual ~TAsymtricKeyPart() { }
 	
 };
 
@@ -67,16 +67,16 @@ class PASCALIMPLEMENTATION TAsymetricKeyPair : public Utplb_streamcipher::TSymet
 public:
 	TAsymtricKeyPart* FPublicPart;
 	TAsymtricKeyPart* FPrivatePart;
-	__fastcall virtual TAsymetricKeyPair(void) = 0 ;
-	__fastcall virtual ~TAsymetricKeyPair(void);
-	virtual TKeyStoragePartSet __fastcall HasParts(void);
+	__fastcall virtual TAsymetricKeyPair() = 0 ;
+	__fastcall virtual ~TAsymetricKeyPair();
+	virtual TKeyStoragePartSet __fastcall HasParts();
 	virtual void __fastcall SaveToStream(System::Classes::TStream* Stream);
 	virtual void __fastcall StoreToStream(System::Classes::TStream* Store, TKeyStoragePartSet Parts);
 	virtual bool __fastcall Can_StoreToStream(TKeyStoragePartSet Parts);
 	virtual void __fastcall LoadFromStream(System::Classes::TStream* Store, TKeyStoragePartSet Parts) = 0 ;
-	unsigned __fastcall NominalKeyBitLength(void);
-	virtual void __fastcall Burn(void);
-	virtual TAsymetricKeyPair* __fastcall Clone(void);
+	unsigned __fastcall NominalKeyBitLength();
+	virtual void __fastcall Burn();
+	virtual TAsymetricKeyPair* __fastcall Clone();
 };
 
 #pragma pack(pop)
@@ -91,11 +91,11 @@ protected:
 	unsigned __int64 FBytesProcessed;
 	Utplb_codecintf::_di_ICodec FSymetricCodec;
 	System::TObject* FSymetricCodecObj;
-	__fastcall virtual TAsymetricEncDec(void);
-	virtual void __fastcall Reset(void);
+	__fastcall virtual TAsymetricEncDec();
+	virtual void __fastcall Reset();
 	
 public:
-	__fastcall virtual ~TAsymetricEncDec(void);
+	__fastcall virtual ~TAsymetricEncDec();
 };
 
 
@@ -108,16 +108,16 @@ protected:
 	System::Classes::TStream* FCipherText;
 	__fastcall virtual TAsymetricEncryptor(TAsymtricKeyPart* PublicKey1, System::Classes::TStream* CipherText1);
 	virtual void __fastcall Encrypt(System::Classes::TStream* const Plaintext);
-	virtual void __fastcall End_Encrypt(void);
+	virtual void __fastcall End_Encrypt();
 	
 public:
-	virtual Utplb_streamcipher::TSymetricKey* __fastcall GenerateSymetricKey(void) = 0 ;
+	virtual Utplb_streamcipher::TSymetricKey* __fastcall GenerateSymetricKey() = 0 ;
 	virtual bool __fastcall VerifySignature(System::Classes::TStream* Document, System::TObject* ProgressSender, Utplb_codecintf::TOnEncDecProgress ProgressEvent, bool &wasAborted) = 0 ;
 protected:
-	/* TAsymetricEncDec.Create */ inline __fastcall virtual TAsymetricEncryptor(void) : TAsymetricEncDec() { }
+	/* TAsymetricEncDec.Create */ inline __fastcall virtual TAsymetricEncryptor() : TAsymetricEncDec() { }
 	
 public:
-	/* TAsymetricEncDec.Destroy */ inline __fastcall virtual ~TAsymetricEncryptor(void) { }
+	/* TAsymetricEncDec.Destroy */ inline __fastcall virtual ~TAsymetricEncryptor() { }
 	
 private:
 	void *__IStreamEncryptor;	// Utplb_streamcipher::IStreamEncryptor 
@@ -149,16 +149,16 @@ protected:
 	System::Classes::TStream* FPlainText;
 	__fastcall virtual TAsymetricDecryptor(TAsymtricKeyPart* PrivateKey1, System::Classes::TStream* PlainText1);
 	virtual void __fastcall Decrypt(System::Classes::TStream* const Ciphertext);
-	virtual void __fastcall End_Decrypt(void);
+	virtual void __fastcall End_Decrypt();
 	
 public:
 	virtual Utplb_streamcipher::TSymetricKey* __fastcall LoadSymetricKey(System::Classes::TStream* Ciphertext) = 0 ;
 	virtual void __fastcall Sign(System::Classes::TStream* Signature, System::TObject* ProgressSender, Utplb_codecintf::TOnEncDecProgress ProgressEvent, bool &wasAborted) = 0 ;
 protected:
-	/* TAsymetricEncDec.Create */ inline __fastcall virtual TAsymetricDecryptor(void) : TAsymetricEncDec() { }
+	/* TAsymetricEncDec.Create */ inline __fastcall virtual TAsymetricDecryptor() : TAsymetricEncDec() { }
 	
 public:
-	/* TAsymetricEncDec.Destroy */ inline __fastcall virtual ~TAsymetricDecryptor(void) { }
+	/* TAsymetricEncDec.Destroy */ inline __fastcall virtual ~TAsymetricDecryptor() { }
 	
 private:
 	void *__IStreamDecryptor;	// Utplb_streamcipher::IStreamDecryptor 
@@ -191,7 +191,7 @@ __interface  INTERFACE_UUID("{F6B035A8-2829-4F43-B95C-14C77A22B379}") IAsymetric
 
 __interface  INTERFACE_UUID("{76B67794-CB5A-41BA-B519-9250FDC592C6}") ICodec_WithAsymetricSupport  : public Utplb_codecintf::ICodec 
 {
-	virtual _di_IAsymetric_Engine __fastcall Asymetric_Engine(void) = 0 ;
+	virtual _di_IAsymetric_Engine __fastcall Asymetric_Engine() = 0 ;
 };
 
 #pragma pack(push,4)
@@ -200,20 +200,20 @@ class PASCALIMPLEMENTATION TAsymetric_Engine : public System::TInterfacedObject
 	typedef System::TInterfacedObject inherited;
 	
 protected:
-	virtual System::UnicodeString __fastcall DisplayName(void) = 0 ;
-	virtual System::UnicodeString __fastcall ProgId(void) = 0 ;
-	virtual Utplb_streamcipher::TAlgorithmicFeatureSet __fastcall Features(void);
-	virtual System::UnicodeString __fastcall DefinitionURL(void) = 0 ;
-	virtual System::UnicodeString __fastcall WikipediaReference(void) = 0 ;
+	virtual System::UnicodeString __fastcall DisplayName() = 0 ;
+	virtual System::UnicodeString __fastcall ProgId() = 0 ;
+	virtual Utplb_streamcipher::TAlgorithmicFeatureSet __fastcall Features();
+	virtual System::UnicodeString __fastcall DefinitionURL() = 0 ;
+	virtual System::UnicodeString __fastcall WikipediaReference() = 0 ;
 	Utplb_streamcipher::TSymetricKey* __fastcall GenerateKey(System::Classes::TStream* Seed);
 	virtual Utplb_streamcipher::TSymetricKey* __fastcall LoadKeyFromStream(System::Classes::TStream* Store) = 0 ;
-	int __fastcall SeedByteSize(void);
+	int __fastcall SeedByteSize();
 	Utplb_streamcipher::_di_IStreamCipher __fastcall Parameterize(const System::_di_IInterface Params);
 	virtual Utplb_streamcipher::_di_IStreamEncryptor __fastcall Start_Encrypt(Utplb_streamcipher::TSymetricKey* Key, System::Classes::TStream* CipherText);
 	virtual Utplb_streamcipher::_di_IStreamDecryptor __fastcall Start_Decrypt(Utplb_streamcipher::TSymetricKey* Key, System::Classes::TStream* PlainText);
-	virtual TAsymetricKeyPairClass __fastcall AsymetricKeyPairClass(void) = 0 ;
-	virtual TAsymetricEncryptorClass __fastcall EncClass(void) = 0 ;
-	virtual TAsymetricDecryptorClass __fastcall DecClass(void) = 0 ;
+	virtual TAsymetricKeyPairClass __fastcall AsymetricKeyPairClass() = 0 ;
+	virtual TAsymetricEncryptorClass __fastcall EncClass() = 0 ;
+	virtual TAsymetricDecryptorClass __fastcall DecClass() = 0 ;
 	
 public:
 	virtual void __fastcall GenerateAsymetricKeyPair(unsigned KeySizeInBits, System::TObject* ProgressSender, Utplb_codecintf::TGenerateAsymetricKeyPairProgress ProgressEvent, TAsymetricKeyPair* &KeyPair, bool &wasAborted) = 0 ;
@@ -221,8 +221,8 @@ public:
 	virtual bool __fastcall VerifySignature(System::Classes::TStream* Document, System::Classes::TStream* Signature, TAsymtricKeyPart* PublicPart, System::TObject* ProgressSender, Utplb_codecintf::TOnEncDecProgress ProgressEvent, bool &wasAborted);
 	virtual TAsymetricKeyPair* __fastcall CreateFromStream(System::Classes::TStream* Store, TKeyStoragePartSet Parts) = 0 ;
 public:
-	/* TObject.Create */ inline __fastcall TAsymetric_Engine(void) : System::TInterfacedObject() { }
-	/* TObject.Destroy */ inline __fastcall virtual ~TAsymetric_Engine(void) { }
+	/* TObject.Create */ inline __fastcall TAsymetric_Engine() : System::TInterfacedObject() { }
+	/* TObject.Destroy */ inline __fastcall virtual ~TAsymetric_Engine() { }
 	
 private:
 	void *__IAsymetric_Engine;	// IAsymetric_Engine 

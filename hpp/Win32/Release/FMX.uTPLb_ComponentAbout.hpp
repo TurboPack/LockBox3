@@ -2,7 +2,7 @@
 // Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'FMX.uTPLb_ComponentAbout.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'FMX.uTPLb_ComponentAbout.pas' rev: 33.00 (Windows)
 
 #ifndef Fmx_Utplb_componentaboutHPP
 #define Fmx_Utplb_componentaboutHPP
@@ -144,7 +144,7 @@ public:
 public:
 	/* TCustomForm.Create */ inline __fastcall virtual TTPLb_fmComponentAbout(System::Classes::TComponent* AOwner) : Fmx::Forms::TForm(AOwner) { }
 	/* TCustomForm.CreateNew */ inline __fastcall virtual TTPLb_fmComponentAbout(System::Classes::TComponent* AOwner, NativeInt Dummy) : Fmx::Forms::TForm(AOwner, Dummy) { }
-	/* TCustomForm.Destroy */ inline __fastcall virtual ~TTPLb_fmComponentAbout(void) { }
+	/* TCustomForm.Destroy */ inline __fastcall virtual ~TTPLb_fmComponentAbout() { }
 	
 };
 

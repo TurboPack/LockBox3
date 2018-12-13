@@ -2,7 +2,7 @@
 // Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'uTPLb_StreamUtils.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'uTPLb_StreamUtils.pas' rev: 33.00 (Windows)
 
 #ifndef Utplb_streamutilsHPP
 #define Utplb_streamutilsHPP
@@ -36,7 +36,7 @@ private:
 	int FSaltVolume;
 	
 protected:
-	virtual __int64 __fastcall GetSize(void);
+	virtual __int64 __fastcall GetSize();
 	virtual void __fastcall SetSize(const __int64 NewSize)/* overload */;
 	
 public:
@@ -46,8 +46,8 @@ public:
 	__property System::Classes::TStream* FreshwaterStream = {read=FFreshwaterStream, write=FFreshwaterStream};
 	__property int SaltVolume = {read=FSaltVolume, write=FSaltVolume, nodefault};
 public:
-	/* TObject.Create */ inline __fastcall TDesalinationWriteStream(void) : System::Classes::TStream() { }
-	/* TObject.Destroy */ inline __fastcall virtual ~TDesalinationWriteStream(void) { }
+	/* TObject.Create */ inline __fastcall TDesalinationWriteStream() : System::Classes::TStream() { }
+	/* TObject.Destroy */ inline __fastcall virtual ~TDesalinationWriteStream() { }
 	
 	/* Hoisted overloads: */
 	

@@ -2,7 +2,7 @@
 // Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'uTPLb_HugeCardinal.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'uTPLb_HugeCardinal.pas' rev: 33.00 (Windows)
 
 #ifndef Utplb_hugecardinalHPP
 #define Utplb_hugecardinalHPP
@@ -40,16 +40,16 @@ class PASCALIMPLEMENTATION THugeCardinal : /*[[sealed]]*/ public System::TObject
 private:
 	int FMaxBits;
 	int FBits;
-	void __fastcall CheckBits(void);
+	void __fastcall CheckBits();
 	__classmethod int __fastcall ComputedNeededSize(int RequestedBits);
 	void __fastcall ClearMem(int Offset, int Length);
 	void __fastcall DividePrimitive(THugeCardinal* Divisor, THugeCardinal* &Quotient, THugeCardinal* &Remainder, bool RequiresQuotient);
-	System::UnicodeString __fastcall GetAsHexString(void);
+	System::UnicodeString __fastcall GetAsHexString();
 	void __fastcall MulPower2_OldAlgorithm(int ShiftAmnt);
 	void __fastcall MulPower2_NewAlgorithm(int ShiftAmnt);
 	void __fastcall MultiplyMod_Old(THugeCardinal* Factor, THugeCardinal* Modulus);
 	void __fastcall MultiplyMod_New(THugeCardinal* Factor, THugeCardinal* Modulus);
-	System::UnicodeString __fastcall GetAsBase10(void);
+	System::UnicodeString __fastcall GetAsBase10();
 	
 protected:
 	System::Classes::TMemoryStream* __fastcall NewMemoryStream(int InitBitSize);
@@ -65,14 +65,14 @@ public:
 	__fastcall THugeCardinal(THugeCardinal* Master, const Utplb_memorystreampool::_di_IMemoryStreamPool Pool1);
 	__fastcall THugeCardinal(int MaxBits1, THugeCardinal* Master, const Utplb_memorystreampool::_di_IMemoryStreamPool Pool1);
 	__fastcall THugeCardinal(int MaxBits1, TByteOrder ByteOrder, System::Classes::TStream* Stream, const Utplb_memorystreampool::_di_IMemoryStreamPool Pool1);
-	__fastcall virtual ~THugeCardinal(void);
-	THugeCardinal* __fastcall Clone(void);
+	__fastcall virtual ~THugeCardinal();
+	THugeCardinal* __fastcall Clone();
 	THugeCardinal* __fastcall CloneSized(int MaxBits1);
 	void __fastcall Resize(int NewMaxBit1);
-	void __fastcall Burn(void);
-	int __fastcall BitLength(void);
-	int __fastcall MaxBits(void);
-	int __fastcall CapacityInBits(void);
+	void __fastcall Burn();
+	int __fastcall BitLength();
+	int __fastcall MaxBits();
+	int __fastcall CapacityInBits();
 	void __fastcall Assign(THugeCardinal* Source);
 	void __fastcall AssignFromBuf(TByteOrder ByteOrder, const void *Value, const int ByteLength);
 	void __fastcall AssignFromStreamIn(TByteOrder ByteOrder, System::Classes::TStream* Stream);
@@ -82,11 +82,11 @@ public:
 	void __fastcall RandomBits(int BitsOfRandom, bool ExactBitLength);
 	TCompareResult __fastcall Compare(THugeCardinal* Reference);
 	TCompareResult __fastcall CompareSmall(unsigned __int64 Reference);
-	bool __fastcall isZero(void);
-	bool __fastcall isOdd(void);
-	void __fastcall Zeroise(void);
-	bool __fastcall isSmall(void);
-	unsigned __int64 __fastcall ExtractSmall(void);
+	bool __fastcall isZero();
+	bool __fastcall isOdd();
+	void __fastcall Zeroise();
+	bool __fastcall isSmall();
+	unsigned __int64 __fastcall ExtractSmall();
 	unsigned __int64 __fastcall ModSmall(unsigned __int64 Modulus);
 	void __fastcall Add(THugeCardinal* Addend);
 	void __fastcall Increment(__int64 Addend);
@@ -108,7 +108,7 @@ public:
 	__property System::UnicodeString AsHexString = {read=GetAsHexString};
 	__property System::UnicodeString AsBase10 = {read=GetAsBase10};
 public:
-	/* TObject.Create */ inline __fastcall THugeCardinal(void) : System::TObject() { }
+	/* TObject.Create */ inline __fastcall THugeCardinal() : System::TObject() { }
 	
 };
 
@@ -135,9 +135,9 @@ extern DELPHI_PACKAGE bool doUseMultiplyMod_NewAlgorithm;
 extern DELPHI_PACKAGE bool doProfiling;
 extern DELPHI_PACKAGE System::StaticArray<__int64, 13> ExecutionTimes;
 extern DELPHI_PACKAGE System::StaticArray<unsigned, 13> ExecutionPercentages;
-extern DELPHI_PACKAGE void __fastcall InitExecutionTimes(void);
-extern DELPHI_PACKAGE void __fastcall DoneExecutionTimes(void);
-extern DELPHI_PACKAGE void __fastcall CalcExecutionPercentages(void);
+extern DELPHI_PACKAGE void __fastcall InitExecutionTimes();
+extern DELPHI_PACKAGE void __fastcall DoneExecutionTimes();
+extern DELPHI_PACKAGE void __fastcall CalcExecutionPercentages();
 extern DELPHI_PACKAGE void __fastcall SafeAssign(THugeCardinal* Destin, THugeCardinal* Source);
 extern DELPHI_PACKAGE void __fastcall SafeAdd(THugeCardinal* Sum, THugeCardinal* Addend1, THugeCardinal* Addend2);
 }	/* namespace Utplb_hugecardinal */

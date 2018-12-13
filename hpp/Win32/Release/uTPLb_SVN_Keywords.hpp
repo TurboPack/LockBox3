@@ -2,7 +2,7 @@
 // Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'uTPLb_SVN_Keywords.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'uTPLb_SVN_Keywords.pas' rev: 33.00 (Windows)
 
 #ifndef Utplb_svn_keywordsHPP
 #define Utplb_svn_keywordsHPP
@@ -27,7 +27,7 @@ extern DELPHI_PACKAGE System::UnicodeString TPLB3Runtime_SVN_Keyword_Revision;
 extern DELPHI_PACKAGE System::UnicodeString TPLB3Runtime_SVN_Keyword_Author;
 extern DELPHI_PACKAGE System::UnicodeString TPLB3Runtime_SVN_Keyword_HeadURL;
 extern DELPHI_PACKAGE System::UnicodeString TPLB3Runtime_SVN_Keyword_Id;
-extern DELPHI_PACKAGE int __fastcall TPLB3Runtime_SVN_Revision(void);
+extern DELPHI_PACKAGE int __fastcall TPLB3Runtime_SVN_Revision();
 }	/* namespace Utplb_svn_keywords */
 #if !defined(DELPHIHEADER_NO_IMPLICIT_NAMESPACE_USE) && !defined(NO_USING_NAMESPACE_UTPLB_SVN_KEYWORDS)
 using namespace Utplb_svn_keywords;

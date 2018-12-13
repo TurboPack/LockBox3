@@ -2,7 +2,7 @@
 // Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'uTPLb_BaseNonVisualComponent.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'uTPLb_BaseNonVisualComponent.pas' rev: 33.00 (Windows)
 
 #ifndef Utplb_basenonvisualcomponentHPP
 #define Utplb_basenonvisualcomponentHPP
@@ -21,10 +21,10 @@
 namespace Utplb_basenonvisualcomponent
 {
 //-- forward type declarations -----------------------------------------------
-__interface ITPLb_Component;
+__interface DELPHIINTERFACE ITPLb_Component;
 typedef System::DelphiInterface<ITPLb_Component> _di_ITPLb_Component;
 class DELPHICLASS TTPLb_BaseNonVisualComponent;
-__interface IEventOrigin;
+__interface DELPHIINTERFACE IEventOrigin;
 typedef System::DelphiInterface<IEventOrigin> _di_IEventOrigin;
 //-- type declarations -------------------------------------------------------
 __interface  INTERFACE_UUID("{AC0A9DC4-DF61-48A6-B460-408CE9CEEB85}") ITPLb_Component  : public System::IInterface 
@@ -37,14 +37,14 @@ class PASCALIMPLEMENTATION TTPLb_BaseNonVisualComponent : public System::Classes
 	typedef System::Classes::TComponent inherited;
 	
 private:
-	System::UnicodeString __fastcall GetAbout(void);
+	System::UnicodeString __fastcall GetAbout();
 	void __fastcall SetAbout(const System::UnicodeString Value);
 	
 __published:
 	__property System::UnicodeString About = {read=GetAbout, write=SetAbout, stored=false};
 public:
 	/* TComponent.Create */ inline __fastcall virtual TTPLb_BaseNonVisualComponent(System::Classes::TComponent* AOwner) : System::Classes::TComponent(AOwner) { }
-	/* TComponent.Destroy */ inline __fastcall virtual ~TTPLb_BaseNonVisualComponent(void) { }
+	/* TComponent.Destroy */ inline __fastcall virtual ~TTPLb_BaseNonVisualComponent() { }
 	
 private:
 	void *__ITPLb_Component;	// ITPLb_Component 

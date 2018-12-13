@@ -2,7 +2,7 @@
 // Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'uTPLb_SHA2.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'uTPLb_SHA2.pas' rev: 33.00 (Windows)
 
 #ifndef Utplb_sha2HPP
 #define Utplb_sha2HPP
@@ -35,20 +35,20 @@ class PASCALIMPLEMENTATION TSHA2 : public System::TInterfacedObject
 	
 private:
 	TSHA2FamilyMember FAlgorithm;
-	System::UnicodeString __fastcall DisplayName(void);
-	System::UnicodeString __fastcall ProgId(void);
-	Utplb_streamcipher::TAlgorithmicFeatureSet __fastcall Features(void);
-	int __fastcall DigestSize(void);
-	int __fastcall UpdateSize(void);
+	System::UnicodeString __fastcall DisplayName();
+	System::UnicodeString __fastcall ProgId();
+	Utplb_streamcipher::TAlgorithmicFeatureSet __fastcall Features();
+	int __fastcall DigestSize();
+	int __fastcall UpdateSize();
 	Utplb_hashdsc::_di_IHasher __fastcall MakeHasher(const System::_di_IInterface Params);
-	System::UnicodeString __fastcall DefinitionURL(void);
-	System::UnicodeString __fastcall WikipediaReference(void);
-	System::TObject* __fastcall ControlObject(void);
+	System::UnicodeString __fastcall DefinitionURL();
+	System::UnicodeString __fastcall WikipediaReference();
+	System::TObject* __fastcall ControlObject();
 	
 public:
 	__fastcall TSHA2(TSHA2FamilyMember Algorithm1);
 public:
-	/* TObject.Destroy */ inline __fastcall virtual ~TSHA2(void) { }
+	/* TObject.Destroy */ inline __fastcall virtual ~TSHA2() { }
 	
 private:
 	void *__IControlObject;	// Utplb_decorators::IControlObject 

@@ -2,7 +2,7 @@
 // Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'uTPLb_MemoryStreamPool.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'uTPLb_MemoryStreamPool.pas' rev: 33.00 (Windows)
 
 #ifndef Utplb_memorystreampoolHPP
 #define Utplb_memorystreampoolHPP
@@ -21,13 +21,13 @@
 namespace Utplb_memorystreampool
 {
 //-- forward type declarations -----------------------------------------------
-__interface IMemoryStreamPool;
+__interface DELPHIINTERFACE IMemoryStreamPool;
 typedef System::DelphiInterface<IMemoryStreamPool> _di_IMemoryStreamPool;
 class DELPHICLASS TPooledMemoryStream;
 //-- type declarations -------------------------------------------------------
 __interface  INTERFACE_UUID("{ADB2D4BA-40F6-4249-923E-201D4719609B}") IMemoryStreamPool  : public System::IInterface 
 {
-	virtual int __fastcall BayCount(void) = 0 ;
+	virtual int __fastcall BayCount() = 0 ;
 	virtual void __fastcall GetUsage(int Size, int &Current, int &Peak) = 0 ;
 	virtual int __fastcall GetSize(int Idx) = 0 ;
 	virtual System::Classes::TMemoryStream* __fastcall NewMemoryStream(int InitSize) = 0 ;
@@ -46,14 +46,14 @@ protected:
 public:
 	__fastcall TPooledMemoryStream(const _di_IMemoryStreamPool Pool1);
 public:
-	/* TMemoryStream.Destroy */ inline __fastcall virtual ~TPooledMemoryStream(void) { }
+	/* TMemoryStream.Destroy */ inline __fastcall virtual ~TPooledMemoryStream() { }
 	
 };
 
 #pragma pack(pop)
 
 //-- var, const, procedure ---------------------------------------------------
-extern DELPHI_PACKAGE _di_IMemoryStreamPool __fastcall NewPool(void);
+extern DELPHI_PACKAGE _di_IMemoryStreamPool __fastcall NewPool();
 }	/* namespace Utplb_memorystreampool */
 #if !defined(DELPHIHEADER_NO_IMPLICIT_NAMESPACE_USE) && !defined(NO_USING_NAMESPACE_UTPLB_MEMORYSTREAMPOOL)
 using namespace Utplb_memorystreampool;

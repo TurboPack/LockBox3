@@ -2,7 +2,7 @@
 // Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'uTPLb_Hash.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'uTPLb_Hash.pas' rev: 33.00 (Windows)
 
 #ifndef Utplb_hashHPP
 #define Utplb_hashHPP
@@ -26,9 +26,9 @@
 namespace Utplb_hash
 {
 //-- forward type declarations -----------------------------------------------
-__interface IHash;
+__interface DELPHIINTERFACE IHash;
 typedef System::DelphiInterface<IHash> _di_IHash;
-__interface IHash_TestAccess;
+__interface DELPHIINTERFACE IHash_TestAccess;
 typedef System::DelphiInterface<IHash_TestAccess> _di_IHash_TestAccess;
 class DELPHICLASS TSimpleHash;
 class DELPHICLASS THash;
@@ -37,21 +37,21 @@ typedef bool __fastcall (__closure *TOnHashProgress)(System::TObject* Sender, __
 
 __interface  INTERFACE_UUID("{97CF303A-B823-42F3-98F6-7022015FDCB5}") IHash  : public System::IInterface 
 {
-	virtual bool __fastcall GetIsHashing(void) = 0 ;
-	virtual Utplb_hashdsc::_di_IHashDsc __fastcall GetHash(void) = 0 ;
+	virtual bool __fastcall GetIsHashing() = 0 ;
+	virtual Utplb_hashdsc::_di_IHashDsc __fastcall GetHash() = 0 ;
 	virtual void __fastcall SetHash(const Utplb_hashdsc::_di_IHashDsc Value) = 0 ;
-	virtual System::Classes::TStream* __fastcall GetHashOutput(void) = 0 ;
-	virtual TOnHashProgress __fastcall GetonProgress(void) = 0 ;
+	virtual System::Classes::TStream* __fastcall GetHashOutput() = 0 ;
+	virtual TOnHashProgress __fastcall GetonProgress() = 0 ;
 	virtual void __fastcall SetOnProgress(TOnHashProgress Value) = 0 ;
-	virtual void __fastcall Begin_Hash(void) = 0 ;
+	virtual void __fastcall Begin_Hash() = 0 ;
 	virtual void __fastcall UpdateMemory(const void *Plaintext, int Count) = 0 ;
-	virtual void __fastcall End_Hash(void) = 0 ;
-	virtual void __fastcall Burn(void) = 0 ;
+	virtual void __fastcall End_Hash() = 0 ;
+	virtual void __fastcall Burn() = 0 ;
 	virtual void __fastcall HashStream(System::Classes::TStream* Plaintext) = 0 ;
 	virtual void __fastcall HashFile(const System::UnicodeString PlaintextFileName) = 0 ;
 	virtual void __fastcall HashString(const System::UnicodeString Plaintext, System::Sysutils::TEncoding* AEncoding) = 0 ;
 	virtual void __fastcall HashAnsiString(const System::UnicodeString Plaintext) = 0 ;
-	virtual bool __fastcall isUserAborted(void) = 0 ;
+	virtual bool __fastcall isUserAborted() = 0 ;
 	virtual void __fastcall WriteHashOutputToStream(System::Classes::TStream* Dest) = 0 ;
 	virtual void __fastcall WriteHashOutputToMemory(void *Dest) = 0 ;
 	__property bool isHashing = {read=GetIsHashing};
@@ -62,7 +62,7 @@ __interface  INTERFACE_UUID("{97CF303A-B823-42F3-98F6-7022015FDCB5}") IHash  : p
 
 __interface  INTERFACE_UUID("{E6604CED-09A1-4EA6-BE22-B3371379218B}") IHash_TestAccess  : public System::IInterface 
 {
-	virtual Utplb_hashdsc::_di_IHasher __fastcall GetHasher(void) = 0 ;
+	virtual Utplb_hashdsc::_di_IHasher __fastcall GetHasher() = 0 ;
 };
 
 class PASCALIMPLEMENTATION TSimpleHash : public System::Classes::TInterfacedPersistent
@@ -71,25 +71,25 @@ class PASCALIMPLEMENTATION TSimpleHash : public System::Classes::TInterfacedPers
 	
 private:
 	System::TObject* FSender;
-	bool __fastcall GetIsHashing(void);
-	Utplb_hashdsc::_di_IHashDsc __fastcall GetHash(void);
+	bool __fastcall GetIsHashing();
+	Utplb_hashdsc::_di_IHashDsc __fastcall GetHash();
 	void __fastcall SetHash(const Utplb_hashdsc::_di_IHashDsc Value);
-	System::Classes::TStream* __fastcall GetHashOutput(void);
-	TOnHashProgress __fastcall GetonProgress(void);
+	System::Classes::TStream* __fastcall GetHashOutput();
+	TOnHashProgress __fastcall GetonProgress();
 	void __fastcall SetOnProgress(TOnHashProgress Value);
-	void __fastcall Begin_Hash(void);
+	void __fastcall Begin_Hash();
 	void __fastcall UpdateMemory(const void *Plaintext, int Count);
-	void __fastcall End_Hash(void);
-	void __fastcall Burn(void);
+	void __fastcall End_Hash();
+	void __fastcall Burn();
 	void __fastcall HashStream(System::Classes::TStream* Plaintext);
 	void __fastcall HashFile(const System::UnicodeString PlaintextFileName);
 	void __fastcall HashString(const System::UnicodeString Plaintext, System::Sysutils::TEncoding* AEncoding);
 	void __fastcall HashAnsiString(const System::UnicodeString Plaintext);
-	bool __fastcall isUserAborted(void);
+	bool __fastcall isUserAborted();
 	void __fastcall SetEventSender(System::TObject* Sender);
 	void __fastcall WriteHashOutputToStream(System::Classes::TStream* Dest);
 	void __fastcall WriteHashOutputToMemory(void *Dest);
-	Utplb_hashdsc::_di_IHasher __fastcall GetHasher(void);
+	Utplb_hashdsc::_di_IHasher __fastcall GetHasher();
 	
 protected:
 	Utplb_hashdsc::_di_IHashDsc FHashDsc;
@@ -102,8 +102,8 @@ protected:
 	bool FisUserAborted;
 	
 public:
-	__fastcall TSimpleHash(void);
-	__fastcall virtual ~TSimpleHash(void);
+	__fastcall TSimpleHash();
+	__fastcall virtual ~TSimpleHash();
 private:
 	void *__IHash_TestAccess;	// IHash_TestAccess 
 	void *__IEventOrigin;	// Utplb_basenonvisualcomponent::IEventOrigin 
@@ -157,39 +157,39 @@ private:
 	Utplb_cryptographiclibrary::TCryptographicLibrary* FLib;
 	System::UnicodeString FHashId;
 	bool FIntfCached;
-	bool __fastcall GetIsHashing(void);
-	System::Classes::TStream* __fastcall GetHashOutput(void);
-	TOnHashProgress __fastcall GetonProgress(void);
+	bool __fastcall GetIsHashing();
+	System::Classes::TStream* __fastcall GetHashOutput();
+	TOnHashProgress __fastcall GetonProgress();
 	void __fastcall SetOnProgress(TOnHashProgress Value);
-	void __fastcall ProgIdsChanged(void);
+	void __fastcall ProgIdsChanged();
 	void __fastcall SetLib(Utplb_cryptographiclibrary::TCryptographicLibrary* Value);
 	void __fastcall Dummy(const System::UnicodeString Value);
 	void __fastcall SetHashId(const System::UnicodeString Value);
 	void __fastcall SetIntfCached(bool Value);
-	Utplb_streamcipher::TAlgorithmicFeatureSet __fastcall GetFeatures(void);
+	Utplb_streamcipher::TAlgorithmicFeatureSet __fastcall GetFeatures();
 	void __fastcall ReadData(System::Classes::TReader* Reader);
 	void __fastcall WriteData(System::Classes::TWriter* Writer);
-	Utplb_hashdsc::_di_IHasher __fastcall GetHasher(void);
+	Utplb_hashdsc::_di_IHasher __fastcall GetHasher();
 	
 protected:
 	virtual void __fastcall Notification(System::Classes::TComponent* AComponent, System::Classes::TOperation Operation);
 	virtual void __fastcall DefineProperties(System::Classes::TFiler* Filer);
-	virtual System::UnicodeString __fastcall GetHashDisplayName(void);
-	virtual void __fastcall Loaded(void);
+	virtual System::UnicodeString __fastcall GetHashDisplayName();
+	virtual void __fastcall Loaded();
 	__property bool InterfacesAreCached = {read=FIntfCached, write=SetIntfCached, nodefault};
 	
 public:
 	__fastcall virtual THash(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~THash(void);
-	void __fastcall Begin_Hash(void);
+	__fastcall virtual ~THash();
+	void __fastcall Begin_Hash();
 	void __fastcall UpdateMemory(const void *Plaintext, int PlaintextLen);
-	void __fastcall End_Hash(void);
-	void __fastcall Burn(void);
+	void __fastcall End_Hash();
+	void __fastcall Burn();
 	void __fastcall HashStream(System::Classes::TStream* Plaintext);
 	void __fastcall HashFile(const System::UnicodeString PlaintextFileName);
 	void __fastcall HashString(const System::UnicodeString Plaintext, System::Sysutils::TEncoding* AEncoding);
 	void __fastcall HashAnsiString(const System::UnicodeString Plaintext);
-	bool __fastcall isUserAborted(void);
+	bool __fastcall isUserAborted();
 	__property bool isHashing = {read=GetIsHashing, nodefault};
 	__property System::UnicodeString HashId = {read=FHashId, write=SetHashId};
 	__property System::Classes::TStream* HashOutputValue = {read=GetHashOutput};

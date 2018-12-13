@@ -2,7 +2,7 @@
 // Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'uTPLb_XXTEA.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'uTPLb_XXTEA.pas' rev: 33.00 (Windows)
 
 #ifndef Utplb_xxteaHPP
 #define Utplb_xxteaHPP
@@ -34,23 +34,23 @@ class PASCALIMPLEMENTATION TXXTEA_LargeBlock : public System::TInterfacedObject
 	
 private:
 	Utplb_blockcipher::_di_IBlockChainingModel FChaining;
-	System::UnicodeString __fastcall DisplayName(void);
-	System::UnicodeString __fastcall ProgId(void);
-	Utplb_streamcipher::TAlgorithmicFeatureSet __fastcall Features(void);
-	System::UnicodeString __fastcall DefinitionURL(void);
-	System::UnicodeString __fastcall WikipediaReference(void);
+	System::UnicodeString __fastcall DisplayName();
+	System::UnicodeString __fastcall ProgId();
+	Utplb_streamcipher::TAlgorithmicFeatureSet __fastcall Features();
+	System::UnicodeString __fastcall DefinitionURL();
+	System::UnicodeString __fastcall WikipediaReference();
 	Utplb_streamcipher::TSymetricKey* __fastcall GenerateKey(System::Classes::TStream* Seed);
 	Utplb_streamcipher::TSymetricKey* __fastcall LoadKeyFromStream(System::Classes::TStream* Store);
-	int __fastcall SeedByteSize(void);
+	int __fastcall SeedByteSize();
 	Utplb_streamcipher::_di_IStreamCipher __fastcall Parameterize(const System::_di_IInterface Params);
 	Utplb_streamcipher::_di_IStreamEncryptor __fastcall Start_Encrypt(Utplb_streamcipher::TSymetricKey* Key, System::Classes::TStream* CipherText);
 	Utplb_streamcipher::_di_IStreamDecryptor __fastcall Start_Decrypt(Utplb_streamcipher::TSymetricKey* Key, System::Classes::TStream* PlainText);
-	System::TObject* __fastcall ControlObject(void);
+	System::TObject* __fastcall ControlObject();
 	
 public:
-	__fastcall TXXTEA_LargeBlock(void);
+	__fastcall TXXTEA_LargeBlock();
 public:
-	/* TObject.Destroy */ inline __fastcall virtual ~TXXTEA_LargeBlock(void) { }
+	/* TObject.Destroy */ inline __fastcall virtual ~TXXTEA_LargeBlock() { }
 	
 private:
 	void *__IControlObject;	// Utplb_decorators::IControlObject 
@@ -98,8 +98,8 @@ public:
 typedef System::StaticArray<unsigned, 4> TTEA_Key;
 
 //-- var, const, procedure ---------------------------------------------------
-extern DELPHI_PACKAGE void __fastcall XXTEA_Encrypt(const TTEA_Key &Key, const System::TLongWordDynArray Plaintext, System::TLongWordDynArray &Ciphertext);
-extern DELPHI_PACKAGE void __fastcall XXTEA_Decrypt(const TTEA_Key &Key, const System::TLongWordDynArray Ciphertext, System::TLongWordDynArray &Plaintext);
+extern DELPHI_PACKAGE void __fastcall XXTEA_Encrypt(const TTEA_Key &Key, const System::DynamicArray<unsigned> Plaintext, System::DynamicArray<unsigned> &Ciphertext);
+extern DELPHI_PACKAGE void __fastcall XXTEA_Decrypt(const TTEA_Key &Key, const System::DynamicArray<unsigned> Ciphertext, System::DynamicArray<unsigned> &Plaintext);
 }	/* namespace Utplb_xxtea */
 #if !defined(DELPHIHEADER_NO_IMPLICIT_NAMESPACE_USE) && !defined(NO_USING_NAMESPACE_UTPLB_XXTEA)
 using namespace Utplb_xxtea;

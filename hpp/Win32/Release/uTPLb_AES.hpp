@@ -2,7 +2,7 @@
 // Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'uTPLb_AES.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'uTPLb_AES.pas' rev: 33.00 (Windows)
 
 #ifndef Utplb_aesHPP
 #define Utplb_aesHPP
@@ -34,26 +34,26 @@ class PASCALIMPLEMENTATION TAES : public System::TInterfacedObject
 	
 private:
 	int FKeySize;
-	System::UnicodeString __fastcall DisplayName(void);
-	System::UnicodeString __fastcall ProgId(void);
-	Utplb_streamcipher::TAlgorithmicFeatureSet __fastcall Features(void);
-	System::UnicodeString __fastcall DefinitionURL(void);
-	System::UnicodeString __fastcall WikipediaReference(void);
-	int __fastcall SeedByteSize(void);
+	System::UnicodeString __fastcall DisplayName();
+	System::UnicodeString __fastcall ProgId();
+	Utplb_streamcipher::TAlgorithmicFeatureSet __fastcall Features();
+	System::UnicodeString __fastcall DefinitionURL();
+	System::UnicodeString __fastcall WikipediaReference();
+	int __fastcall SeedByteSize();
 	Utplb_streamcipher::TSymetricKey* __fastcall GenerateKey(System::Classes::TStream* Seed);
 	Utplb_streamcipher::TSymetricKey* __fastcall LoadKeyFromStream(System::Classes::TStream* Store);
-	int __fastcall BlockSize(void);
-	int __fastcall KeySize(void);
+	int __fastcall BlockSize();
+	int __fastcall KeySize();
 	Utplb_blockcipher::_di_IBlockCodec __fastcall MakeBlockCodec(Utplb_streamcipher::TSymetricKey* Key);
-	System::DynamicArray<System::Byte> __fastcall SelfTest_Key(void);
-	System::DynamicArray<System::Byte> __fastcall SelfTest_Plaintext(void);
-	System::DynamicArray<System::Byte> __fastcall SelfTest_Ciphertext(void);
-	System::TObject* __fastcall ControlObject(void);
+	System::DynamicArray<System::Byte> __fastcall SelfTest_Key();
+	System::DynamicArray<System::Byte> __fastcall SelfTest_Plaintext();
+	System::DynamicArray<System::Byte> __fastcall SelfTest_Ciphertext();
+	System::TObject* __fastcall ControlObject();
 	
 public:
 	__fastcall TAES(int KeySize1);
 public:
-	/* TObject.Destroy */ inline __fastcall virtual ~TAES(void) { }
+	/* TObject.Destroy */ inline __fastcall virtual ~TAES() { }
 	
 private:
 	void *__IControlObject;	// Utplb_decorators::IControlObject 

@@ -2,7 +2,7 @@
 // Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'uTPLb_Random.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'uTPLb_Random.pas' rev: 33.00 (Windows)
 
 #ifndef Utplb_randomHPP
 #define Utplb_randomHPP
@@ -31,21 +31,21 @@ private:
 	__int64 FValue;
 	__int64 FBuffer;
 	int FAvail;
-	void __fastcall Crunch(void);
+	void __fastcall Crunch();
 	void __fastcall SetSeed(__int64 Value);
 	
 protected:
-	virtual __int64 __fastcall GetSize(void);
+	virtual __int64 __fastcall GetSize();
 	virtual void __fastcall SetSize(const __int64 NewSize)/* overload */;
 	
 public:
-	__fastcall TRandomStream(void);
-	__fastcall virtual ~TRandomStream(void);
+	__fastcall TRandomStream();
+	__fastcall virtual ~TRandomStream();
 	__classmethod TRandomStream* __fastcall Instance();
 	virtual int __fastcall Read(void *Buffer, int Count)/* overload */;
 	virtual int __fastcall Write(const void *Buffer, int Count)/* overload */;
 	virtual __int64 __fastcall Seek(const __int64 Offset, System::Classes::TSeekOrigin Origin)/* overload */;
-	void __fastcall Randomize(void);
+	void __fastcall Randomize();
 	__property __int64 Seed = {read=FValue, write=SetSeed};
 	/* Hoisted overloads: */
 	

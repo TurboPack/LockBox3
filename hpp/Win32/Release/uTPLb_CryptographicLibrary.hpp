@@ -2,7 +2,7 @@
 // Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'uTPLb_CryptographicLibrary.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'uTPLb_CryptographicLibrary.pas' rev: 33.00 (Windows)
 
 #ifndef Utplb_cryptographiclibraryHPP
 #define Utplb_cryptographiclibraryHPP
@@ -31,10 +31,10 @@ namespace Utplb_cryptographiclibrary
 {
 //-- forward type declarations -----------------------------------------------
 class DELPHICLASS TCustomStreamCipher;
-__interface ICryptographicLibraryWatcher;
+__interface DELPHIINTERFACE ICryptographicLibraryWatcher;
 typedef System::DelphiInterface<ICryptographicLibraryWatcher> _di_ICryptographicLibraryWatcher;
 class DELPHICLASS TCryptographicLibrary;
-__interface ICipherChoice;
+__interface DELPHIINTERFACE ICipherChoice;
 typedef System::DelphiInterface<ICipherChoice> _di_ICipherChoice;
 //-- type declarations -------------------------------------------------------
 enum DECLSPEC_DENUM TCryptoLibStringRef : unsigned char { cStreamId, sStreamName, cBlockId, cBlockName, cChainId, cChainName, cHashId, cHashName };
@@ -65,7 +65,7 @@ protected:
 	__fastcall TCustomStreamCipher(TCryptographicLibrary* Lib1);
 	
 public:
-	__fastcall virtual ~TCustomStreamCipher(void);
+	__fastcall virtual ~TCustomStreamCipher();
 	
 __published:
 	__property System::UnicodeString DisplayName = {read=FDisplayName, write=SetDisplayName};
@@ -78,7 +78,7 @@ __published:
 
 __interface  INTERFACE_UUID("{A9170972-FDF5-406B-9010-230E661DAF5C}") ICryptographicLibraryWatcher  : public System::IInterface 
 {
-	virtual void __fastcall ProgIdsChanged(void) = 0 ;
+	virtual void __fastcall ProgIdsChanged() = 0 ;
 };
 
 class PASCALIMPLEMENTATION TCryptographicLibrary : public Utplb_basenonvisualcomponent::TTPLb_BaseNonVisualComponent
@@ -104,17 +104,17 @@ private:
 	TOnGenerateKeyFunc FOnGenerateKeyFunc;
 	TOnStart_EncryptFunc FOnStart_EncryptFunc;
 	TOnStart_DecryptFunc FOnStart_DecryptFunc;
-	System::Classes::TStrings* __fastcall GetStreamCiphers_ByProgId(void);
-	System::Classes::TStrings* __fastcall GetStreamCiphers_ByDisplayName(void);
+	System::Classes::TStrings* __fastcall GetStreamCiphers_ByProgId();
+	System::Classes::TStrings* __fastcall GetStreamCiphers_ByDisplayName();
 	System::UnicodeString __fastcall GetStreamCipherDisplayNames(const System::UnicodeString ProgIdx);
-	System::Classes::TStrings* __fastcall GetBlockCiphers_ByProgId(void);
-	System::Classes::TStrings* __fastcall GetBlockCiphers_ByDisplayName(void);
+	System::Classes::TStrings* __fastcall GetBlockCiphers_ByProgId();
+	System::Classes::TStrings* __fastcall GetBlockCiphers_ByDisplayName();
 	System::UnicodeString __fastcall GetBlockCipherDisplayNames(const System::UnicodeString ProgIdx);
-	System::Classes::TStrings* __fastcall GetChainModes_ByProgId(void);
-	System::Classes::TStrings* __fastcall GetChainModes_ByDisplayName(void);
+	System::Classes::TStrings* __fastcall GetChainModes_ByProgId();
+	System::Classes::TStrings* __fastcall GetChainModes_ByDisplayName();
 	System::UnicodeString __fastcall GetChainModesDisplayNames(const System::UnicodeString ProgIdx);
-	System::Classes::TStrings* __fastcall GetHashs_ByProgId(void);
-	System::Classes::TStrings* __fastcall GetHashs_ByDisplayName(void);
+	System::Classes::TStrings* __fastcall GetHashs_ByProgId();
+	System::Classes::TStrings* __fastcall GetHashs_ByDisplayName();
 	System::UnicodeString __fastcall GetHashDisplayNames(const System::UnicodeString ProgIdx);
 	int __fastcall MeasureDepthUp(int MeasureLimit);
 	int __fastcall MeasureDepthDown(int MeasureLimit);
@@ -125,14 +125,14 @@ protected:
 	System::Generics::Collections::TObjectList__1<TCryptographicLibrary*>* FChildLibraries;
 	void __fastcall SetParentLibrary(TCryptographicLibrary* Value);
 	virtual void __fastcall Notification(System::Classes::TComponent* AComponent, System::Classes::TOperation Operation);
-	virtual void __fastcall StockStreamCiphers(void);
-	virtual void __fastcall StockBlockCiphers(void);
-	virtual void __fastcall StockHashes(void);
-	virtual void __fastcall StockChainModes(void);
+	virtual void __fastcall StockStreamCiphers();
+	virtual void __fastcall StockBlockCiphers();
+	virtual void __fastcall StockHashes();
+	virtual void __fastcall StockChainModes();
 	
 public:
 	__fastcall virtual TCryptographicLibrary(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TCryptographicLibrary(void);
+	__fastcall virtual ~TCryptographicLibrary();
 	Utplb_streamcipher::_di_IStreamCipher __fastcall StreamCipherIntfc(const System::UnicodeString ProgIdx);
 	void __fastcall RegisterStreamCipher(const Utplb_streamcipher::_di_IStreamCipher Registrant);
 	void __fastcall DeregisterStreamCipher(const Utplb_streamcipher::_di_IStreamCipher Registrant);
@@ -149,11 +149,11 @@ public:
 	void __fastcall DegisterWatcher(const _di_ICryptographicLibraryWatcher Registrant);
 	virtual void __fastcall ProgIdsChanged(int StackLimit);
 	System::UnicodeString __fastcall RegisterSimpleBlockTransform(Utplb_simpleblockcipher::TSimpleBlockCipherClass Cls, const System::UnicodeString ProgId1, const System::UnicodeString DisplayName1, Utplb_streamcipher::TAlgorithmicFeatureSet Features1, int BlockSizeInBytes1);
-	System::Classes::_di_IInterfaceList __fastcall GetCipherChoices(void);
+	System::Classes::_di_IInterfaceList __fastcall GetCipherChoices();
 	__classmethod System::UnicodeString __fastcall ComputeCipherDisplayName(const Utplb_streamcipher::_di_IStreamCipher SCipher, const Utplb_blockcipher::_di_IBlockCipher BCipher);
-	System::Classes::_di_IInterfaceList __fastcall GetHashChoices(void);
+	System::Classes::_di_IInterfaceList __fastcall GetHashChoices();
 	__classmethod System::UnicodeString __fastcall ComputeHashDisplayName(const Utplb_hashdsc::_di_IHashDsc Hash);
-	System::Classes::_di_IInterfaceList __fastcall GetChainChoices(void);
+	System::Classes::_di_IInterfaceList __fastcall GetChainChoices();
 	__classmethod System::UnicodeString __fastcall ComputeChainDisplayName(const Utplb_blockcipher::_di_IBlockChainingModel Chain);
 	__property System::Classes::TStrings* StreamCiphers_ByProgId = {read=GetStreamCiphers_ByProgId};
 	__property System::Classes::TStrings* StreamCiphers_ByDisplayName = {read=GetStreamCiphers_ByDisplayName};

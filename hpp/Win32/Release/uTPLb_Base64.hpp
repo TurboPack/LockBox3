@@ -2,7 +2,7 @@
 // Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'uTPLb_Base64.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'uTPLb_Base64.pas' rev: 33.00 (Windows)
 
 #ifndef Utplb_base64HPP
 #define Utplb_base64HPP
@@ -30,20 +30,20 @@ class PASCALIMPLEMENTATION TBase64Converter : public System::TInterfacedObject
 	typedef System::TInterfacedObject inherited;
 	
 private:
-	System::UnicodeString __fastcall DisplayName(void);
-	System::UnicodeString __fastcall ProgId(void);
-	Utplb_streamcipher::TAlgorithmicFeatureSet __fastcall Features(void);
-	System::UnicodeString __fastcall DefinitionURL(void);
-	System::UnicodeString __fastcall WikipediaReference(void);
+	System::UnicodeString __fastcall DisplayName();
+	System::UnicodeString __fastcall ProgId();
+	Utplb_streamcipher::TAlgorithmicFeatureSet __fastcall Features();
+	System::UnicodeString __fastcall DefinitionURL();
+	System::UnicodeString __fastcall WikipediaReference();
 	Utplb_streamcipher::TSymetricKey* __fastcall GenerateKey(System::Classes::TStream* Seed);
 	Utplb_streamcipher::TSymetricKey* __fastcall LoadKeyFromStream(System::Classes::TStream* Store);
-	int __fastcall SeedByteSize(void);
+	int __fastcall SeedByteSize();
 	Utplb_streamcipher::_di_IStreamCipher __fastcall Parameterize(const System::_di_IInterface Params);
 	Utplb_streamcipher::_di_IStreamEncryptor __fastcall Start_Encrypt(Utplb_streamcipher::TSymetricKey* Key, System::Classes::TStream* CipherText);
 	Utplb_streamcipher::_di_IStreamDecryptor __fastcall Start_Decrypt(Utplb_streamcipher::TSymetricKey* Key, System::Classes::TStream* PlainText);
 public:
-	/* TObject.Create */ inline __fastcall TBase64Converter(void) : System::TInterfacedObject() { }
-	/* TObject.Destroy */ inline __fastcall virtual ~TBase64Converter(void) { }
+	/* TObject.Create */ inline __fastcall TBase64Converter() : System::TInterfacedObject() { }
+	/* TObject.Destroy */ inline __fastcall virtual ~TBase64Converter() { }
 	
 private:
 	void *__IisBase64Converter;	// Utplb_streamcipher::IisBase64Converter 

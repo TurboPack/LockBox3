@@ -2,7 +2,7 @@
 // Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'uTPLb_RSA_Engine.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'uTPLb_RSA_Engine.pas' rev: 33.00 (Windows)
 
 #ifndef Utplb_rsa_engineHPP
 #define Utplb_rsa_engineHPP
@@ -28,7 +28,7 @@ namespace Utplb_rsa_engine
 {
 //-- forward type declarations -----------------------------------------------
 class DELPHICLASS TRSA_Engine;
-__interface IHugeCardinalWrap;
+__interface DELPHIINTERFACE IHugeCardinalWrap;
 typedef System::DelphiInterface<IHugeCardinalWrap> _di_IHugeCardinalWrap;
 class DELPHICLASS TRSAKeyPart;
 class DELPHICLASS TRSA_PublicKeyPart;
@@ -43,22 +43,22 @@ class PASCALIMPLEMENTATION TRSA_Engine : public Utplb_asymetric::TAsymetric_Engi
 	typedef Utplb_asymetric::TAsymetric_Engine inherited;
 	
 protected:
-	virtual System::UnicodeString __fastcall DisplayName(void);
-	virtual System::UnicodeString __fastcall ProgId(void);
-	virtual Utplb_streamcipher::TAlgorithmicFeatureSet __fastcall Features(void);
-	virtual System::UnicodeString __fastcall DefinitionURL(void);
-	virtual System::UnicodeString __fastcall WikipediaReference(void);
+	virtual System::UnicodeString __fastcall DisplayName();
+	virtual System::UnicodeString __fastcall ProgId();
+	virtual Utplb_streamcipher::TAlgorithmicFeatureSet __fastcall Features();
+	virtual System::UnicodeString __fastcall DefinitionURL();
+	virtual System::UnicodeString __fastcall WikipediaReference();
 	virtual Utplb_streamcipher::TSymetricKey* __fastcall LoadKeyFromStream(System::Classes::TStream* Store);
-	virtual Utplb_asymetric::TAsymetricKeyPairClass __fastcall AsymetricKeyPairClass(void);
-	virtual Utplb_asymetric::TAsymetricEncryptorClass __fastcall EncClass(void);
-	virtual Utplb_asymetric::TAsymetricDecryptorClass __fastcall DecClass(void);
+	virtual Utplb_asymetric::TAsymetricKeyPairClass __fastcall AsymetricKeyPairClass();
+	virtual Utplb_asymetric::TAsymetricEncryptorClass __fastcall EncClass();
+	virtual Utplb_asymetric::TAsymetricDecryptorClass __fastcall DecClass();
 	
 public:
 	virtual void __fastcall GenerateAsymetricKeyPair(unsigned KeySizeInBits, System::TObject* ProgressSender, Utplb_codecintf::TGenerateAsymetricKeyPairProgress ProgressEvent, Utplb_asymetric::TAsymetricKeyPair* &KeyPair, bool &wasAborted);
 	virtual Utplb_asymetric::TAsymetricKeyPair* __fastcall CreateFromStream(System::Classes::TStream* Store, Utplb_asymetric::TKeyStoragePartSet Parts);
 public:
-	/* TObject.Create */ inline __fastcall TRSA_Engine(void) : Utplb_asymetric::TAsymetric_Engine() { }
-	/* TObject.Destroy */ inline __fastcall virtual ~TRSA_Engine(void) { }
+	/* TObject.Create */ inline __fastcall TRSA_Engine() : Utplb_asymetric::TAsymetric_Engine() { }
+	/* TObject.Destroy */ inline __fastcall virtual ~TRSA_Engine() { }
 	
 };
 
@@ -70,9 +70,9 @@ typedef System::Set<RSAKeyStorePart, RSAKeyStorePart::PartN, RSAKeyStorePart::Pa
 
 __interface  INTERFACE_UUID("{27B8620A-903B-4695-80DD-20DA9D24BCC4}") IHugeCardinalWrap  : public System::IInterface 
 {
-	virtual Utplb_hugecardinal::THugeCardinal* __fastcall Value(void) = 0 ;
-	virtual void __fastcall Burn(void) = 0 ;
-	virtual bool __fastcall IsZero(void) = 0 ;
+	virtual Utplb_hugecardinal::THugeCardinal* __fastcall Value() = 0 ;
+	virtual void __fastcall Burn() = 0 ;
+	virtual bool __fastcall IsZero() = 0 ;
 };
 
 #pragma pack(push,4)
@@ -83,7 +83,7 @@ class PASCALIMPLEMENTATION TRSAKeyPart : public Utplb_asymetric::TAsymtricKeyPar
 protected:
 	_di_IHugeCardinalWrap F_RSA_n;
 	TRSAKeyPair* FOwner;
-	virtual unsigned __fastcall NominalKeyBitLength(void);
+	virtual unsigned __fastcall NominalKeyBitLength();
 	virtual void __fastcall MarkPartsToStoreLoad(RSAKeyStorePartSet &Parts) = 0 ;
 	virtual void __fastcall StoreE(System::Classes::TStream* Store) = 0 ;
 	virtual void __fastcall StoreD(System::Classes::TStream* Store) = 0 ;
@@ -98,10 +98,10 @@ protected:
 public:
 	virtual void __fastcall SaveToStream(System::Classes::TStream* Store);
 	virtual void __fastcall LoadFromStream(System::Classes::TStream* Store);
-	virtual void __fastcall Burn(void);
+	virtual void __fastcall Burn();
 public:
-	/* TObject.Create */ inline __fastcall TRSAKeyPart(void) : Utplb_asymetric::TAsymtricKeyPart() { }
-	/* TObject.Destroy */ inline __fastcall virtual ~TRSAKeyPart(void) { }
+	/* TObject.Create */ inline __fastcall TRSAKeyPart() : Utplb_asymetric::TAsymtricKeyPart() { }
+	/* TObject.Destroy */ inline __fastcall virtual ~TRSAKeyPart() { }
 	
 };
 
@@ -123,11 +123,11 @@ protected:
 	
 public:
 	_di_IHugeCardinalWrap F_RSA_e;
-	virtual void __fastcall Burn(void);
-	virtual bool __fastcall isEmpty(void);
+	virtual void __fastcall Burn();
+	virtual bool __fastcall isEmpty();
 public:
-	/* TObject.Create */ inline __fastcall TRSA_PublicKeyPart(void) : TRSAKeyPart() { }
-	/* TObject.Destroy */ inline __fastcall virtual ~TRSA_PublicKeyPart(void) { }
+	/* TObject.Create */ inline __fastcall TRSA_PublicKeyPart() : TRSAKeyPart() { }
+	/* TObject.Destroy */ inline __fastcall virtual ~TRSA_PublicKeyPart() { }
 	
 };
 
@@ -154,11 +154,11 @@ public:
 	_di_IHugeCardinalWrap F_RSA_dp;
 	_di_IHugeCardinalWrap F_RSA_dq;
 	_di_IHugeCardinalWrap F_RSA_qinv;
-	virtual void __fastcall Burn(void);
-	virtual bool __fastcall isEmpty(void);
+	virtual void __fastcall Burn();
+	virtual bool __fastcall isEmpty();
 public:
-	/* TObject.Create */ inline __fastcall TRSA_PrivateKeyPart(void) : TRSAKeyPart() { }
-	/* TObject.Destroy */ inline __fastcall virtual ~TRSA_PrivateKeyPart(void) { }
+	/* TObject.Create */ inline __fastcall TRSA_PrivateKeyPart() : TRSAKeyPart() { }
+	/* TObject.Destroy */ inline __fastcall virtual ~TRSA_PrivateKeyPart() { }
 	
 };
 
@@ -170,8 +170,8 @@ class PASCALIMPLEMENTATION TRSAKeyPair : public Utplb_asymetric::TAsymetricKeyPa
 	typedef Utplb_asymetric::TAsymetricKeyPair inherited;
 	
 private:
-	void __fastcall LinkParts(void);
-	void __fastcall CheckLinkages(void);
+	void __fastcall LinkParts();
+	void __fastcall CheckLinkages();
 	
 protected:
 	Utplb_memorystreampool::_di_IMemoryStreamPool FPool;
@@ -187,11 +187,11 @@ public:
 	_di_IHugeCardinalWrap F_RSA_dp;
 	_di_IHugeCardinalWrap F_RSA_dq;
 	_di_IHugeCardinalWrap F_RSA_qinv;
-	__fastcall virtual TRSAKeyPair(void);
-	__fastcall virtual ~TRSAKeyPair(void);
+	__fastcall virtual TRSAKeyPair();
+	__fastcall virtual ~TRSAKeyPair();
 	virtual void __fastcall LoadFromStream(System::Classes::TStream* Store, Utplb_asymetric::TKeyStoragePartSet Parts);
 	virtual void __fastcall StoreToStream(System::Classes::TStream* Store, Utplb_asymetric::TKeyStoragePartSet Parts);
-	virtual void __fastcall Burn(void);
+	virtual void __fastcall Burn();
 };
 
 #pragma pack(pop)
@@ -201,16 +201,16 @@ class PASCALIMPLEMENTATION TRSA_Encryptor : public Utplb_asymetric::TAsymetricEn
 	typedef Utplb_asymetric::TAsymetricEncryptor inherited;
 	
 public:
-	virtual Utplb_streamcipher::TSymetricKey* __fastcall GenerateSymetricKey(void);
+	virtual Utplb_streamcipher::TSymetricKey* __fastcall GenerateSymetricKey();
 	virtual bool __fastcall VerifySignature(System::Classes::TStream* Document, System::TObject* ProgressSender, Utplb_codecintf::TOnEncDecProgress ProgressEvent, bool &wasAborted);
 protected:
 	/* TAsymetricEncryptor.Start_Encrypt */ inline __fastcall virtual TRSA_Encryptor(Utplb_asymetric::TAsymtricKeyPart* PublicKey1, System::Classes::TStream* CipherText1) : Utplb_asymetric::TAsymetricEncryptor(PublicKey1, CipherText1) { }
 	
 protected:
-	/* TAsymetricEncDec.Create */ inline __fastcall virtual TRSA_Encryptor(void) : Utplb_asymetric::TAsymetricEncryptor() { }
+	/* TAsymetricEncDec.Create */ inline __fastcall virtual TRSA_Encryptor() : Utplb_asymetric::TAsymetricEncryptor() { }
 	
 public:
-	/* TAsymetricEncDec.Destroy */ inline __fastcall virtual ~TRSA_Encryptor(void) { }
+	/* TAsymetricEncDec.Destroy */ inline __fastcall virtual ~TRSA_Encryptor() { }
 	
 };
 
@@ -226,10 +226,10 @@ protected:
 	/* TAsymetricDecryptor.Start_Decrypt */ inline __fastcall virtual TRSA_Decryptor(Utplb_asymetric::TAsymtricKeyPart* PrivateKey1, System::Classes::TStream* PlainText1) : Utplb_asymetric::TAsymetricDecryptor(PrivateKey1, PlainText1) { }
 	
 protected:
-	/* TAsymetricEncDec.Create */ inline __fastcall virtual TRSA_Decryptor(void) : Utplb_asymetric::TAsymetricDecryptor() { }
+	/* TAsymetricEncDec.Create */ inline __fastcall virtual TRSA_Decryptor() : Utplb_asymetric::TAsymetricDecryptor() { }
 	
 public:
-	/* TAsymetricEncDec.Destroy */ inline __fastcall virtual ~TRSA_Decryptor(void) { }
+	/* TAsymetricEncDec.Destroy */ inline __fastcall virtual ~TRSA_Decryptor() { }
 	
 };
 

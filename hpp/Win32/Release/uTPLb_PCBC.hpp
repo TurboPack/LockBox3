@@ -2,7 +2,7 @@
 // Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'uTPLb_PCBC.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'uTPLb_PCBC.pas' rev: 33.00 (Windows)
 
 #ifndef Utplb_pcbcHPP
 #define Utplb_pcbcHPP
@@ -34,15 +34,15 @@ class PASCALIMPLEMENTATION TPCBC : public System::TInterfacedObject
 protected:
 	Utplb_blockcipher::TBlockChainLink* __fastcall Chain_EncryptBlock(Utplb_streamcipher::TSymetricKey* Key, System::Classes::TMemoryStream* InitializationVector, const Utplb_blockcipher::_di_IBlockCodec Cipher);
 	Utplb_blockcipher::TBlockChainLink* __fastcall Chain_DecryptBlock(Utplb_streamcipher::TSymetricKey* Key, System::Classes::TMemoryStream* InitializationVector, const Utplb_blockcipher::_di_IBlockCodec Cipher);
-	System::UnicodeString __fastcall DisplayName(void);
-	System::UnicodeString __fastcall ProgId(void);
-	Utplb_streamcipher::TAlgorithmicFeatureSet __fastcall Features(void);
-	Utplb_blockcipher::TChainingFeatureSet __fastcall ChainingFeatures(void);
-	System::UnicodeString __fastcall DefinitionURL(void);
-	System::UnicodeString __fastcall WikipediaReference(void);
+	System::UnicodeString __fastcall DisplayName();
+	System::UnicodeString __fastcall ProgId();
+	Utplb_streamcipher::TAlgorithmicFeatureSet __fastcall Features();
+	Utplb_blockcipher::TChainingFeatureSet __fastcall ChainingFeatures();
+	System::UnicodeString __fastcall DefinitionURL();
+	System::UnicodeString __fastcall WikipediaReference();
 public:
-	/* TObject.Create */ inline __fastcall TPCBC(void) : System::TInterfacedObject() { }
-	/* TObject.Destroy */ inline __fastcall virtual ~TPCBC(void) { }
+	/* TObject.Create */ inline __fastcall TPCBC() : System::TInterfacedObject() { }
+	/* TObject.Destroy */ inline __fastcall virtual ~TPCBC() { }
 	
 private:
 	void *__IBlockChainingModel;	// Utplb_blockcipher::IBlockChainingModel 
@@ -76,9 +76,9 @@ protected:
 	__fastcall TPCBCLink(Utplb_streamcipher::TSymetricKey* Key, System::Classes::TMemoryStream* InitializationVector, const Utplb_blockcipher::_di_IBlockCodec Cipher);
 	
 public:
-	virtual Utplb_blockcipher::TBlockChainLink* __fastcall Clone(void);
-	virtual void __fastcall Burn(void);
-	__fastcall virtual ~TPCBCLink(void);
+	virtual Utplb_blockcipher::TBlockChainLink* __fastcall Clone();
+	virtual void __fastcall Burn();
+	__fastcall virtual ~TPCBCLink();
 	virtual void __fastcall Encrypt_Block(System::Classes::TMemoryStream* Plaintext, System::Classes::TMemoryStream* Ciphertext);
 	virtual void __fastcall Decrypt_Block(System::Classes::TMemoryStream* Plaintext, System::Classes::TMemoryStream* Ciphertext);
 protected:

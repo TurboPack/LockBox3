@@ -2,7 +2,7 @@
 // Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'uTPLb_3DES.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'uTPLb_3DES.pas' rev: 33.00 (Windows)
 
 #ifndef Utplb_3desHPP
 #define Utplb_3desHPP
@@ -33,25 +33,25 @@ class PASCALIMPLEMENTATION T3DES : public System::TInterfacedObject
 	typedef System::TInterfacedObject inherited;
 	
 private:
-	virtual System::UnicodeString __fastcall DisplayName(void);
-	virtual System::UnicodeString __fastcall ProgId(void);
-	Utplb_streamcipher::TAlgorithmicFeatureSet __fastcall Features(void);
-	System::UnicodeString __fastcall DefinitionURL(void);
-	System::UnicodeString __fastcall WikipediaReference(void);
+	virtual System::UnicodeString __fastcall DisplayName();
+	virtual System::UnicodeString __fastcall ProgId();
+	Utplb_streamcipher::TAlgorithmicFeatureSet __fastcall Features();
+	System::UnicodeString __fastcall DefinitionURL();
+	System::UnicodeString __fastcall WikipediaReference();
 	virtual Utplb_streamcipher::TSymetricKey* __fastcall GenerateKey(System::Classes::TStream* Seed);
 	virtual Utplb_streamcipher::TSymetricKey* __fastcall LoadKeyFromStream(System::Classes::TStream* Store);
-	virtual int __fastcall BlockSize(void);
-	virtual int __fastcall KeySize(void);
-	virtual int __fastcall SeedByteSize(void);
+	virtual int __fastcall BlockSize();
+	virtual int __fastcall KeySize();
+	virtual int __fastcall SeedByteSize();
 	virtual Utplb_blockcipher::_di_IBlockCodec __fastcall MakeBlockCodec(Utplb_streamcipher::TSymetricKey* Key);
-	virtual System::DynamicArray<System::Byte> __fastcall SelfTest_Key(void);
-	virtual System::DynamicArray<System::Byte> __fastcall SelfTest_Plaintext(void);
-	virtual System::DynamicArray<System::Byte> __fastcall SelfTest_Ciphertext(void);
+	virtual System::DynamicArray<System::Byte> __fastcall SelfTest_Key();
+	virtual System::DynamicArray<System::Byte> __fastcall SelfTest_Plaintext();
+	virtual System::DynamicArray<System::Byte> __fastcall SelfTest_Ciphertext();
 	
 public:
-	__fastcall virtual T3DES(void);
+	__fastcall virtual T3DES();
 public:
-	/* TObject.Destroy */ inline __fastcall virtual ~T3DES(void) { }
+	/* TObject.Destroy */ inline __fastcall virtual ~T3DES() { }
 	
 private:
 	void *__IBlockCipher;	// Utplb_blockcipher::IBlockCipher 
@@ -90,21 +90,21 @@ class PASCALIMPLEMENTATION T3DES_KO1 : public T3DES
 	typedef T3DES inherited;
 	
 private:
-	virtual System::UnicodeString __fastcall DisplayName(void);
-	virtual System::UnicodeString __fastcall ProgId(void);
+	virtual System::UnicodeString __fastcall DisplayName();
+	virtual System::UnicodeString __fastcall ProgId();
 	virtual Utplb_streamcipher::TSymetricKey* __fastcall GenerateKey(System::Classes::TStream* Seed);
 	virtual Utplb_streamcipher::TSymetricKey* __fastcall LoadKeyFromStream(System::Classes::TStream* Store);
-	virtual int __fastcall KeySize(void);
-	virtual int __fastcall SeedByteSize(void);
+	virtual int __fastcall KeySize();
+	virtual int __fastcall SeedByteSize();
 	virtual Utplb_blockcipher::_di_IBlockCodec __fastcall MakeBlockCodec(Utplb_streamcipher::TSymetricKey* Key);
-	virtual System::DynamicArray<System::Byte> __fastcall SelfTest_Key(void);
-	virtual System::DynamicArray<System::Byte> __fastcall SelfTest_Plaintext(void);
-	virtual System::DynamicArray<System::Byte> __fastcall SelfTest_Ciphertext(void);
+	virtual System::DynamicArray<System::Byte> __fastcall SelfTest_Key();
+	virtual System::DynamicArray<System::Byte> __fastcall SelfTest_Plaintext();
+	virtual System::DynamicArray<System::Byte> __fastcall SelfTest_Ciphertext();
 public:
-	/* T3DES.Create */ inline __fastcall virtual T3DES_KO1(void) : T3DES() { }
+	/* T3DES.Create */ inline __fastcall virtual T3DES_KO1() : T3DES() { }
 	
 public:
-	/* TObject.Destroy */ inline __fastcall virtual ~T3DES_KO1(void) { }
+	/* TObject.Destroy */ inline __fastcall virtual ~T3DES_KO1() { }
 	
 };
 

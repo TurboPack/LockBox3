@@ -2,7 +2,7 @@
 // Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'uTPLb_StreamCipher.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'uTPLb_StreamCipher.pas' rev: 33.00 (Windows)
 
 #ifndef Utplb_streamcipherHPP
 #define Utplb_streamcipherHPP
@@ -21,18 +21,18 @@
 namespace Utplb_streamcipher
 {
 //-- forward type declarations -----------------------------------------------
-__interface ICryptoGraphicAlgorithm;
+__interface DELPHIINTERFACE ICryptoGraphicAlgorithm;
 typedef System::DelphiInterface<ICryptoGraphicAlgorithm> _di_ICryptoGraphicAlgorithm;
 class DELPHICLASS TSymetricKey;
-__interface IStreamEncryptor;
+__interface DELPHIINTERFACE IStreamEncryptor;
 typedef System::DelphiInterface<IStreamEncryptor> _di_IStreamEncryptor;
-__interface IStreamDecryptor;
+__interface DELPHIINTERFACE IStreamDecryptor;
 typedef System::DelphiInterface<IStreamDecryptor> _di_IStreamDecryptor;
-__interface IStreamCipher;
+__interface DELPHIINTERFACE IStreamCipher;
 typedef System::DelphiInterface<IStreamCipher> _di_IStreamCipher;
-__interface IStreamCipherEx2;
+__interface DELPHIINTERFACE IStreamCipherEx2;
 typedef System::DelphiInterface<IStreamCipherEx2> _di_IStreamCipherEx2;
-__interface IisBase64Converter;
+__interface DELPHIINTERFACE IisBase64Converter;
 typedef System::DelphiInterface<IisBase64Converter> _di_IisBase64Converter;
 //-- type declarations -------------------------------------------------------
 enum DECLSPEC_DENUM TAlgorithmicFeature : unsigned char { afStar, afCryptographicallyWeak, afNotImplementedYet, afForTestOnly, afForRunTimeOnly, afEncumberedByPatent, afEncumberedByCopyRight, afOpenSourceSoftware, afCommercial, afCompressor, afConverter, afBlockAdapter, afDisplayNameOnKeySize, afDoesNotNeedSalt, afAsymetric };
@@ -41,11 +41,11 @@ typedef System::Set<TAlgorithmicFeature, TAlgorithmicFeature::afStar, TAlgorithm
 
 __interface  INTERFACE_UUID("{0562074A-4D94-4721-BC4A-65E48372A7E7}") ICryptoGraphicAlgorithm  : public System::IInterface 
 {
-	virtual System::UnicodeString __fastcall DisplayName(void) = 0 ;
-	virtual System::UnicodeString __fastcall ProgId(void) = 0 ;
-	virtual TAlgorithmicFeatureSet __fastcall Features(void) = 0 ;
-	virtual System::UnicodeString __fastcall DefinitionURL(void) = 0 ;
-	virtual System::UnicodeString __fastcall WikipediaReference(void) = 0 ;
+	virtual System::UnicodeString __fastcall DisplayName() = 0 ;
+	virtual System::UnicodeString __fastcall ProgId() = 0 ;
+	virtual TAlgorithmicFeatureSet __fastcall Features() = 0 ;
+	virtual System::UnicodeString __fastcall DefinitionURL() = 0 ;
+	virtual System::UnicodeString __fastcall WikipediaReference() = 0 ;
 };
 
 #pragma pack(push,4)
@@ -55,10 +55,10 @@ class PASCALIMPLEMENTATION TSymetricKey : public System::TObject
 	
 public:
 	virtual void __fastcall SaveToStream(System::Classes::TStream* Stream) = 0 ;
-	virtual void __fastcall Burn(void) = 0 ;
+	virtual void __fastcall Burn() = 0 ;
 public:
-	/* TObject.Create */ inline __fastcall TSymetricKey(void) : System::TObject() { }
-	/* TObject.Destroy */ inline __fastcall virtual ~TSymetricKey(void) { }
+	/* TObject.Create */ inline __fastcall TSymetricKey() : System::TObject() { }
+	/* TObject.Destroy */ inline __fastcall virtual ~TSymetricKey() { }
 	
 };
 
@@ -67,22 +67,22 @@ public:
 __interface  INTERFACE_UUID("{4DC93CFC-AD4C-4D2D-9087-296CCC591995}") IStreamEncryptor  : public System::IInterface 
 {
 	virtual void __fastcall Encrypt(System::Classes::TStream* const Plaintext) = 0 ;
-	virtual void __fastcall End_Encrypt(void) = 0 ;
-	virtual void __fastcall Reset(void) = 0 ;
+	virtual void __fastcall End_Encrypt() = 0 ;
+	virtual void __fastcall Reset() = 0 ;
 };
 
 __interface  INTERFACE_UUID("{481C71F0-BBB2-4021-93F3-48A5C21F8184}") IStreamDecryptor  : public System::IInterface 
 {
 	virtual void __fastcall Decrypt(System::Classes::TStream* const Ciphertext) = 0 ;
-	virtual void __fastcall End_Decrypt(void) = 0 ;
-	virtual void __fastcall Reset(void) = 0 ;
+	virtual void __fastcall End_Decrypt() = 0 ;
+	virtual void __fastcall Reset() = 0 ;
 };
 
 __interface  INTERFACE_UUID("{E2F61BDB-42A3-4A9B-A02C-FA710B23F660}") IStreamCipher  : public ICryptoGraphicAlgorithm 
 {
 	virtual TSymetricKey* __fastcall GenerateKey(System::Classes::TStream* Seed) = 0 ;
 	virtual TSymetricKey* __fastcall LoadKeyFromStream(System::Classes::TStream* Store) = 0 ;
-	virtual int __fastcall SeedByteSize(void) = 0 ;
+	virtual int __fastcall SeedByteSize() = 0 ;
 	virtual _di_IStreamCipher __fastcall Parameterize(const System::_di_IInterface Params) = 0 ;
 	virtual _di_IStreamEncryptor __fastcall Start_Encrypt(TSymetricKey* Key, System::Classes::TStream* CipherText) = 0 ;
 	virtual _di_IStreamDecryptor __fastcall Start_Decrypt(TSymetricKey* Key, System::Classes::TStream* PlainText) = 0 ;

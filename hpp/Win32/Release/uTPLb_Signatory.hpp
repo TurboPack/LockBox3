@@ -2,7 +2,7 @@
 // Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'uTPLb_Signatory.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'uTPLb_Signatory.pas' rev: 33.00 (Windows)
 
 #ifndef Utplb_signatoryHPP
 #define Utplb_signatoryHPP
@@ -46,15 +46,15 @@ public:
 	Utplb_asymetric::TAsymetricKeyPair* FCryptoKeys;
 	Utplb_asymetric::TAsymetricKeyPair* FSigningKeys;
 	__fastcall virtual TSignatory(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TSignatory(void);
+	__fastcall virtual ~TSignatory();
 	bool __fastcall Sign(System::Classes::TStream* Document, System::Classes::TStream* Signature);
 	TVerifyResult __fastcall Verify(System::Classes::TStream* Document, System::Classes::TStream* Signature);
-	bool __fastcall GenerateKeys(void);
+	bool __fastcall GenerateKeys();
 	void __fastcall StoreKeysToStream(System::Classes::TStream* Store, Utplb_asymetric::TKeyStoragePartSet Parts);
 	void __fastcall LoadKeysFromStream(System::Classes::TStream* Store, Utplb_asymetric::TKeyStoragePartSet Parts);
 	bool __fastcall Can_SaveKeys(Utplb_asymetric::TKeyStoragePartSet Parts);
-	Utplb_asymetric::TKeyStoragePartSet __fastcall HasParts(void);
-	void __fastcall Burn(void);
+	Utplb_asymetric::TKeyStoragePartSet __fastcall HasParts();
+	void __fastcall Burn();
 	
 __published:
 	__property Utplb_codec::TCodec* Codec = {read=FCodec, write=SetCodec};

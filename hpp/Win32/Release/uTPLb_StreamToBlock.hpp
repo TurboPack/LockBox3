@@ -2,7 +2,7 @@
 // Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'uTPLb_StreamToBlock.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'uTPLb_StreamToBlock.pas' rev: 33.00 (Windows)
 
 #ifndef Utplb_streamtoblockHPP
 #define Utplb_streamtoblockHPP
@@ -35,25 +35,25 @@ private:
 	Utplb_blockcipher::_di_IBlockChainingModel FChaining;
 	Utplb_blockcipher::TSymetricEncryptionOptionSet FAdvancedOptions;
 	Utplb_blockcipher::TSetMemStreamProc FOnSetIV;
-	System::UnicodeString __fastcall DisplayName(void);
-	System::UnicodeString __fastcall ProgId(void);
-	Utplb_streamcipher::TAlgorithmicFeatureSet __fastcall Features(void);
-	System::UnicodeString __fastcall DefinitionURL(void);
-	System::UnicodeString __fastcall WikipediaReference(void);
+	System::UnicodeString __fastcall DisplayName();
+	System::UnicodeString __fastcall ProgId();
+	Utplb_streamcipher::TAlgorithmicFeatureSet __fastcall Features();
+	System::UnicodeString __fastcall DefinitionURL();
+	System::UnicodeString __fastcall WikipediaReference();
 	Utplb_streamcipher::TSymetricKey* __fastcall GenerateKey(System::Classes::TStream* Seed);
 	Utplb_streamcipher::TSymetricKey* __fastcall LoadKeyFromStream(System::Classes::TStream* Store);
-	int __fastcall SeedByteSize(void);
+	int __fastcall SeedByteSize();
 	Utplb_streamcipher::_di_IStreamCipher __fastcall Parameterize(const System::_di_IInterface Params);
 	Utplb_streamcipher::_di_IStreamEncryptor __fastcall Start_Encrypt(Utplb_streamcipher::TSymetricKey* Key, System::Classes::TStream* CipherText)/* overload */;
 	Utplb_streamcipher::_di_IStreamDecryptor __fastcall Start_Decrypt(Utplb_streamcipher::TSymetricKey* Key, System::Classes::TStream* PlainText)/* overload */;
 	Utplb_streamcipher::_di_IStreamEncryptor __fastcall Start_Encrypt(Utplb_streamcipher::TSymetricKey* Key, System::Classes::TStream* CipherText, System::Classes::TStream* IV)/* overload */;
 	Utplb_streamcipher::_di_IStreamDecryptor __fastcall Start_Decrypt(Utplb_streamcipher::TSymetricKey* Key, System::Classes::TStream* PlainText, System::Classes::TStream* IV)/* overload */;
-	System::TObject* __fastcall ControlObject(void);
+	System::TObject* __fastcall ControlObject();
 	
 public:
-	__fastcall TStreamToBlock_Adapter(void);
+	__fastcall TStreamToBlock_Adapter();
 public:
-	/* TObject.Destroy */ inline __fastcall virtual ~TStreamToBlock_Adapter(void) { }
+	/* TObject.Destroy */ inline __fastcall virtual ~TStreamToBlock_Adapter() { }
 	
 private:
 	void *__IStreamCipherEx2;	// Utplb_streamcipher::IStreamCipherEx2 
@@ -109,7 +109,7 @@ public:
 
 
 //-- var, const, procedure ---------------------------------------------------
-extern DELPHI_PACKAGE Utplb_streamcipher::_di_IStreamCipher __fastcall StreamToBlock_Adapter_CSharpVariant(void);
+extern DELPHI_PACKAGE Utplb_streamcipher::_di_IStreamCipher __fastcall StreamToBlock_Adapter_CSharpVariant();
 }	/* namespace Utplb_streamtoblock */
 #if !defined(DELPHIHEADER_NO_IMPLICIT_NAMESPACE_USE) && !defined(NO_USING_NAMESPACE_UTPLB_STREAMTOBLOCK)
 using namespace Utplb_streamtoblock;

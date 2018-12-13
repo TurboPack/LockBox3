@@ -2,7 +2,7 @@
 // Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'uTPLb_HashDsc.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'uTPLb_HashDsc.pas' rev: 33.00 (Windows)
 
 #ifndef Utplb_hashdscHPP
 #define Utplb_hashdscHPP
@@ -23,24 +23,24 @@
 namespace Utplb_hashdsc
 {
 //-- forward type declarations -----------------------------------------------
-__interface IHasher;
+__interface DELPHIINTERFACE IHasher;
 typedef System::DelphiInterface<IHasher> _di_IHasher;
-__interface IHashDsc;
+__interface DELPHIINTERFACE IHashDsc;
 typedef System::DelphiInterface<IHashDsc> _di_IHashDsc;
 //-- type declarations -------------------------------------------------------
 __interface  INTERFACE_UUID("{982870E4-EC9B-48CD-B882-17F58F0A7D1A}") IHasher  : public System::IInterface 
 {
 	virtual void __fastcall Update(System::Classes::TMemoryStream* Source) = 0 ;
 	virtual void __fastcall End_Hash(System::Classes::TMemoryStream* PartBlock, System::Classes::TStream* Digest) = 0 ;
-	virtual void __fastcall Burn(void) = 0 ;
-	virtual System::DynamicArray<System::Byte> __fastcall SelfTest_Source(void) = 0 ;
-	virtual System::DynamicArray<System::Byte> __fastcall SelfTest_ReferenceHashValue(void) = 0 ;
+	virtual void __fastcall Burn() = 0 ;
+	virtual System::DynamicArray<System::Byte> __fastcall SelfTest_Source() = 0 ;
+	virtual System::DynamicArray<System::Byte> __fastcall SelfTest_ReferenceHashValue() = 0 ;
 };
 
 __interface  INTERFACE_UUID("{A3922AFC-C917-4364-9FD1-FD84A3E37558}") IHashDsc  : public Utplb_streamcipher::ICryptoGraphicAlgorithm 
 {
-	virtual int __fastcall DigestSize(void) = 0 ;
-	virtual int __fastcall UpdateSize(void) = 0 ;
+	virtual int __fastcall DigestSize() = 0 ;
+	virtual int __fastcall UpdateSize() = 0 ;
 	virtual _di_IHasher __fastcall MakeHasher(const System::_di_IInterface Params) = 0 ;
 };
 

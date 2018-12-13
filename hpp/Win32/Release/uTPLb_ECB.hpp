@@ -2,7 +2,7 @@
 // Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'uTPLb_ECB.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'uTPLb_ECB.pas' rev: 33.00 (Windows)
 
 #ifndef Utplb_ecbHPP
 #define Utplb_ecbHPP
@@ -34,15 +34,15 @@ class PASCALIMPLEMENTATION TECB : public System::TInterfacedObject
 protected:
 	Utplb_blockcipher::TBlockChainLink* __fastcall Chain_EncryptBlock(Utplb_streamcipher::TSymetricKey* Key, System::Classes::TMemoryStream* InitializationVector, const Utplb_blockcipher::_di_IBlockCodec Cipher);
 	Utplb_blockcipher::TBlockChainLink* __fastcall Chain_DecryptBlock(Utplb_streamcipher::TSymetricKey* Key, System::Classes::TMemoryStream* InitializationVector, const Utplb_blockcipher::_di_IBlockCodec Cipher);
-	System::UnicodeString __fastcall DisplayName(void);
-	virtual System::UnicodeString __fastcall ProgId(void);
-	virtual Utplb_blockcipher::TChainingFeatureSet __fastcall ChainingFeatures(void);
-	Utplb_streamcipher::TAlgorithmicFeatureSet __fastcall Features(void);
-	System::UnicodeString __fastcall DefinitionURL(void);
-	System::UnicodeString __fastcall WikipediaReference(void);
+	System::UnicodeString __fastcall DisplayName();
+	virtual System::UnicodeString __fastcall ProgId();
+	virtual Utplb_blockcipher::TChainingFeatureSet __fastcall ChainingFeatures();
+	Utplb_streamcipher::TAlgorithmicFeatureSet __fastcall Features();
+	System::UnicodeString __fastcall DefinitionURL();
+	System::UnicodeString __fastcall WikipediaReference();
 public:
-	/* TObject.Create */ inline __fastcall TECB(void) : System::TInterfacedObject() { }
-	/* TObject.Destroy */ inline __fastcall virtual ~TECB(void) { }
+	/* TObject.Create */ inline __fastcall TECB() : System::TInterfacedObject() { }
+	/* TObject.Destroy */ inline __fastcall virtual ~TECB() { }
 	
 private:
 	void *__IBlockChainingModel;	// Utplb_blockcipher::IBlockChainingModel 
@@ -76,10 +76,10 @@ protected:
 	/* TBlockChainLink.BaseCreate */ inline __fastcall TECBLink(Utplb_streamcipher::TSymetricKey* Key1, System::Classes::TMemoryStream* IV1, Utplb_blockcipher::_di_IBlockCodec Cipher1) : Utplb_blockcipher::TBlockChainLink(Key1, IV1, Cipher1) { }
 	
 public:
-	/* TBlockChainLink.Destroy */ inline __fastcall virtual ~TECBLink(void) { }
+	/* TBlockChainLink.Destroy */ inline __fastcall virtual ~TECBLink() { }
 	
 public:
-	/* TObject.Create */ inline __fastcall TECBLink(void) : Utplb_blockcipher::TBlockChainLink() { }
+	/* TObject.Create */ inline __fastcall TECBLink() : Utplb_blockcipher::TBlockChainLink() { }
 	
 };
 

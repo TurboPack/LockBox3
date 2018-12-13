@@ -2,7 +2,7 @@
 // Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'DCPtwofish_LB3Modified.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'DCPtwofish_LB3Modified.pas' rev: 33.00 (Windows)
 
 #ifndef Dcptwofish_lb3modifiedHPP
 #define Dcptwofish_lb3modifiedHPP
@@ -51,7 +51,7 @@ static const System::Int8 SK_ROTL = System::Int8(0x9);
 extern DELPHI_PACKAGE void __fastcall DCP_twofish_InitKey(const void *Key, unsigned Size, TSubKeys &SubKeys, TSBox &SBox);
 extern DELPHI_PACKAGE void __fastcall DCP_twofish_EncryptECB(const TSubKeys &SubKeys, const TSBox &SBox, const T128 &InData, T128 &OutData);
 extern DELPHI_PACKAGE void __fastcall DCP_twofish_DecryptECB(const TSubKeys &SubKeys, const TSBox &SBox, const T128 &InData, T128 &OutData);
-extern DELPHI_PACKAGE void __fastcall DCP_towfish_Precomp(void);
+extern DELPHI_PACKAGE void __fastcall DCP_towfish_Precomp();
 }	/* namespace Dcptwofish_lb3modified */
 #if !defined(DELPHIHEADER_NO_IMPLICIT_NAMESPACE_USE) && !defined(NO_USING_NAMESPACE_DCPTWOFISH_LB3MODIFIED)
 using namespace Dcptwofish_lb3modified;

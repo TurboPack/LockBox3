@@ -2,7 +2,7 @@
 // Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'uTPLb_Codec.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'uTPLb_Codec.pas' rev: 33.00 (Windows)
 
 #ifndef Utplb_codecHPP
 #define Utplb_codecHPP
@@ -32,7 +32,7 @@ namespace Utplb_codec
 {
 //-- forward type declarations -----------------------------------------------
 class DELPHICLASS TSimpleCodec;
-__interface ICodec_TestAccess;
+__interface DELPHIINTERFACE ICodec_TestAccess;
 typedef System::DelphiInterface<ICodec_TestAccess> _di_ICodec_TestAccess;
 class DELPHICLASS TCodec;
 //-- type declarations -------------------------------------------------------
@@ -67,49 +67,49 @@ private:
 	void __fastcall SetStreamCipher(const Utplb_streamcipher::_di_IStreamCipher Value);
 	void __fastcall SetBlockCipher(const Utplb_blockcipher::_di_IBlockCipher Value);
 	void __fastcall SetChainMode(const Utplb_blockcipher::_di_IBlockChainingModel Value);
-	Utplb_codecintf::TCodecMode __fastcall GetMode(void);
-	Utplb_streamcipher::_di_IStreamCipher __fastcall GetStreamCipher(void);
-	Utplb_blockcipher::_di_IBlockCipher __fastcall GetBlockCipher(void);
-	Utplb_blockcipher::_di_IBlockChainingModel __fastcall GetChainMode(void);
-	Utplb_codecintf::TOnEncDecProgress __fastcall GetOnProgress(void);
+	Utplb_codecintf::TCodecMode __fastcall GetMode();
+	Utplb_streamcipher::_di_IStreamCipher __fastcall GetStreamCipher();
+	Utplb_blockcipher::_di_IBlockCipher __fastcall GetBlockCipher();
+	Utplb_blockcipher::_di_IBlockChainingModel __fastcall GetChainMode();
+	Utplb_codecintf::TOnEncDecProgress __fastcall GetOnProgress();
 	void __fastcall SetOnProgress(Utplb_codecintf::TOnEncDecProgress Value);
 	void __fastcall SetEventSender(System::TObject* Sender);
-	bool __fastcall isNotBase64Converter(void);
-	unsigned __fastcall GetAsymetricKeySizeInBits(void);
+	bool __fastcall isNotBase64Converter();
+	unsigned __fastcall GetAsymetricKeySizeInBits();
 	void __fastcall SetAsymetricKeySizeInBits(unsigned value);
-	Utplb_codecintf::TGenerateAsymetricKeyPairProgress __fastcall GetAsymGenProgressEvent(void);
+	Utplb_codecintf::TGenerateAsymetricKeyPairProgress __fastcall GetAsymGenProgressEvent();
 	void __fastcall SetAsymGenProgressEvent(Utplb_codecintf::TGenerateAsymetricKeyPairProgress Value);
-	Utplb_streamcipher::TSymetricKey* __fastcall GetKey(void);
-	Utplb_asymetric::_di_IAsymetric_Engine __fastcall Asymetric_Engine(void);
-	void __fastcall End_EncryptDecrypt(void);
-	void __fastcall DoProgress(void);
-	void __fastcall InitCheck(void);
-	Utplb_blockcipher::TSymetricEncryptionOptionSet __fastcall GetAdvancedOptions2(void);
+	Utplb_streamcipher::TSymetricKey* __fastcall GetKey();
+	Utplb_asymetric::_di_IAsymetric_Engine __fastcall Asymetric_Engine();
+	void __fastcall End_EncryptDecrypt();
+	void __fastcall DoProgress();
+	void __fastcall InitCheck();
+	Utplb_blockcipher::TSymetricEncryptionOptionSet __fastcall GetAdvancedOptions2();
 	void __fastcall SetAdvancedOptions2(Utplb_blockcipher::TSymetricEncryptionOptionSet Value);
 	bool __fastcall hasOnSetIVHandler(Utplb_blockcipher::TSetMemStreamProc &Proc);
-	Utplb_blockcipher::TSetMemStreamProc __fastcall GetOnSetIV(void);
+	Utplb_blockcipher::TSetMemStreamProc __fastcall GetOnSetIV();
 	void __fastcall SetOnSetIV(Utplb_blockcipher::TSetMemStreamProc Value);
 	
 public:
-	__fastcall TSimpleCodec(void);
-	__fastcall virtual ~TSimpleCodec(void);
+	__fastcall TSimpleCodec();
+	__fastcall virtual ~TSimpleCodec();
 	void __fastcall Init(const System::UnicodeString Key, System::Sysutils::TEncoding* AEncoding);
 	void __fastcall InitA(const System::UnicodeString Key);
 	void __fastcall SaveKeyToStream(System::Classes::TStream* Store);
 	void __fastcall InitFromStream(System::Classes::TStream* Store);
 	void __fastcall InitFromKey(Utplb_streamcipher::TSymetricKey* Key);
-	void __fastcall Reset(void);
+	void __fastcall Reset();
 	void __fastcall Burn(bool doIncludeBurnKey);
-	bool __fastcall isAsymetric(void);
-	void __fastcall InitFromGeneratedAsymetricKeyPair(void);
+	bool __fastcall isAsymetric();
+	void __fastcall InitFromGeneratedAsymetricKeyPair();
 	void __fastcall Sign(System::Classes::TStream* Document, System::Classes::TStream* Signature, System::TObject* ProgressSender, Utplb_codecintf::TOnEncDecProgress ProgressEvent, System::TObject* SigningKeys_PrivatePart, bool &wasAborted);
 	bool __fastcall VerifySignature(System::Classes::TStream* Document, System::Classes::TStream* Signature, System::TObject* ProgressSender, Utplb_codecintf::TOnEncDecProgress ProgressEvent, System::TObject* SigningKeys_PublicPart, bool &wasAborted);
 	void __fastcall Begin_EncryptMemory(System::Classes::TStream* CipherText);
 	void __fastcall EncryptMemory(const System::DynamicArray<System::Byte> Plaintext, int PlaintextLen);
-	void __fastcall End_EncryptMemory(void);
+	void __fastcall End_EncryptMemory();
 	void __fastcall Begin_DecryptMemory(System::Classes::TStream* Plaintext);
 	void __fastcall DecryptMemory(const void *CipherText, int CiphertextLen);
-	void __fastcall End_DecryptMemory(void);
+	void __fastcall End_DecryptMemory();
 	void __fastcall EncryptStream(System::Classes::TStream* Plaintext, System::Classes::TStream* CipherText);
 	void __fastcall DecryptStream(System::Classes::TStream* Plaintext, System::Classes::TStream* CipherText);
 	void __fastcall EncryptFile(const System::UnicodeString Plaintext_FileName, const System::UnicodeString CipherText_FileName);
@@ -118,7 +118,7 @@ public:
 	void __fastcall DecryptString(System::UnicodeString &Plaintext, const System::UnicodeString CipherText_Base64, System::Sysutils::TEncoding* AEncoding);
 	void __fastcall EncryptAnsiString(const System::UnicodeString Plaintext, System::UnicodeString &CipherText_Base64);
 	void __fastcall DecryptAnsiString(System::UnicodeString &Plaintext, const System::UnicodeString CipherText_Base64);
-	bool __fastcall GetAborted(void);
+	bool __fastcall GetAborted();
 	void __fastcall SetAborted(bool Value);
 	System::UnicodeString __fastcall GetCipherDisplayName(Utplb_cryptographiclibrary::TCryptographicLibrary* Lib);
 	__property Utplb_codecintf::TCodecMode Mode = {read=GetMode, nodefault};
@@ -194,7 +194,7 @@ public:
 
 __interface  INTERFACE_UUID("{1DCED340-E6C0-4B97-BBAA-98305B5D4F5E}") ICodec_TestAccess  : public System::IInterface 
 {
-	virtual Utplb_codecintf::_di_ICodec __fastcall GetCodecIntf(void) = 0 ;
+	virtual Utplb_codecintf::_di_ICodec __fastcall GetCodecIntf() = 0 ;
 };
 
 class PASCALIMPLEMENTATION TCodec : public Utplb_basenonvisualcomponent::TTPLb_BaseNonVisualComponent
@@ -229,52 +229,52 @@ private:
 	void __fastcall WriteData_Block(System::Classes::TWriter* Writer);
 	void __fastcall ReadData_Chain(System::Classes::TReader* Reader);
 	void __fastcall WriteData_Chain(System::Classes::TWriter* Writer);
-	Utplb_codecintf::TCodecMode __fastcall GetMode(void);
-	Utplb_hash::TOnHashProgress __fastcall GetOnProgress(void);
+	Utplb_codecintf::TCodecMode __fastcall GetMode();
+	Utplb_hash::TOnHashProgress __fastcall GetOnProgress();
 	void __fastcall SetOnProgress(const Utplb_hash::TOnHashProgress Value);
-	void __fastcall ProgIdsChanged(void);
-	Utplb_codecintf::_di_ICodec __fastcall GetCodecIntf(void);
+	void __fastcall ProgIdsChanged();
+	Utplb_codecintf::_di_ICodec __fastcall GetCodecIntf();
 	void __fastcall SetPassword(const System::UnicodeString NewPassword);
 	void __fastcall GenerateAsymetricKeyPairProgress_Event(System::TObject* Sender, int CountPrimalityTests, bool &doAbort);
-	unsigned __fastcall GetAsymetricKeySizeInBits(void);
+	unsigned __fastcall GetAsymetricKeySizeInBits();
 	void __fastcall SetAsymetricKeySizeInBits(unsigned value);
-	Utplb_streamcipher::TSymetricKey* __fastcall GetKey(void);
-	void __fastcall BeginEncDec(void);
-	void __fastcall EndEncDec(void);
-	void __fastcall ClearPassword(void);
-	Utplb_blockcipher::TSymetricEncryptionOptionSet __fastcall GetAdvancedOptions2(void);
+	Utplb_streamcipher::TSymetricKey* __fastcall GetKey();
+	void __fastcall BeginEncDec();
+	void __fastcall EndEncDec();
+	void __fastcall ClearPassword();
+	Utplb_blockcipher::TSymetricEncryptionOptionSet __fastcall GetAdvancedOptions2();
 	void __fastcall SetAdvancedOptions2(Utplb_blockcipher::TSymetricEncryptionOptionSet Value);
-	Utplb_blockcipher::TSetMemStreamProc __fastcall GetOnSetIV(void);
+	Utplb_blockcipher::TSetMemStreamProc __fastcall GetOnSetIV();
 	void __fastcall SetOnSetIV(Utplb_blockcipher::TSetMemStreamProc Value);
 	
 protected:
 	virtual void __fastcall Notification(System::Classes::TComponent* AComponent, System::Classes::TOperation Operation);
 	virtual void __fastcall DefineProperties(System::Classes::TFiler* Filer);
-	virtual System::UnicodeString __fastcall GetCipherDisplayName(void);
-	virtual System::UnicodeString __fastcall GetChainDisplayName(void);
-	virtual void __fastcall Loaded(void);
+	virtual System::UnicodeString __fastcall GetCipherDisplayName();
+	virtual System::UnicodeString __fastcall GetChainDisplayName();
+	virtual void __fastcall Loaded();
 	__property bool InterfacesAreCached = {read=FIntfCached, write=SetIntfCached, nodefault};
 	
 public:
 	int FGenerateAsymetricKeyPairProgress_CountPrimalityTests;
 	__fastcall virtual TCodec(System::Classes::TComponent* AOwner);
-	__fastcall virtual ~TCodec(void);
-	void __fastcall Burn(void);
-	void __fastcall Reset(void);
+	__fastcall virtual ~TCodec();
+	void __fastcall Burn();
+	void __fastcall Reset();
 	void __fastcall SaveKeyToStream(System::Classes::TStream* Store);
 	void __fastcall InitFromStream(System::Classes::TStream* Store);
-	bool __fastcall GetAborted(void);
+	bool __fastcall GetAborted();
 	void __fastcall SetAborted(bool Value);
-	bool __fastcall isAsymetric(void);
-	Utplb_asymetric::_di_IAsymetric_Engine __fastcall Asymetric_Engine(void);
+	bool __fastcall isAsymetric();
+	Utplb_asymetric::_di_IAsymetric_Engine __fastcall Asymetric_Engine();
 	void __fastcall InitFromKey(Utplb_streamcipher::TSymetricKey* Key);
-	void __fastcall InitFromGeneratedAsymetricKeyPair(void);
+	void __fastcall InitFromGeneratedAsymetricKeyPair();
 	void __fastcall Begin_EncryptMemory(System::Classes::TStream* CipherText);
 	void __fastcall EncryptMemory(const System::DynamicArray<System::Byte> Plaintext, int PlaintextLen);
-	void __fastcall End_EncryptMemory(void);
+	void __fastcall End_EncryptMemory();
 	void __fastcall Begin_DecryptMemory(System::Classes::TStream* Plaintext);
 	void __fastcall DecryptMemory(const void *CipherText, int CiphertextLen);
-	void __fastcall End_DecryptMemory(void);
+	void __fastcall End_DecryptMemory();
 	void __fastcall EncryptStream(System::Classes::TStream* Plaintext, System::Classes::TStream* CipherText);
 	void __fastcall DecryptStream(System::Classes::TStream* Plaintext, System::Classes::TStream* CipherText);
 	void __fastcall EncryptFile(const System::UnicodeString Plaintext_FileName, const System::UnicodeString CipherText_FileName);
@@ -283,7 +283,7 @@ public:
 	void __fastcall DecryptString(System::UnicodeString &Plaintext, const System::UnicodeString CipherText_Base64, System::Sysutils::TEncoding* AEncoding);
 	void __fastcall EncryptAnsiString(const System::UnicodeString Plaintext, System::UnicodeString &CipherText_Base64);
 	void __fastcall DecryptAnsiString(System::UnicodeString &Plaintext, const System::UnicodeString CipherText_Base64);
-	int __fastcall Speed(void);
+	int __fastcall Speed();
 	__property Utplb_streamcipher::TSymetricKey* Key = {read=GetKey};
 	__property System::UnicodeString StreamCipherId = {read=FStreamCipherId, write=SetStreamCipherId};
 	__property System::UnicodeString BlockCipherId = {read=FBlockCipherId, write=SetBlockCipherId};

@@ -2,7 +2,7 @@
 // Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'uTPLb_DES.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'uTPLb_DES.pas' rev: 33.00 (Windows)
 
 #ifndef Utplb_desHPP
 #define Utplb_desHPP
@@ -32,25 +32,25 @@ class PASCALIMPLEMENTATION TDES : public System::TInterfacedObject
 	typedef System::TInterfacedObject inherited;
 	
 private:
-	System::UnicodeString __fastcall DisplayName(void);
-	System::UnicodeString __fastcall ProgId(void);
-	Utplb_streamcipher::TAlgorithmicFeatureSet __fastcall Features(void);
-	System::UnicodeString __fastcall DefinitionURL(void);
-	System::UnicodeString __fastcall WikipediaReference(void);
+	System::UnicodeString __fastcall DisplayName();
+	System::UnicodeString __fastcall ProgId();
+	Utplb_streamcipher::TAlgorithmicFeatureSet __fastcall Features();
+	System::UnicodeString __fastcall DefinitionURL();
+	System::UnicodeString __fastcall WikipediaReference();
 	Utplb_streamcipher::TSymetricKey* __fastcall GenerateKey(System::Classes::TStream* Seed);
 	Utplb_streamcipher::TSymetricKey* __fastcall LoadKeyFromStream(System::Classes::TStream* Store);
-	int __fastcall BlockSize(void);
-	int __fastcall KeySize(void);
-	int __fastcall SeedByteSize(void);
+	int __fastcall BlockSize();
+	int __fastcall KeySize();
+	int __fastcall SeedByteSize();
 	Utplb_blockcipher::_di_IBlockCodec __fastcall MakeBlockCodec(Utplb_streamcipher::TSymetricKey* Key);
-	System::DynamicArray<System::Byte> __fastcall SelfTest_Key(void);
-	System::DynamicArray<System::Byte> __fastcall SelfTest_Plaintext(void);
-	System::DynamicArray<System::Byte> __fastcall SelfTest_Ciphertext(void);
+	System::DynamicArray<System::Byte> __fastcall SelfTest_Key();
+	System::DynamicArray<System::Byte> __fastcall SelfTest_Plaintext();
+	System::DynamicArray<System::Byte> __fastcall SelfTest_Ciphertext();
 	
 public:
-	__fastcall TDES(void);
+	__fastcall TDES();
 public:
-	/* TObject.Destroy */ inline __fastcall virtual ~TDES(void) { }
+	/* TObject.Destroy */ inline __fastcall virtual ~TDES() { }
 	
 private:
 	void *__IBlockCipher;	// Utplb_blockcipher::IBlockCipher 

@@ -2,7 +2,7 @@
 // Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'uTPLb_Decorators.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'uTPLb_Decorators.pas' rev: 33.00 (Windows)
 
 #ifndef Utplb_decoratorsHPP
 #define Utplb_decoratorsHPP
@@ -20,16 +20,16 @@
 namespace Utplb_decorators
 {
 //-- forward type declarations -----------------------------------------------
-__interface IControlObject;
+__interface DELPHIINTERFACE IControlObject;
 typedef System::DelphiInterface<IControlObject> _di_IControlObject;
 class DELPHICLASS IntegerRange;
 class DELPHICLASS DesignDescription;
-__interface IVariableSeedSize;
+__interface DELPHIINTERFACE IVariableSeedSize;
 typedef System::DelphiInterface<IVariableSeedSize> _di_IVariableSeedSize;
 //-- type declarations -------------------------------------------------------
 __interface  INTERFACE_UUID("{420914AC-6242-417E-8D18-7B163056DA60}") IControlObject  : public System::IInterface 
 {
-	virtual System::TObject* __fastcall ControlObject(void) = 0 ;
+	virtual System::TObject* __fastcall ControlObject() = 0 ;
 };
 
 #pragma pack(push,4)
@@ -46,7 +46,7 @@ public:
 	__property int Min = {read=FMin, nodefault};
 	__property int Max = {read=FMax, nodefault};
 public:
-	/* TObject.Destroy */ inline __fastcall virtual ~IntegerRange(void) { }
+	/* TObject.Destroy */ inline __fastcall virtual ~IntegerRange() { }
 	
 };
 
@@ -64,7 +64,7 @@ public:
 	__fastcall DesignDescription(const System::UnicodeString Description1);
 	__property System::UnicodeString Description = {read=FDescription};
 public:
-	/* TObject.Destroy */ inline __fastcall virtual ~DesignDescription(void) { }
+	/* TObject.Destroy */ inline __fastcall virtual ~DesignDescription() { }
 	
 };
 
@@ -72,8 +72,8 @@ public:
 
 __interface  INTERFACE_UUID("{38096CBB-5ACB-43D7-826A-C21812F6E447}") IVariableSeedSize  : public System::IInterface 
 {
-	virtual int __fastcall MinSeedByteSize(void) = 0 ;
-	virtual int __fastcall MaxSeedByteSize(void) = 0 ;
+	virtual int __fastcall MinSeedByteSize() = 0 ;
+	virtual int __fastcall MaxSeedByteSize() = 0 ;
 	__property int Min = {read=MinSeedByteSize};
 	__property int Max = {read=MaxSeedByteSize};
 };

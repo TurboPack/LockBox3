@@ -2,7 +2,7 @@
 // Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'uTPLb_StrUtils.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'uTPLb_StrUtils.pas' rev: 33.00 (Windows)
 
 #ifndef Utplb_strutilsHPP
 #define Utplb_strutilsHPP

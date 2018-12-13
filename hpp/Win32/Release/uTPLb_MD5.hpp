@@ -2,7 +2,7 @@
 // Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'uTPLb_MD5.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'uTPLb_MD5.pas' rev: 33.00 (Windows)
 
 #ifndef Utplb_md5HPP
 #define Utplb_md5HPP
@@ -31,17 +31,17 @@ class PASCALIMPLEMENTATION TMD5 : public System::TInterfacedObject
 	typedef System::TInterfacedObject inherited;
 	
 private:
-	System::UnicodeString __fastcall DisplayName(void);
-	System::UnicodeString __fastcall ProgId(void);
-	Utplb_streamcipher::TAlgorithmicFeatureSet __fastcall Features(void);
-	int __fastcall DigestSize(void);
-	int __fastcall UpdateSize(void);
+	System::UnicodeString __fastcall DisplayName();
+	System::UnicodeString __fastcall ProgId();
+	Utplb_streamcipher::TAlgorithmicFeatureSet __fastcall Features();
+	int __fastcall DigestSize();
+	int __fastcall UpdateSize();
 	Utplb_hashdsc::_di_IHasher __fastcall MakeHasher(const System::_di_IInterface Params);
-	System::UnicodeString __fastcall DefinitionURL(void);
-	System::UnicodeString __fastcall WikipediaReference(void);
+	System::UnicodeString __fastcall DefinitionURL();
+	System::UnicodeString __fastcall WikipediaReference();
 public:
-	/* TObject.Create */ inline __fastcall TMD5(void) : System::TInterfacedObject() { }
-	/* TObject.Destroy */ inline __fastcall virtual ~TMD5(void) { }
+	/* TObject.Create */ inline __fastcall TMD5() : System::TInterfacedObject() { }
+	/* TObject.Destroy */ inline __fastcall virtual ~TMD5() { }
 	
 private:
 	void *__IHashDsc;	// Utplb_hashdsc::IHashDsc 

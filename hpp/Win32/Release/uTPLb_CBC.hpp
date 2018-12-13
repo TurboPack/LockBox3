@@ -2,7 +2,7 @@
 // Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'uTPLb_CBC.pas' rev: 32.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'uTPLb_CBC.pas' rev: 33.00 (Windows)
 
 #ifndef Utplb_cbcHPP
 #define Utplb_cbcHPP
@@ -34,15 +34,15 @@ class PASCALIMPLEMENTATION TCBC : public System::TInterfacedObject
 protected:
 	Utplb_blockcipher::TBlockChainLink* __fastcall Chain_EncryptBlock(Utplb_streamcipher::TSymetricKey* Key, System::Classes::TMemoryStream* InitializationVector, const Utplb_blockcipher::_di_IBlockCodec Cipher);
 	Utplb_blockcipher::TBlockChainLink* __fastcall Chain_DecryptBlock(Utplb_streamcipher::TSymetricKey* Key, System::Classes::TMemoryStream* InitializationVector, const Utplb_blockcipher::_di_IBlockCodec Cipher);
-	System::UnicodeString __fastcall DisplayName(void);
-	System::UnicodeString __fastcall ProgId(void);
-	Utplb_streamcipher::TAlgorithmicFeatureSet __fastcall Features(void);
-	Utplb_blockcipher::TChainingFeatureSet __fastcall ChainingFeatures(void);
-	System::UnicodeString __fastcall DefinitionURL(void);
-	System::UnicodeString __fastcall WikipediaReference(void);
+	System::UnicodeString __fastcall DisplayName();
+	System::UnicodeString __fastcall ProgId();
+	Utplb_streamcipher::TAlgorithmicFeatureSet __fastcall Features();
+	Utplb_blockcipher::TChainingFeatureSet __fastcall ChainingFeatures();
+	System::UnicodeString __fastcall DefinitionURL();
+	System::UnicodeString __fastcall WikipediaReference();
 public:
-	/* TObject.Create */ inline __fastcall TCBC(void) : System::TInterfacedObject() { }
-	/* TObject.Destroy */ inline __fastcall virtual ~TCBC(void) { }
+	/* TObject.Create */ inline __fastcall TCBC() : System::TInterfacedObject() { }
+	/* TObject.Destroy */ inline __fastcall virtual ~TCBC() { }
 	
 private:
 	void *__IBlockChainingModel;	// Utplb_blockcipher::IBlockChainingModel 
@@ -73,16 +73,16 @@ private:
 	System::Classes::TMemoryStream* FNextCV;
 	
 public:
-	virtual void __fastcall Burn(void);
-	virtual Utplb_blockcipher::TBlockChainLink* __fastcall Clone(void);
-	__fastcall virtual ~TCBCLink(void);
+	virtual void __fastcall Burn();
+	virtual Utplb_blockcipher::TBlockChainLink* __fastcall Clone();
+	__fastcall virtual ~TCBCLink();
 	virtual void __fastcall Encrypt_Block(System::Classes::TMemoryStream* Plaintext, System::Classes::TMemoryStream* Ciphertext);
 	virtual void __fastcall Decrypt_Block(System::Classes::TMemoryStream* Plaintext, System::Classes::TMemoryStream* Ciphertext);
 protected:
 	/* TBlockChainLink.BaseCreate */ inline __fastcall TCBCLink(Utplb_streamcipher::TSymetricKey* Key1, System::Classes::TMemoryStream* IV1, Utplb_blockcipher::_di_IBlockCodec Cipher1) : Utplb_blockcipher::TBlockChainLink(Key1, IV1, Cipher1) { }
 	
 public:
-	/* TObject.Create */ inline __fastcall TCBCLink(void) : Utplb_blockcipher::TBlockChainLink() { }
+	/* TObject.Create */ inline __fastcall TCBCLink() : Utplb_blockcipher::TBlockChainLink() { }
 	
 };
 
