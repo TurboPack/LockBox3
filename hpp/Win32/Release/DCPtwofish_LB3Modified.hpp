@@ -1,8 +1,8 @@
 ﻿// CodeGear C++Builder
-// Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
+// Copyright (c) 1995, 2017 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'DCPtwofish_LB3Modified.pas' rev: 31.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'DCPtwofish_LB3Modified.pas' rev: 32.00 (Windows)
 
 #ifndef Dcptwofish_lb3modifiedHPP
 #define Dcptwofish_lb3modifiedHPP

@@ -2,7 +2,7 @@
 // Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'LockBox3DR.dpk' rev: 31.00 (MacOS)
+// (DO NOT EDIT: machine generated header) 'LockBox3DR.dpk' rev: 32.00 (MacOS)
 
 #ifndef Lockbox3drHPP
 #define Lockbox3drHPP
@@ -120,6 +120,12 @@
 #include <System.TimeSpan.hpp>	// (rtl)
 #include <System.Diagnostics.hpp>	// (rtl)
 #include <System.SyncObjs.hpp>	// (rtl)
+// SO_PFX: bpl
+// SO_SFX: 250
+// PRG_EXT: .dylib
+// BPI_DIR: C:\Users\Public\Documents\Embarcadero\Studio\19.0\Dcp\OSX32
+// OBJ_DIR: C:\Users\Public\Documents\Embarcadero\Studio\19.0\Dcp\OSX32
+// OBJ_EXT: .o
 
 //-- user supplied -----------------------------------------------------------
 

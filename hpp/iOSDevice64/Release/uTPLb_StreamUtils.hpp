@@ -2,7 +2,7 @@
 // Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'uTPLb_StreamUtils.pas' rev: 31.00 (iOS)
+// (DO NOT EDIT: machine generated header) 'uTPLb_StreamUtils.pas' rev: 32.00 (iOS)
 
 #ifndef Utplb_streamutilsHPP
 #define Utplb_streamutilsHPP
@@ -51,7 +51,7 @@ public:
 	/* Hoisted overloads: */
 	
 protected:
-	inline void __fastcall  SetSize(long NewSize){ System::Classes::TStream::SetSize(NewSize); }
+	inline void __fastcall  SetSize _DEPRECATED_ATTRIBUTE0 (long NewSize){ System::Classes::TStream::SetSize(NewSize); }
 	
 public:
 	inline long __fastcall  Read(System::TArray__1<System::Byte> Buffer, long Offset, long Count){ return System::Classes::TStream::Read(Buffer, Offset, Count); }

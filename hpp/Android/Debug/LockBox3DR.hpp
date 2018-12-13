@@ -2,7 +2,7 @@
 // Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'LockBox3DR.dpk' rev: 31.00 (Android)
+// (DO NOT EDIT: machine generated header) 'LockBox3DR.dpk' rev: 32.00 (Android)
 
 #ifndef Lockbox3drHPP
 #define Lockbox3drHPP
@@ -60,6 +60,11 @@
 #include <uTPLb_SHA2.hpp>
 #include <uTPLb_SVN_Keywords.hpp>
 #include <uTPLb_StrUtils.hpp>
+// SO_PFX: bpl
+// SO_SFX: 250
+// PRG_EXT: .a
+// OBJ_DIR: C:\Users\Public\Documents\Embarcadero\Studio\19.0\Dcp\Android
+// OBJ_EXT: .o
 
 //-- user supplied -----------------------------------------------------------
 

@@ -32,13 +32,6 @@ unit uTPLb_IntegerUtils;
 interface
 
 
-{$IF CompilerVersion < 21.00}  // Meaning "before Delphi 2010".
-type
-  uint32 = cardinal; // Must be unsigned 32 bit 2's complement integer
-                     //  with native operational support.
-  uint16 = word;
-{$ifend}
-
 // NOTE: In Delphi 2010, uint32 is a standard type defined in the system unit.
 
 
@@ -109,6 +102,10 @@ uses SysUtils;
 {$ENDIF}
 
 {$IFDEF MACOS}
+  {$define IntegerUtils_Pascal}
+{$ENDIF}
+
+{$IFDEF LINUX64}
   {$define IntegerUtils_Pascal}
 {$ENDIF}
 

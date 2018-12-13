@@ -253,7 +253,7 @@ try
 finally
 if doCreate then
   begin
-  TPLb_fmComponentAbout.Release;
+  TPLb_fmComponentAbout.Free;
   TPLb_fmComponentAbout := nil
   end
 end end;

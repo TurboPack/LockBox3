@@ -2,7 +2,7 @@
 // Copyright (c) 1995, 2016 by Embarcadero Technologies, Inc.
 // All rights reserved
 
-// (DO NOT EDIT: machine generated header) 'LockBox3FMXDD.dpk' rev: 31.00 (Windows)
+// (DO NOT EDIT: machine generated header) 'LockBox3FMXDD.dpk' rev: 32.00 (Windows)
 
 #ifndef Lockbox3fmxddHPP
 #define Lockbox3fmxddHPP
@@ -89,9 +89,9 @@
 #include <Data.DB.hpp>	// (dbrtl)
 #include <System.Messaging.hpp>	// (rtl)
 #include <System.Devices.hpp>	// (rtl)
+#include <FMX.Utils.hpp>	// (fmx)
 #include <FMX.Text.hpp>	// (fmx)
 #include <FMX.TextLayout.hpp>	// (fmx)
-#include <FMX.Utils.hpp>	// (fmx)
 #include <FMX.Graphics.hpp>	// (fmx)
 #include <FMX.BehaviorManager.hpp>	// (fmx)
 #include <FMX.Styles.hpp>	// (fmx)
@@ -199,6 +199,11 @@
 #include <Data.Bind.EngExt.hpp>	// (bindcomp)
 #include <Datasnap.DSIntf.hpp>	// (dsnap)
 #include <Fmx.Bind.Grid.hpp>	// (Bindcompfmx)
+// SO_SFX: 250
+// PRG_EXT: .bpl
+// BPI_DIR: C:\Users\Public\Documents\Embarcadero\Studio\19.0\Dcp
+// OBJ_DIR: C:\Users\Public\Documents\Embarcadero\Studio\19.0\Dcp
+// OBJ_EXT: .obj
 
 //-- user supplied -----------------------------------------------------------
 
