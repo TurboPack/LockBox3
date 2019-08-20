@@ -82,7 +82,6 @@
         <VerInfo_Locale>1031</VerInfo_Locale>
         <ILINK_LibraryPath>..\..\design\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
         <DesignOnlyPackage>true</DesignOnlyPackage>
-        <DCC_HppOutput>..\..\hpp\$(Platform)\$(Config)</DCC_HppOutput>
         <DCC_AdditionalSwitches>-LUDesignIDE</DCC_AdditionalSwitches>
         <DCC_CBuilderOutput>All</DCC_CBuilderOutput>
         <DynamicRTL>true</DynamicRTL>
