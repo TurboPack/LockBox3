@@ -1,4 +1,4 @@
-package LockBox3DD;
+package LockBox3VCLDD;
 
 {$R *.res}
 {$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
@@ -25,7 +25,8 @@ package LockBox3DD;
 {$IMAGEBASE $400000}
 {$DEFINE RELEASE}
 {$ENDIF IMPLICITBUILDING}
-{$DESCRIPTION 'TurboPack LockBox 3 designtime package'}
+{$DESCRIPTION 'TurboPack LockBox 3 VCL designtime package'}
+{$LIBSUFFIX '250'}
 {$DESIGNONLY}
 {$IMPLICITBUILD OFF}
 
@@ -37,9 +38,9 @@ requires
   LockBox3DR;
 
 contains
-  uTPLb_ComponentRegistration in '..\..\design\uTPLb_ComponentRegistration.pas',
-  uTPLb_ComponentEditors in '..\..\design\uTPLb_ComponentEditors.pas',
-  uTPLb_ComponentAbout in '..\..\design\uTPLb_ComponentAbout.pas' {TPLb_fmComponentAbout},
-  uTPLb_InfoUtils in '..\..\design\uTPLb_InfoUtils.pas';
+  Vcl.uTPLb_InfoUtils in '..\..\..\design\Vcl.uTPLb_InfoUtils.pas',
+  Vcl.uTPLb_ComponentAbout in '..\..\..\design\Vcl.uTPLb_ComponentAbout.pas' {TPLb_fmComponentAbout},
+  VcluTPLb_ComponentEditors in '..\..\..\design\VcluTPLb_ComponentEditors.pas',
+  VcluTPLb_ComponentRegistration in '..\..\..\design\VcluTPLb_ComponentRegistration.pas';
 
 end.
