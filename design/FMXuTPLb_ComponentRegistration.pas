@@ -32,27 +32,6 @@ unit FMXuTPLb_ComponentRegistration;
 
 interface
 
-procedure Register;
-
 implementation
-
-{$R 'LockBox3.dcr'}
-
-uses
-  System.Classes, FMX.Types, FMX.Controls, uTPLb_Hash, uTPLb_CryptographicLibrary,
-  uTPLb_Codec, uTPLb_Signatory;
-
-procedure Register;
-begin
-  GroupDescendentsWith(THash, FMX.Controls.TControl);
-  GroupDescendentsWith(TCodec, FMX.Controls.TControl);
-  GroupDescendentsWith(TCryptographicLibrary, FMX.Controls.TControl);
-  GroupDescendentsWith(TSignatory, FMX.Controls.TControl);
-
-  RegisterFmxClasses([THash, TCodec, TCryptographicLibrary, TSignatory]);
-
-  RegisterComponents( 'LockBox', [THash, TCodec, TCryptographicLibrary, TSignatory])
-end;
-
 
 end.

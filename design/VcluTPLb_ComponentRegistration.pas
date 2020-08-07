@@ -32,19 +32,6 @@ unit VcluTPLb_ComponentRegistration;
 
 interface
 
-procedure Register;
-
 implementation
-
-{$R 'LockBox3.dcr'}
-
-uses
-  Classes, uTPLb_Hash, uTPLb_CryptographicLibrary, uTPLb_Codec, uTPLb_Signatory;
-
-procedure Register;
-begin
-  RegisterComponents( 'LockBox', [THash, TCodec, TCryptographicLibrary, TSignatory])
-end;
-
 
 end.
