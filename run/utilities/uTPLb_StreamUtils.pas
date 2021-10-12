@@ -7,7 +7,6 @@ The contents of this file are subject to the Mozilla Public License (MPL)
 Version 1.1 (the "License"); you may not use this file except in compliance
 with the License. You may obtain a copy of the License at
 http://www.mozilla.org/MPL/
-
 Alternatively, you may redistribute it and/or modify it under the terms of
 the GNU Lesser General Public License (LGPL) as published by the Free Software
 Foundation, either version 3 of the License, or (at your option) any later
@@ -278,6 +277,12 @@ end;
 
 
 
+{$IFOPT R+}
+  {$DEFINE RANGEON}
+  {$R-}
+{$ELSE}
+  {$UNDEF RANGEON}
+{$ENDIF}
 function Stream_to_Base64(ASource: TStream; const ATransform: TBytes = nil): TBytes;
 var
   pThreeBytes: packed array[ 0..2 ] of byte;
@@ -312,6 +317,10 @@ begin
       Inc( P)
       end
 end;
+{$IFDEF RANGEON}
+  {$R+}
+  {$UNDEF RANGEON}
+{$ENDIF}
 
 {$IFNDEF NEXTGEN}
 function Stream_To_Hex(ASource: TStream): Ansistring;
@@ -335,6 +344,12 @@ CustomBase64_to_stream( Base64, Destin, Inverse_Base64Chars)
 end;
 
 
+{$IFOPT R+}
+  {$DEFINE RANGEON}
+  {$R-}
+{$ELSE}
+  {$UNDEF RANGEON}
+{$ENDIF}
 procedure CustomBase64_to_stream( const Base64: TBytes; Destin: TStream;
   const InverseTransform: TInverseBaseTransform);
 var
@@ -377,7 +392,10 @@ for P := 0 to (Length( Base64) div 4) - 1 do
   Destin.WriteBuffer( ThreeBytes, ByteIdx)
   end
 end;
-
+{$IFDEF RANGEON}
+  {$R+}
+  {$UNDEF RANGEON}
+{$ENDIF}
 
 procedure Invert_Base64Chars;
 var

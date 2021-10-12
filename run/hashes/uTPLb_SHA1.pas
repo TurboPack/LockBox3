@@ -234,6 +234,12 @@ end;
 
 
 
+{$IFOPT Q+}
+  {$DEFINE OVERFLOWON}
+  {$Q-}
+{$ELSE}
+  {$UNDEF OVERFLOWON}
+{$ENDIF}
 procedure TSHA1_Hasher.Update( Source: TMemoryStream);
 var
   t: integer;
@@ -306,5 +312,9 @@ H[2] := H[2] + C;
 H[3] := H[3] + D;
 H[4] := H[4] + E
 end;
+{$IFDEF OVERFLOWON}
+  {$Q+}
+  {$UNDEF OVERFLOWON}
+{$ENDIF}
 
 end.
