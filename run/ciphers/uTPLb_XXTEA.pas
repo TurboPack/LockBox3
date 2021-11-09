@@ -8,7 +8,6 @@ The contents of this file are subject to the Mozilla Public License (MPL)
 Version 1.1 (the "License"); you may not use this file except in compliance
 with the License. You may obtain a copy of the License at
 http://www.mozilla.org/MPL/
-
 Alternatively, you may redistribute it and/or modify it under the terms of
 the GNU Lesser General Public License (LGPL) as published by the Free Software
 Foundation, either version 3 of the License, or (at your option) any later
@@ -76,17 +75,17 @@ TXXTEA_LargeBlock = class( TInterfacedObject,
 
 
 
-  TTEA_Key = packed array[ 0.. 3 ] of longword;
+  TTEA_Key = packed array[ 0.. 3 ] of UInt32;
 
 procedure XXTEA_Encrypt(  // Corrected Block TEA encryption primitive.
   const Key: TTEA_Key;
-  const Plaintext: TLongWordDynArray;   // At least 2
-  var   Ciphertext: TLongWordDynArray);   // Same length as Plaintext
+  const Plaintext: TArray<UInt32>;   // At least 2
+  var   Ciphertext: TArray<UInt32>);   // Same length as Plaintext
 
 procedure XXTEA_Decrypt(  // Corrected Block TEA encryption primitive.
   const Key: TTEA_Key;
-  const Ciphertext: TLongWordDynArray;   // At least 2
-  var   Plaintext : TLongWordDynArray);   // Same length as Ciphertext
+  const Ciphertext: TArray<UInt32>;   // At least 2
+  var   Plaintext : TArray<UInt32>);   // Same length as Ciphertext
 
 
 implementation
@@ -223,8 +222,8 @@ TXXTEA_BlockCodec = class( TInterfacedObject, IBlockCodec)
   private
     FBlockSize_InBytes: integer;
     FKey: TXXTEA_LE_Key;
-    FPlaintext_Longs: TLongWordDynArray;
-    FCiphertext_Longs: TLongWordDynArray;
+    FPlaintext_Longs: TArray<UInt32>;
+    FCiphertext_Longs: TArray<UInt32>;
 
     procedure Encrypt_Block( Plaintext{in}, Ciphertext{out}: TMemoryStream);
     procedure Decrypt_Block( Plaintext{out}, Ciphertext{in}: TMemoryStream);
@@ -236,8 +235,8 @@ TXXTEA_BlockCodec = class( TInterfacedObject, IBlockCodec)
   end;
 
 //type
-//  TTEA_Key = array[ 0.. 3 ] of longword;
-//  TLongs = array of longword;
+//  TTEA_Key = array[ 0.. 3 ] of UInt32;
+//  TLongs = array of UInt32;
 
 // XXTEA primitives
 // In the following comment section, read ")-" as "}".
@@ -288,8 +287,8 @@ According to Needham and Wheeler:
 const DELTA = $9e3779b9;       // For Little-endien implementations only.
 
 function Mx(
-  const z, y, sum: longword;
-  const k: TTEA_Key; const p, e: longword): longword;
+  const z, y, sum: UInt32;
+  const k: TTEA_Key; const p, e: UInt32): UInt32;
 {$IF CompilerVersion >= 17.0} inline; {$ENDIF}
 begin
 result := (((z shr 5) xor (y shl 2)) +
@@ -300,19 +299,19 @@ end;
 
 procedure XXTEA_Encrypt(  // Corrected Block TEA encryption primitive.
   const Key: TTEA_Key;
-  const Plaintext : TLongWordDynArray;   // At least 2
-  var   Ciphertext: TLongWordDynArray);   // Same length as Plaintext
+  const Plaintext : TArray<UInt32>;   // At least 2
+  var   Ciphertext: TArray<UInt32>);   // Same length as Plaintext
 var
   n: integer;
-  z, sum: longword;
-  e, q, p: LongWord;
+  z, sum: UInt32;
+  e, q, p: UInt32;
 begin
 n := Length( Plaintext);
 Assert( n >= 2, 'Plaintext too short');
 z := Plaintext[ n-1];
 if Length( Ciphertext) <> n then
   SetLength( Ciphertext, n);
-Move( Plaintext[0], Ciphertext[0], n * SizeOf( longword));
+Move( Plaintext[0], Ciphertext[0], n * SizeOf( UInt32));
 sum := 0;
 for q := 5 + (52 div n) downto 0 do
   begin
@@ -332,20 +331,20 @@ end;
 
 procedure XXTEA_Decrypt(  // Corrected Block TEA decryption primitive.
   const Key: TTEA_Key;
-  const Ciphertext: TLongWordDynArray;   // At least 2
-  var   Plaintext : TLongWordDynArray);   // Same length as Ciphertext
+  const Ciphertext: TArray<UInt32>;   // At least 2
+  var   Plaintext : TArray<UInt32>);   // Same length as Ciphertext
 var
   n: integer;
-  y: LongWord;
-  sum: LongWord;
-  e: LongWord;
-  p: LongWord;
+  y: UInt32;
+  sum: UInt32;
+  e: UInt32;
+  p: UInt32;
 begin
 n := Length( Ciphertext);
 Assert( n >= 2, 'Ciphertext too short');
 if Length( Plaintext) <> n then
   SetLength( Plaintext, n);
-Move( Ciphertext[0], Plaintext[0], n * SizeOf( longword));
+Move( Ciphertext[0], Plaintext[0], n * SizeOf( UInt32));
 sum := (6 + (52 div Cardinal(n))) * DELTA;
 y := Plaintext[0];
 while sum <> 0 do
@@ -645,7 +644,7 @@ procedure TXXTEA_LargeBlock_LE_Encryptor.End_Encrypt;
 var
   RequiredSizeIncrease, RequiredSize: integer;
   j, L: integer;
-  PlaintextArray, CiphertextArray: TLongWordDynArray;
+  PlaintextArray, CiphertextArray: TArray<UInt32>;
   PTCopy: TMemoryStream;
 begin
 if FisBuffering then
@@ -664,7 +663,7 @@ if FisBuffering then
     for j := FBufLen to FBufLen + RequiredSizeIncrease - 1 do
       FBuffer[j] := RequiredSizeIncrease;  // Pad it out.
     L := (RequiredSize div 4) + 2;
-    SetLength( PlaintextArray, L); // Setup longword array.
+    SetLength( PlaintextArray, L); // Setup UInt32 array.
     Move( FBuffer[0], PlaintextArray[0], RequiredSize); // Convert padded payload to longwords.
     TRandomStream.Instance.Read( PlaintextArray[L-2], 8); // Salting.
     SetLength( CiphertextArray, L);
@@ -785,7 +784,7 @@ procedure TXXTEA_LargeBlock_LE_Decryptor.End_Decrypt;
 var
   RequiredSizeDecrease: integer;
   L: integer;
-  PlaintextArray, CiphertextArray: TLongWordDynArray;
+  PlaintextArray, CiphertextArray: TArray<UInt32>;
 begin
 if FisBuffering then
     begin
@@ -797,7 +796,7 @@ if FisBuffering then
 //      2.2.3 De-pad the message out at the tail. The number of pad bytes to
 //        remove is the value of the last byte.
     L := FBufLen div 4;
-    SetLength( CiphertextArray, L); // Setup longword array.
+    SetLength( CiphertextArray, L); // Setup UInt32 array.
     SetLength( PlaintextArray , L);
     if L >= 2 then
       begin

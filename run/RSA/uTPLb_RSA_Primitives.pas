@@ -7,7 +7,6 @@ The contents of this file are subject to the Mozilla Public License (MPL)
 Version 1.1 (the "License"); you may not use this file except in compliance
 with the License. You may obtain a copy of the License at
 http://www.mozilla.org/MPL/
-
 Alternatively, you may redistribute it and/or modify it under the terms of
 the GNU Lesser General Public License (LGPL) as published by the Free Software
 Foundation, either version 3 of the License, or (at your option) any later
@@ -339,7 +338,7 @@ end end;
 
 procedure MGF1( mgfSeed: TStream; maskLen: cardinal; mask: TStream);
 var
-  Counter: longword;
+  Counter: UInt32;
   HashObj: TObject;
   Hash: IHash;
   xfer: integer;

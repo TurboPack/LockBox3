@@ -7,7 +7,6 @@ The contents of this file are subject to the Mozilla Public License (MPL)
 Version 1.1 (the "License"); you may not use this file except in compliance
 with the License. You may obtain a copy of the License at
 http://www.mozilla.org/MPL/
-
 Alternatively, you may redistribute it and/or modify it under the terms of
 the GNU Lesser General Public License (LGPL) as published by the Free Software
 Foundation, either version 3 of the License, or (at your option) any later
@@ -472,7 +471,7 @@ procedure Blowfish_Make_SBoxes(
   const Key; KeySizeInBytes: integer; var SBox: TSBox; var PBox: TPBox);
 // Assume KeySizeInBytes: 1..56
 var
-  i, j, k: longword;
+  i, j, k: UInt32;
   T32: uint32;
   Block: uint64;
   KeyBytePntr: PByte;
@@ -488,15 +487,15 @@ for i := 0 to 17 do
     begin
     {$IF CompilerVersion >= 21}
     LongRec( T32).Bytes[ j] := KeyBytePntr[
-      (k + 3 - j) mod longword( KeySizeInBytes)]
+      (k + 3 - j) mod UInt32( KeySizeInBytes)]
     {$ELSE}
     LongRec( T32).Bytes[ j] := PByte( cardinal( KeyBytePntr) +
-      ((k + 3 - j) mod longword( KeySizeInBytes)))^
+      ((k + 3 - j) mod UInt32( KeySizeInBytes)))^
     {$ENDIF}
     end;
   PBox[ i ]:= PBox[ i] xor T32;
   inc( k, 4);
-  if k >= longword( KeySizeInBytes) then
+  if k >= UInt32( KeySizeInBytes) then
     dec( k, KeySizeInBytes)
   end;
 FillChar( Block, Sizeof( Block), 0);

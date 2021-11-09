@@ -58,7 +58,7 @@ Tp8x8    = packed array[ 0..1 ] of T2048;
 procedure DCP_towfish_Precomp;
 
 procedure DCP_twofish_InitKey(
-  const Key; Size: longword;
+  const Key; Size: UInt32;
   var SubKeys: TSubKeys; var SBox: TSBox);
 
 procedure DCP_twofish_EncryptECB(
@@ -258,7 +258,7 @@ for i := 0 to 63 do
 end;
 
 procedure DCP_twofish_InitKey(
-  const Key; Size: longword;
+  const Key; Size: UInt32;
   var SubKeys: TSubKeys; var SBox: TSBox);
 const
   subkeyCnt= ROUNDSUBKEYS + 2*NUMROUNDS;
@@ -462,7 +462,7 @@ procedure DCP_twofish_EncryptECB(
   const SubKeys: TSubKeys; const SBox: TSBox;
   const InData: T128; var OutData: T128);
 var
-  i: longword;
+  i: UInt32;
   t0, t1: DWord;
   X: T128;
   k: integer;
@@ -540,7 +540,7 @@ end;
 procedure DCP_towfish_Precomp;
 var
   m1, mx, my: array[0..1] of DWord;
-  nI: longword;
+  nI: UInt32;
 begin
   for nI:= 0 to 255 do
   begin
