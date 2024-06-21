@@ -1469,7 +1469,7 @@ if assigned( FOpenSSLProc_PEM_read_bio_RSAPrivateKey) and (sPrivateKey <> '') th
       ErrorMessage := 'A non-empty password is required.';
     if (FPassword <> '') and (Cipher = cipher_InTheClear) then
       FPassword := '';
-    if ErrorMessage <> '' then
+    if ErrorMessage = '' then
       enc := GetEVP( Cipher);
     if (not assigned( enc)) and (Cipher <> cipher_InTheClear) then
       ErrorMessage := 'Encryption function not found in OpenSSL';
