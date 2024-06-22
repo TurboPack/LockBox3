@@ -731,7 +731,8 @@ TOpenSSL_Signatory = class( TOpenSSL_Base)
       PreHash: TSigHashKind;
       Message1: pointer; MessageLen: cardinal;
       const Signature: utf8string): boolean; // True for verified good.
-
+
+
     function  PrivateKey_AsPEM( Cipher: TCipherToEncryptPrivateKeyWith; const Password: utf8string): utf8string;
 
     function  GetPrivateKey_AsPEM: utf8string;
@@ -1017,7 +1018,8 @@ begin
 @FOpenSSLProc_PEM_write_bio_RSAPublicKey := nil;
 @FOpenSSLProc_RSA_sign   := nil;
 @FOpenSSLProc_RSA_verify := nil;
-@FOpenSSLProc_RSA_print  := nil;
+
+@FOpenSSLProc_RSA_print  := nil;
 @FOpenSSLProc_PEM_read_bio_RSAPrivateKey := nil;
 @FOpenSSLProc_BIO_new_mem_buf := nil;
 @FOpenSSLProc_PEM_read_bio_RSAPublicKey := nil;
@@ -1335,7 +1337,8 @@ if FHandle = 0 then exit;
 @FOpenSSLProc_PEM_write_bio_RSAPublicKey := ProcAddress( 'PEM_write_bio_RSAPublicKey');
 @FOpenSSLProc_RSA_sign   := ProcAddress( 'RSA_sign');
 @FOpenSSLProc_RSA_verify := ProcAddress( 'RSA_verify');
-@FOpenSSLProc_RSA_print  := ProcAddress( 'RSA_print');
+
+@FOpenSSLProc_RSA_print  := ProcAddress( 'RSA_print');
 @FOpenSSLProc_PEM_read_bio_RSAPrivateKey := ProcAddress( 'PEM_read_bio_RSAPrivateKey');
 @FOpenSSLProc_BIO_new_mem_buf := ProcAddress( 'BIO_new_mem_buf');
 @FOpenSSLProc_PEM_read_bio_RSAPublicKey := ProcAddress( 'PEM_read_bio_RSAPublicKey');
@@ -1466,7 +1469,7 @@ if assigned( FOpenSSLProc_PEM_read_bio_RSAPrivateKey) and (sPrivateKey <> '') th
       ErrorMessage := 'A non-empty password is required.';
     if (FPassword <> '') and (Cipher = cipher_InTheClear) then
       FPassword := '';
-    if ErrorMessage <> '' then
+    if ErrorMessage = '' then
       enc := GetEVP( Cipher);
     if (not assigned( enc)) and (Cipher <> cipher_InTheClear) then
       ErrorMessage := 'Encryption function not found in OpenSSL';
