@@ -16,65 +16,18 @@ metadata:
     - cryptography
   readme: readme.md
 targetPlatforms:
-  - compiler: delphi10.1
+  - compiler from: delphi10.1
+    compiler to: delphi10.4
     platforms:
       - win32
       - win64
-    template: berlin
-  - compiler: delphi10.2
-    platforms:
-      - win32
-      - win64
-    template: tokyo
-  - compiler: delphi10.3
-    platforms:
-      - win32
-      - win64
-    template: rio
-  - compiler: delphi10.4
-    platforms:
-      - win32
-      - win64
-    template: sydney
+    template: named
   - compiler from: delphi11.0
     compiler to: delphi13.0
     platforms:
       - win32
       - win64
 templates:
-  - name: berlin
-    source:
-      - src: ./run/ciphers/*.pas
-      - src: ./run/cryptography/*.pas
-      - src: ./run/hashes/*.pas
-      - src: ./run/library surface/*.pas
-      - src: ./run/RSA/*.pas
-      - src: ./run/utilities/*.pas
-      - src: ./design/*.pas
-      - src: ./design/*.bmp
-      - src: ./design/*.jpg
-      - src: ./design/*.dfm
-        copyToLib: true
-      - src: ./design/*.fmx
-        copyToLib: true
-      - src: ./design/*.dcr
-      - src: ./packages/Berlin/Delphi/*.dpk
-      - src: ./packages/Berlin/Delphi/*.dproj
-    build:
-      - project: ./packages/Berlin/Delphi/LockBox3DR.dproj
-        platforms:
-          - win32
-          - win64
-        defines: RELEASE
-    design:
-      - project: ./packages/Berlin/Delphi/LockBox3VCLDD.dproj
-        platforms:
-          - win32
-        defines: RELEASE
-      - project: ./packages/Berlin/Delphi/LockBox3FMXDD.dproj
-        platforms:
-          - win32
-        defines: RELEASE
   - name: default
     source:
       - src: ./run/ciphers/*.pas
@@ -113,7 +66,7 @@ templates:
         platforms:
           - win32
         defines: RELEASE
-  - name: rio
+  - name: named
     source:
       - src: ./run/ciphers/*.pas
       - src: ./run/cryptography/*.pas
@@ -129,86 +82,20 @@ templates:
       - src: ./design/*.fmx
         copyToLib: true
       - src: ./design/*.dcr
-      - src: ./packages/Rio/Delphi/*.dpk
-      - src: ./packages/Rio/Delphi/*.dproj
+      - src: ./packages/$compilercodename$/Delphi/*.dpk
+      - src: ./packages/$compilercodename$/Delphi/*.dproj
     build:
-      - project: ./packages/Rio/Delphi/LockBox3DR.dproj
+      - project: ./packages/$compilercodename$/Delphi/LockBox3DR.dproj
         platforms:
           - win32
           - win64
         defines: RELEASE
     design:
-      - project: ./packages/Rio/Delphi/LockBox3VCLDD.dproj
+      - project: ./packages/$compilercodename$/Delphi/LockBox3VCLDD.dproj
         platforms:
           - win32
         defines: RELEASE
-      - project: ./packages/Rio/Delphi/LockBox3FMXDD.dproj
-        platforms:
-          - win32
-        defines: RELEASE
-  - name: sydney
-    source:
-      - src: ./run/ciphers/*.pas
-      - src: ./run/cryptography/*.pas
-      - src: ./run/hashes/*.pas
-      - src: ./run/library surface/*.pas
-      - src: ./run/RSA/*.pas
-      - src: ./run/utilities/*.pas
-      - src: ./design/*.pas
-      - src: ./design/*.bmp
-      - src: ./design/*.jpg
-      - src: ./design/*.dfm
-        copyToLib: true
-      - src: ./design/*.fmx
-        copyToLib: true
-      - src: ./design/*.dcr
-      - src: ./packages/Sydney/Delphi/*.dpk
-      - src: ./packages/Sydney/Delphi/*.dproj
-    build:
-      - project: ./packages/Sydney/Delphi/LockBox3DR.dproj
-        platforms:
-          - win32
-          - win64
-        defines: RELEASE
-    design:
-      - project: ./packages/Sydney/Delphi/LockBox3VCLDD.dproj
-        platforms:
-          - win32
-        defines: RELEASE
-      - project: ./packages/Sydney/Delphi/LockBox3FMXDD.dproj
-        platforms:
-          - win32
-        defines: RELEASE
-  - name: tokyo
-    source:
-      - src: ./run/ciphers/*.pas
-      - src: ./run/cryptography/*.pas
-      - src: ./run/hashes/*.pas
-      - src: ./run/library surface/*.pas
-      - src: ./run/RSA/*.pas
-      - src: ./run/utilities/*.pas
-      - src: ./design/*.pas
-      - src: ./design/*.bmp
-      - src: ./design/*.jpg
-      - src: ./design/*.dfm
-        copyToLib: true
-      - src: ./design/*.fmx
-        copyToLib: true
-      - src: ./design/*.dcr
-      - src: ./packages/Tokyo/Delphi/*.dpk
-      - src: ./packages/Tokyo/Delphi/*.dproj
-    build:
-      - project: ./packages/Tokyo/Delphi/LockBox3DR.dproj
-        platforms:
-          - win32
-          - win64
-        defines: RELEASE
-    design:
-      - project: ./packages/Tokyo/Delphi/LockBox3VCLDD.dproj
-        platforms:
-          - win32
-        defines: RELEASE
-      - project: ./packages/Tokyo/Delphi/LockBox3FMXDD.dproj
+      - project: ./packages/$compilercodename$/Delphi/LockBox3FMXDD.dproj
         platforms:
           - win32
         defines: RELEASE
