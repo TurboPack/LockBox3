@@ -1,0 +1,101 @@
+# DPM package spec file
+metadata:
+  id: TurboPack.LockBox3
+  version: 3.4.0
+  description: Cryptographic components
+  icon: LockBox-3.5.2.png
+  authors:
+    - Sean B. Durkin & David Barton
+  projectUrl: https://github.com/TurboPack/LockBox3
+  repositoryUrl: https://github.com/TurboPack/LockBox3
+  license: MPL-1.1
+  copyright: Sean B. Durkin
+  tags:
+    - vcl
+    - fmx
+    - cryptography
+  readme: readme.md
+targetPlatforms:
+  - compiler from: delphi10.1
+    compiler to: delphi10.4
+    platforms:
+      - win32
+      - win64
+    template: named
+  - compiler from: delphi11.0
+    compiler to: delphi13.0
+    platforms:
+      - win32
+      - win64
+templates:
+  - name: default
+    source:
+      - src: ./run/ciphers/*.pas
+      - src: ./run/cryptography/*.pas
+      - src: ./run/hashes/*.pas
+      - src: ./run/library surface/*.pas
+      - src: ./run/RSA/*.pas
+      - src: ./run/utilities/*.pas
+      - src: ./design/*.pas
+      - src: ./design/*.bmp
+      - src: ./design/*.jpg
+      - src: ./design/*.dfm
+        copyToLib: true
+      - src: ./design/*.fmx
+        copyToLib: true
+      - src: ./design/*.dcr
+      - src: ./packages/11AndAbove/Delphi/*.dpk
+      - src: ./packages/11AndAbove/Delphi/*.dproj
+    build:
+      - project: ./packages/11AndAbove/Delphi/LockBox3DR.dproj
+        platforms:
+          - win32
+          - win64
+        defines: RELEASE
+        excludeCompilers:
+          - delphi10.1
+          - delphi10.2
+          - delphi10.3
+          - delphi10.4
+    design:
+      - project: ./packages/11AndAbove/Delphi/LockBox3VCLDD.dproj
+        platforms:
+          - win32
+        defines: RELEASE
+      - project: ./packages/11AndAbove/Delphi/LockBox3FMXDD.dproj
+        platforms:
+          - win32
+        defines: RELEASE
+  - name: named
+    source:
+      - src: ./run/ciphers/*.pas
+      - src: ./run/cryptography/*.pas
+      - src: ./run/hashes/*.pas
+      - src: ./run/library surface/*.pas
+      - src: ./run/RSA/*.pas
+      - src: ./run/utilities/*.pas
+      - src: ./design/*.pas
+      - src: ./design/*.bmp
+      - src: ./design/*.jpg
+      - src: ./design/*.dfm
+        copyToLib: true
+      - src: ./design/*.fmx
+        copyToLib: true
+      - src: ./design/*.dcr
+      - src: ./packages/$compilercodename$/Delphi/*.dpk
+      - src: ./packages/$compilercodename$/Delphi/*.dproj
+    build:
+      - project: ./packages/$compilercodename$/Delphi/LockBox3DR.dproj
+        platforms:
+          - win32
+          - win64
+        defines: RELEASE
+    design:
+      - project: ./packages/$compilercodename$/Delphi/LockBox3VCLDD.dproj
+        platforms:
+          - win32
+        defines: RELEASE
+      - project: ./packages/$compilercodename$/Delphi/LockBox3FMXDD.dproj
+        platforms:
+          - win32
+        defines: RELEASE
